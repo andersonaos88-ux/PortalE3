@@ -496,15 +496,18 @@ function getData() {
       valor: parseFloat(document.getElementById('a-valor').value) || 0,
       cop:   copMap['a'] || false,
     },
-    plans: plans.map((id,i) => ({
-      id,
-      color: PLAN_COLORS[i],
-      seg:   document.getElementById(`p${id}-seg`)?.value || 'outro',
-      plano: document.getElementById(`p${id}-plano`)?.value.trim() || '—',
-      vidas: parseInt(document.getElementById(`p${id}-vidas`)?.value) || 1,
-      valor: parseFloat(document.getElementById(`p${id}-valor`)?.value) || 0,
-      cop:   copMap['p'+id] || false,
-    })),
+    plans: plans.map((id,i) => {
+      const seg = document.getElementById(`p${id}-seg`)?.value || 'outro';
+      return {
+        id,
+        color: (INS[seg] || INS.outro).color,
+        seg,
+        plano: document.getElementById(`p${id}-plano`)?.value.trim() || '—',
+        vidas: parseInt(document.getElementById(`p${id}-vidas`)?.value) || 1,
+        valor: parseFloat(document.getElementById(`p${id}-valor`)?.value) || 0,
+        cop:   copMap['p'+id] || false,
+      };
+    }),
   };
 }
 
