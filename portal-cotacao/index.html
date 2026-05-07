@@ -178,6 +178,7 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--gray-bg
   width: 960px; min-height: 540px;
   background: var(--white);
   padding: 36px 44px 28px;
+  position: relative;
 }
 .s-comp .s-title { text-align: center; font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 28px; }
 .s-comp .s-title em { font-style: normal; font-weight: 400; color: var(--muted); }
@@ -642,6 +643,7 @@ function buildComp(d) {
   return `
   <div class="slide-box" id="sl-comp">
     <div class="s-comp">
+      ${logoDataUrl ? `<img src="${logoDataUrl}" style="position:absolute;top:22px;right:36px;height:32px;max-width:130px;object-fit:contain;opacity:.55">` : ''}
       <div class="s-title">Resumo Financeiro — <em>${d.atual.vidas} vida${d.atual.vidas!==1?'s':''}</em></div>
 
       <div class="comp-grid">
@@ -685,10 +687,7 @@ function buildComp(d) {
       </div>
 
       <div class="divider"></div>
-      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px">
-        <div style="font-size:9px; color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:1.2px">Legenda das Seguradoras/Operadoras</div>
-        ${logoDataUrl ? `<img src="${logoDataUrl}" style="height:28px;max-width:100px;object-fit:contain;opacity:.7;filter:brightness(0)">` : ''}
-      </div>
+      <div style="text-align:center; font-size:9px; color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:8px">Legenda das Seguradoras/Operadoras</div>
       <div class="legend-row">${insLegend}</div>
     </div>
   </div>`;
