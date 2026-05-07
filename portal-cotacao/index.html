@@ -660,14 +660,6 @@ function drawCharts(d) {
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           ctx.fillText(fmt(v), bar.x, bar.y + bar.height / 2);
-          // ganho anual above bar
-          if (ganhos && ganhos[i] !== undefined) {
-            const g = ganhos[i];
-            const label = (g > 0 ? '▼ ' : g < 0 ? '▲ ' : '') + fmt(Math.abs(g));
-            ctx.font = 'bold 9px Segoe UI';
-            ctx.fillStyle = g > 0 ? '#15803d' : g < 0 ? '#b91c1c' : '#6B6B8A';
-            ctx.fillText(label, bar.x, bar.y - 8);
-          }
           ctx.restore();
         });
       });
