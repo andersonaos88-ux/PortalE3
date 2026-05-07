@@ -410,33 +410,35 @@ const PLANS = {
   outro:       [],
 };
 
-/* ═══════════════════ COPARTICIPAÇÃO DATA (preencher por seguradora) ═══════════════════ */
+/* ═══════════════════ COPARTICIPAÇÃO DATA ═══════════════════ */
 const COPDATA = {
   bradesco: {
-    titulo: 'Coparticipação — Bradesco',
-    obs: 'Conteúdo a preencher',
-    itens: [{ procedimento: '—', valor: '—' }],
+    titulo: 'Coparticipação — Bradesco Saúde',
+    subtitulo: 'Limites em reais · Contratos de 3 a 199 vidas',
+    procedimentos: [
+      'Atendimento em P.S',
+      'Consulta eletiva',
+      'Exames Especiais - Tipo B',
+      'Exames Simples - Tipo A',
+      'Procedimentos ambulatoriais',
+      'Procedimentos Seriados',
+      'Internação',
+    ],
+    planos: {
+      'Regional':      ['R$ 90,00',  'R$ 35,00',  'R$ 120,00', 'R$ 45,00',  'R$ 135,00', 'R$ 50,00',  'R$ 250,00'],
+      'Saúde +':       ['R$ 90,00',  'R$ 35,00',  'R$ 120,00', 'R$ 45,00',  'R$ 135,00', 'R$ 50,00',  'R$ 250,00'],
+      'Efetivo':       ['R$ 90,00',  'R$ 35,00',  'R$ 120,00', 'R$ 45,00',  'R$ 135,00', 'R$ 50,00',  'R$ 250,00'],
+      'Efetivo Plus':  ['R$ 120,00', 'R$ 45,00',  'R$ 160,00', 'R$ 60,00',  'R$ 150,00', 'R$ 55,00',  'R$ 300,00'],
+      'Flex':          ['R$ 115,00', 'R$ 40,00',  'R$ 135,00', 'R$ 55,00',  'R$ 150,00', 'R$ 55,00',  'R$ 300,00'],
+      'Ideal':         ['R$ 120,00', 'R$ 45,00',  'R$ 160,00', 'R$ 60,00',  'R$ 150,00', 'R$ 55,00',  'R$ 300,00'],
+      'Nacional':      ['R$ 130,00', 'R$ 70,00',  'R$ 160,00', 'R$ 65,00',  'R$ 180,00', 'R$ 65,00',  'R$ 500,00'],
+      'Nacional Plus': ['R$ 320,00', 'R$ 160,00', 'R$ 320,00', 'R$ 160,00', 'R$ 320,00', 'R$ 160,00', 'R$ 550,00'],
+    },
   },
-  sulamerica: {
-    titulo: 'Coparticipação — SulAmérica',
-    obs: 'Conteúdo a preencher',
-    itens: [{ procedimento: '—', valor: '—' }],
-  },
-  amil: {
-    titulo: 'Coparticipação — Amil',
-    obs: 'Conteúdo a preencher',
-    itens: [{ procedimento: '—', valor: '—' }],
-  },
-  portoseguro: {
-    titulo: 'Coparticipação — Porto Seguro',
-    obs: 'Conteúdo a preencher',
-    itens: [{ procedimento: '—', valor: '—' }],
-  },
-  hapvida: {
-    titulo: 'Coparticipação — Hapvida',
-    obs: 'Conteúdo a preencher',
-    itens: [{ procedimento: '—', valor: '—' }],
-  },
+  sulamerica:  { titulo: 'Coparticipação — SulAmérica',  subtitulo: '', procedimentos: [], planos: {} },
+  amil:        { titulo: 'Coparticipação — Amil',        subtitulo: '', procedimentos: [], planos: {} },
+  portoseguro: { titulo: 'Coparticipação — Porto Seguro',subtitulo: '', procedimentos: [], planos: {} },
+  hapvida:     { titulo: 'Coparticipação — Hapvida',     subtitulo: '', procedimentos: [], planos: {} },
 };
 
 /* ═══════════════════ STATE ═══════════════════ */
@@ -702,9 +704,14 @@ function render() {
 
   const d = getData();
   const wrap = document.getElementById('doc-wrap');
-  const copSlides = d.plans
-    .filter(p => p.cop && copSlideMap[p.id])
-    .map(p => buildCopSlide(p.seg, p.plano))
+  // Group cop slides by insurer (one slide per insurer with all selected plans)
+  const copByIns = {};
+  d.plans.filter(p => p.cop && copSlideMap[p.id]).forEach(p => {
+    if (!copByIns[p.seg]) copByIns[p.seg] = [];
+    if (!copByIns[p.seg].includes(p.plano)) copByIns[p.seg].push(p.plano);
+  });
+  const copSlides = Object.entries(copByIns)
+    .map(([seg, planos]) => buildCopSlide(seg, planos))
     .join('');
   wrap.innerHTML = buildCover(d) + buildComp(d) + copSlides + buildBackCover();
 
@@ -755,37 +762,57 @@ function buildBackCover() {
 }
 
 /* ═══════════════════ SLIDE — COPARTICIPAÇÃO ═══════════════════ */
-function buildCopSlide(seg, plano) {
+function buildCopSlide(seg, planos) {
   const ins  = INS[seg] || INS.outro;
   const data = COPDATA[seg];
-  if (!data) return '';
-  const rows = data.itens.map(r => `
-    <tr>
-      <td style="padding:8px 12px; border-bottom:1px solid #f0f0f5; font-size:12px; color:#1A1A3E">${r.procedimento}</td>
-      <td style="padding:8px 12px; border-bottom:1px solid #f0f0f5; font-size:12px; font-weight:700; color:${ins.color}; text-align:right">${r.valor}</td>
-    </tr>`).join('');
+  if (!data || !data.procedimentos.length) return '';
+
+  // Deduplicate: group planos with identical value arrays
+  const groups = [];
+  planos.forEach(nome => {
+    const vals = data.planos[nome];
+    if (!vals) return;
+    const key = vals.join('|');
+    const existing = groups.find(g => g.key === key);
+    if (existing) existing.nomes.push(nome);
+    else groups.push({ key, nomes: [nome], vals });
+  });
+  if (!groups.length) return '';
+
+  const thStyle = `padding:9px 10px;text-align:center;font-size:10px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.6px;border-left:1px solid rgba(255,255,255,.2)`;
+  const tdProc  = `padding:8px 12px;font-size:11px;color:#1A1A3E;border-bottom:1px solid #f0f0f5;white-space:nowrap`;
+  const tdVal   = `padding:8px 10px;font-size:11px;font-weight:700;color:${ins.color};text-align:center;border-bottom:1px solid #f0f0f5;border-left:1px solid #f0f0f5`;
+
+  const headers = groups.map(g =>
+    `<th style="${thStyle}">${g.nomes.join(' / ')}</th>`
+  ).join('');
+
+  const rows = data.procedimentos.map((proc, i) => {
+    const cols = groups.map(g => `<td style="${tdVal}">${g.vals[i] || '—'}</td>`).join('');
+    return `<tr><td style="${tdProc}">${proc}</td>${cols}</tr>`;
+  }).join('');
+
   return `
   <div class="slide-box" id="sl-cop-${seg}">
-    <div style="width:960px; min-height:540px; background:#fff; padding:44px 60px; position:relative; font-family:'Segoe UI',system-ui,sans-serif">
+    <div style="width:960px;min-height:540px;background:#fff;padding:44px 60px;position:relative;font-family:'Segoe UI',system-ui,sans-serif;box-sizing:border-box">
       <img src="e3_hor_azul.png" style="position:absolute;top:22px;right:36px;height:28px;max-width:110px;object-fit:contain;opacity:.55">
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px">
-        <div style="width:6px;height:40px;background:${ins.color};border-radius:3px"></div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px">
+        <div style="width:6px;height:40px;background:${ins.color};border-radius:3px;flex-shrink:0"></div>
         <div>
           <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:${ins.color}">${ins.label}</div>
           <div style="font-size:20px;font-weight:800;color:#1A1A3E">Exemplos de Coparticipação</div>
         </div>
       </div>
-      <table style="width:100%;border-collapse:collapse;background:#fafafa;border-radius:10px;overflow:hidden">
+      ${data.subtitulo ? `<div style="font-size:10px;color:#6B6B8A;margin-bottom:20px;margin-left:20px">${data.subtitulo}</div>` : ''}
+      <table style="width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden">
         <thead>
           <tr style="background:${ins.color}">
-            <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.8px">Procedimento</th>
-            <th style="padding:10px 12px;text-align:right;font-size:11px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.8px">Coparticipação</th>
+            <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.6px">Procedimento</th>
+            ${headers}
           </tr>
         </thead>
         <tbody>${rows}</tbody>
       </table>
-      ${data.obs ? `<div style="margin-top:16px;font-size:10px;color:#6B6B8A;font-style:italic">* ${data.obs}</div>` : ''}
-      <div style="position:absolute;bottom:28px;left:60px;font-size:9px;color:#9999AA;font-weight:700;text-transform:uppercase;letter-spacing:1px">Plano: ${esc(plano)}</div>
     </div>
   </div>`;
 }
@@ -941,10 +968,8 @@ async function gerarPDF() {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [297, 167] });
 
-    const slideIds = ['sl-cover', 'sl-comp',
-      ...getData().plans.filter(p => p.cop && copSlideMap[p.id]).map(p => `sl-cop-${p.seg}`),
-      'sl-back'
-    ];
+    const copSegs = [...new Set(getData().plans.filter(p => p.cop && copSlideMap[p.id]).map(p => p.seg))];
+    const slideIds = ['sl-cover', 'sl-comp', ...copSegs.map(s => `sl-cop-${s}`), 'sl-back'];
     for (const [idx, sid] of slideIds.entries()) {
       const el = document.getElementById(sid);
       if (!el) continue;
