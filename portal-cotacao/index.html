@@ -324,7 +324,7 @@ canvas { display: block; }
             <label>Seguradora</label>
             <div class="ins-wrap">
               <div class="ins-dot" id="dot-atual" style="background:var(--atual)"></div>
-              <select id="a-seg" onchange="syncDot('atual','a-seg'); render()">
+              <select id="a-seg" onchange="syncDot('atual','a-seg'); syncAtualPlanOpts(); render()">
                 <option value="bradesco">Bradesco</option>
                 <option value="sulamerica">SulAmérica</option>
                 <option value="amil">Amil</option>
@@ -336,7 +336,7 @@ canvas { display: block; }
           </div>
           <div class="fg">
             <label>Nome do Plano</label>
-            <input id="a-plano" type="text" placeholder="Ex: Prata Nacional" oninput="render()">
+            <select id="a-plano" onchange="render()"></select>
           </div>
         </div>
         <div class="row2">
@@ -401,6 +401,15 @@ const INS = {
 const INS_OPTIONS = ['bradesco','sulamerica','amil','portoseguro','hapvida','outro'];
 const PLAN_COLORS = ['#CC0000','#3B2F9E','#E8661A','#005FAF'];
 
+const PLANS = {
+  bradesco:    ['Regional','Saúde +','Efetivo','Efetivo Plus','Flex','Ideal','Nacional','Nacional Plus'],
+  sulamerica:  ['Direto Nacional E','Direto Nacional Q','Exato E','Exato Q','Clássico Vital E','Clássico Vital Q','Clássico 100 E','Especial 100 Q','Especial Mais Vital','Especial Mais','Executivo','Prestige'],
+  amil:        ['Bronze SP','Bronze Mais','Prata','Ouro','Ouro II','Platinum R1','Platinum R2','S380 E','S380 Q','S450 E','S450 Q','S750 R1','S750 R2','S750 R3'],
+  portoseguro: ['Pró ABCDM','Prata Pró E','Prata Pró Q','Ouro Pró','Diamante Pró','Bronze Brasil E','Bronze Brasil Q','Prata Mais E','Prata Mais Q','Ouro Mais','Ouro Max','Diamante Mais'],
+  hapvida:     ['200 ABC','200 UP','300 E','500 E','500 Q','600 E','600 Q','700 E','700 Q'],
+  outro:       [],
+};
+
 /* ═══════════════════ COPARTICIPAÇÃO DATA (preencher por seguradora) ═══════════════════ */
 const COPDATA = {
   bradesco: {
@@ -443,6 +452,7 @@ let renderGen = 0;
 window.addEventListener('DOMContentLoaded', () => {
   const now = new Date();
   document.getElementById('mesano').value = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+  syncAtualPlanOpts();
   addPlan();
   render();
 });
@@ -491,6 +501,28 @@ function removePlan(id) {
   renderPlanCards();
   updateAddBtn();
   render();
+}
+
+function syncPlanOpts(id) {
+  const seg   = document.getElementById(`p${id}-seg`)?.value || 'bradesco';
+  const sel   = document.getElementById(`p${id}-plano`);
+  if (!sel) return;
+  const opts  = PLANS[seg] || [];
+  const prev  = sel.value;
+  sel.innerHTML = opts.length
+    ? opts.map(p => `<option value="${p}"${p===prev?' selected':''}>${p}</option>`).join('')
+    : '<option value="">—</option>';
+}
+
+function syncAtualPlanOpts() {
+  const seg  = document.getElementById('a-seg')?.value || 'bradesco';
+  const sel  = document.getElementById('a-plano');
+  if (!sel) return;
+  const opts = PLANS[seg] || [];
+  const prev = sel.value;
+  sel.innerHTML = opts.length
+    ? opts.map(p => `<option value="${p}"${p===prev?' selected':''}>${p}</option>`).join('')
+    : '<option value="">—</option>';
 }
 
 function toggleCopSlide(id) {
@@ -543,12 +575,14 @@ function renderPlanCards() {
           <label>Seguradora</label>
           <div class="ins-wrap">
             <div class="ins-dot" id="dot-p${id}" style="background:${col}"></div>
-            <select id="p${id}-seg" onchange="syncDot('p${id}','p${id}-seg'); render()">${opts}</select>
+            <select id="p${id}-seg" onchange="syncDot('p${id}','p${id}-seg'); syncPlanOpts(${id}); render()">${opts}</select>
           </div>
         </div>
         <div class="fg">
           <label>Nome do Plano</label>
-          <input id="p${id}-plano" type="text" placeholder="Ex: Nacional" oninput="render()">
+          <select id="p${id}-plano" onchange="render()">
+            ${(PLANS[saved[id]?.seg || 'bradesco'] || []).map(p => `<option value="${p}">${p}</option>`).join('')}
+          </select>
         </div>
       </div>
       <div class="row3">
