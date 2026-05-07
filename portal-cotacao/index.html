@@ -221,9 +221,9 @@ canvas { display: block; }
 .ganho-chip.neutro   { background: #f1f5f9; color: var(--muted); }
 .ganho-label { font-size: 8px; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); margin-top: 1px; }
 
-/* study plans row */
-.study-plans-row { display: flex; gap: 0; }
-.study-plan-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+/* study plans grid — each row aligns across all plan columns */
+.study-plans-grid { display: grid; text-align: center; gap: 3px 0; }
+.study-plans-grid > * { display: flex; align-items: center; justify-content: center; }
 
 /* reembolso removed, just empty for alignment */
 .divider { height: 3px; background: linear-gradient(90deg, var(--purple), #818cf8); border-radius: 2px; margin: 20px 0 12px; }
@@ -614,23 +614,20 @@ function buildComp(d) {
           <div class="col-label">Estudo de Planos</div>
           <div style="text-align:center; margin-bottom:8px">${estudoTags}</div>
           <div class="chart-wrap"><canvas id="ch-estudo"></canvas></div>
-          <div class="study-plans-row">
-            ${d.plans.map(p => {
-              const ganhoMensal = d.atual.valor - p.valor;
-              const ganhoAnual  = ganhoMensal * 12;
-              const cls = ganhoAnual > 0 ? 'positivo' : ganhoAnual < 0 ? 'negativo' : 'neutro';
-              const icon = ganhoAnual > 0 ? '▼' : ganhoAnual < 0 ? '▲' : '=';
-              const lbl  = ganhoAnual > 0 ? 'Economia anual' : ganhoAnual < 0 ? 'Acréscimo anual' : 'Sem variação';
-              return `<div class="study-plan-col">
-                <span class="plan-name-label" style="color:${p.color}">${esc(p.plano)}</span>
-                <span class="cop-chip ${p.cop?'sim':'nao'}">${p.cop?'C/Cop':'S/Cop'}</span>
-                <span class="vidas-chip">${p.vidas} vida${p.vidas!==1?'s':''}</span>
-                <span class="ganho-chip ${cls}">${icon} ${fmt(Math.abs(ganhoAnual))}</span>
-                <span class="ganho-label">${lbl}</span>
-                ${p.reembolso ? `<span class="reembolso-chip">↩ Reembolso consulta ${fmt(p.reembolso)}</span>` : ''}
-              </div>`;
-            }).join('')}
-          </div>
+          ${(() => {
+            const n = d.plans.length;
+            const cols = `repeat(${n}, 1fr)`;
+            const ganhos = d.plans.map(p => (d.atual.valor - p.valor) * 12);
+            const rows = [
+              d.plans.map(p => `<span class="plan-name-label" style="color:${p.color}">${esc(p.plano)}</span>`),
+              d.plans.map(p => `<span class="cop-chip ${p.cop?'sim':'nao'}">${p.cop?'C/Cop':'S/Cop'}</span>`),
+              d.plans.map(p => `<span class="vidas-chip">${p.vidas} vida${p.vidas!==1?'s':''}</span>`),
+              d.plans.map((p,i) => { const g=ganhos[i]; const cls=g>0?'positivo':g<0?'negativo':'neutro'; const icon=g>0?'▼':g<0?'▲':'='; return `<span class="ganho-chip ${cls}">${icon} ${fmt(Math.abs(g))}</span>`; }),
+              d.plans.map((p,i) => { const g=ganhos[i]; const lbl=g>0?'Economia anual':g<0?'Acréscimo anual':'Sem variação'; return `<span class="ganho-label">${lbl}</span>`; }),
+              d.plans.map(p => p.reembolso ? `<span class="reembolso-chip">↩ Reembolso consulta ${fmt(p.reembolso)}</span>` : `<span></span>`),
+            ];
+            return `<div class="study-plans-grid" style="grid-template-columns:${cols}">${rows.flat().join('')}</div>`;
+          })()}
         </div>
       </div>
 
