@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal de Cotação — Plano de Saúde</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -27,7 +30,7 @@
   --atual:       #2563EB;
 }
 
-body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--gray-bg); color: var(--text); min-height: 100vh; }
+body { font-family: 'Open Sans', system-ui, sans-serif; background: var(--gray-bg); color: var(--text); min-height: 100vh; }
 
 /* ── HEADER ── */
 .header {
@@ -162,12 +165,12 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--gray-bg
   background: repeating-linear-gradient(32deg,transparent,transparent 5px,rgba(100,100,220,.3) 5px,rgba(100,100,220,.3) 7px);
   opacity: .5;
 }
-.s-cover .tag { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,.45); text-transform: uppercase; margin-bottom: 12px; }
-.s-cover .title { font-size: 54px; font-weight: 300; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
-.s-cover .title strong { font-weight: 800; }
-.s-cover .company { font-size: 17px; font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
-.s-cover .date { font-size: 13px; color: rgba(255,255,255,.5); }
-.s-cover .logo-area { position: absolute; left: 60px; top: 36px; display: flex; align-items: center; gap: 10px; }
+.s-cover .tag { font-family: 'Industry','Industry Book',sans-serif; font-size: 10px; letter-spacing: 2.5px; color: rgba(255,255,255,.45); text-transform: uppercase; }
+.s-cover .title { font-family: 'Industry','Industry Book',sans-serif; font-size: 54px; font-weight: 300; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
+.s-cover .title strong { font-family: 'Industry','Industry Book',sans-serif; font-weight: 800; }
+.s-cover .company { font-family: 'Industry','Industry Book',sans-serif; font-size: 17px; font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
+.s-cover .date { font-family: 'Open Sans',sans-serif; font-size: 13px; color: rgba(255,255,255,.5); }
+.s-cover .logo-area { position: absolute; left: 60px; top: 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
 .s-cover .logo-box { width: 46px; height: 46px; background: var(--white); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; color: var(--navy); letter-spacing: -1px; }
 .s-cover .logo-txt { font-size: 10px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
 
@@ -187,6 +190,7 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--gray-bg
 .s-back .back-sep { width: 1px; height: 110px; background: rgba(255,255,255,.3); }
 .s-back .back-tagline {
   padding-left: 60px;
+  font-family: 'Industry','Industry Book',sans-serif;
   font-size: 22px; font-weight: 300; color: rgba(255,255,255,.85); letter-spacing: .3px;
 }
 
@@ -404,7 +408,7 @@ const PLAN_COLORS = ['#CC0000','#3B2F9E','#E8661A','#005FAF'];
 const PLANS = {
   bradesco:    ['Regional','Saúde +','Efetivo','Efetivo Plus','Flex','Ideal','Nacional','Nacional Plus'],
   sulamerica:  ['Direto Nacional E','Direto Nacional Q','Exato E','Exato Q','Clássico Vital E','Clássico Vital Q','Clássico 100 E','Especial 100 Q','Especial Mais Vital','Especial Mais','Executivo','Prestige'],
-  amil:        ['Bronze SP','Bronze Mais','Prata','Ouro','Ouro II','Platinum R1','Platinum R2','S380 E','S380 Q','S450 E','S450 Q','S750 R1','S750 R2','S750 R3'],
+  amil:        ['Bronze SP','Bronze Mais','Prata','Ouro','Ouro II','Platinum R1','Platinum R2','S380 E','S380 Q','S450 E','S450 Q','S750 R1','S750 R2','S750 R3','Black I','S2500','Black II','S6500 Black'],
   portoseguro: ['Pró ABCDM','Prata Pró E','Prata Pró Q','Ouro Pró','Diamante Pró','Bronze Brasil E','Bronze Brasil Q','Prata Mais E','Prata Mais Q','Ouro Mais','Ouro Max','Diamante Mais'],
   hapvida:     ['200 ABC','200 UP','300 E','500 E','500 Q','600 E','600 Q','700 E','700 Q'],
   outro:       [],
@@ -436,7 +440,58 @@ const COPDATA = {
     },
   },
   sulamerica:  { titulo: 'Coparticipação — SulAmérica',  subtitulo: '', procedimentos: [], planos: {} },
-  amil:        { titulo: 'Coparticipação — Amil',        subtitulo: '', procedimentos: [], planos: {} },
+  amil: {
+    parcial: {
+      tipo: 'Parcial',
+      subtitulo: 'Coparticipação apenas em: fisioterapia, fonoaudiologia, nutrição, psicoterapia e terapia ocupacional · Limite máximo por sessão',
+      procedimentos: ['Consultas eletivas','Consultas hospitalares (PS)','Exames básicos','Exames especiais','Procedimentos básicos','Procedimentos especiais','Fisioterapia','Fonoaudiologia','Nutrição','Psicoterapia','Terapia Ocupacional','Internação'],
+      planos: {
+        'Bronze SP':   ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'Bronze Mais': ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'Prata':       ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'Ouro':        ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'Ouro II':     ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'Platinum R1': ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Isento'],
+        'Platinum R2': ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Isento'],
+        'S380 E':      ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'S380 Q':      ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'S450 E':      ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'S450 Q':      ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Isento'],
+        'S750 R1':     ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Isento'],
+        'S750 R2':     ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Isento'],
+        'S750 R3':     ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Isento'],
+        'Black I':     ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$90','40%·R$90','40%·R$90','40%·R$90','40%·R$90','Isento'],
+        'S2500':       ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$90','40%·R$90','40%·R$90','40%·R$90','40%·R$90','Isento'],
+        'Black II':    ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$100','40%·R$100','40%·R$100','40%·R$100','40%·R$100','Isento'],
+        'S6500 Black': ['Isento','Isento','Isento','Isento','Isento','Isento','40%·R$100','40%·R$100','40%·R$100','40%·R$100','40%·R$100','Isento'],
+      },
+    },
+    completo: {
+      tipo: 'Completo',
+      subtitulo: '% coparticipação e limite máximo por item · Internação: limite por evento',
+      procedimentos: ['Consultas eletivas','Consultas hospitalares (PS)','Exames básicos','Exames especiais','Procedimentos básicos','Procedimentos especiais','Fisioterapia','Fonoaudiologia','Nutrição','Psicoterapia','Terapia Ocupacional','Internação'],
+      planos: {
+        'Bronze SP':   ['30%·R$30','40%·R$80','30%·R$20','30%·R$100','30%·R$35','30%·R$140','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$180'],
+        'Bronze Mais': ['30%·R$30','40%·R$80','30%·R$20','30%·R$100','30%·R$35','30%·R$140','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$180'],
+        'Prata':       ['30%·R$30','40%·R$90','30%·R$25','30%·R$110','30%·R$60','30%·R$150','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$220'],
+        'Ouro':        ['30%·R$30','40%·R$90','30%·R$25','30%·R$110','30%·R$60','30%·R$150','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$220'],
+        'Ouro II':     ['30%·R$30','40%·R$90','30%·R$25','30%·R$110','30%·R$60','30%·R$150','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$220'],
+        'Platinum R1': ['30%·R$55','40%·R$130','30%·R$35','30%·R$130','30%·R$60','30%·R$170','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Até R$400'],
+        'Platinum R2': ['30%·R$55','40%·R$130','30%·R$35','30%·R$130','30%·R$60','30%·R$170','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Até R$400'],
+        'S380 E':      ['30%·R$30','40%·R$90','30%·R$25','30%·R$110','30%·R$60','30%·R$150','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$220'],
+        'S380 Q':      ['30%·R$30','40%·R$90','30%·R$25','30%·R$110','30%·R$60','30%·R$150','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$220'],
+        'S450 E':      ['30%·R$30','40%·R$90','30%·R$25','30%·R$110','30%·R$60','30%·R$150','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$220'],
+        'S450 Q':      ['30%·R$30','40%·R$90','30%·R$25','30%·R$110','30%·R$60','30%·R$150','40%·R$60','40%·R$60','40%·R$60','40%·R$60','40%·R$60','Até R$220'],
+        'S750 R1':     ['30%·R$55','40%·R$130','30%·R$35','30%·R$130','30%·R$60','30%·R$170','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Até R$400'],
+        'S750 R2':     ['30%·R$55','40%·R$130','30%·R$35','30%·R$130','30%·R$60','30%·R$170','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Até R$400'],
+        'S750 R3':     ['30%·R$55','40%·R$130','30%·R$35','30%·R$130','30%·R$60','30%·R$170','40%·R$70','40%·R$70','40%·R$70','40%·R$70','40%·R$70','Até R$400'],
+        'Black I':     ['30%·R$90','40%·R$200','30%·R$45','30%·R$150','30%·R$80','30%·R$200','40%·R$90','40%·R$90','40%·R$90','40%·R$90','40%·R$90','Até R$550'],
+        'S2500':       ['30%·R$90','40%·R$200','30%·R$45','30%·R$150','30%·R$80','30%·R$200','40%·R$90','40%·R$90','40%·R$90','40%·R$90','40%·R$90','Até R$550'],
+        'Black II':    ['30%·R$100','40%·R$220','30%·R$50','30%·R$160','30%·R$100','30%·R$220','40%·R$100','40%·R$100','40%·R$100','40%·R$100','40%·R$100','Até R$600'],
+        'S6500 Black': ['30%·R$100','40%·R$220','30%·R$50','30%·R$160','30%·R$100','30%·R$220','40%·R$100','40%·R$100','40%·R$100','40%·R$100','40%·R$100','Até R$600'],
+      },
+    },
+  },
   portoseguro: { titulo: 'Coparticipação — Porto Seguro',subtitulo: '', procedimentos: [], planos: {} },
   hapvida:     { titulo: 'Coparticipação — Hapvida',     subtitulo: '', procedimentos: [], planos: {} },
 };
@@ -445,6 +500,7 @@ const COPDATA = {
 let plans = [];
 let copMap = { a: false };
 let copSlideMap = {};   // id → true/false: incluir slide de cop
+let copTypeMap  = {};  // id → 'parcial' | 'completo' (Amil only)
 let reajMap = {};      // id → true/false: mostrar reajuste
 let counter = 0;
 let charts = [];
@@ -489,6 +545,7 @@ function addPlan() {
   plans.push(id);
   copMap['p' + id] = false;
   copSlideMap[id] = false;
+  copTypeMap[id] = null;
   reajMap[id] = false;
   renderPlanCards();
   updateAddBtn();
@@ -499,6 +556,7 @@ function removePlan(id) {
   plans = plans.filter(x => x !== id);
   delete copMap['p' + id];
   delete copSlideMap[id];
+  delete copTypeMap[id];
   delete reajMap[id];
   renderPlanCards();
   updateAddBtn();
@@ -538,6 +596,12 @@ function toggleReaj(id) {
   render();
 }
 
+function setCopType(id, type) {
+  copTypeMap[id] = type;
+  renderPlanCards();
+  render();
+}
+
 function updateAddBtn() {
   document.getElementById('add-btn').disabled = plans.length >= 4;
 }
@@ -553,6 +617,7 @@ function renderPlanCards() {
       valor:     document.getElementById(`p${id}-valor`)?.value,
       reembolso: document.getElementById(`p${id}-reembolso`)?.value,
       copSlide:  copSlideMap[id],
+      copType:   copTypeMap[id],
       reaj:      reajMap[id],
       reaj5:     document.getElementById(`p${id}-reaj5`)?.value,
       reajat:    document.getElementById(`p${id}-reajat`)?.value,
@@ -577,7 +642,7 @@ function renderPlanCards() {
           <label>Seguradora</label>
           <div class="ins-wrap">
             <div class="ins-dot" id="dot-p${id}" style="background:${col}"></div>
-            <select id="p${id}-seg" onchange="syncDot('p${id}','p${id}-seg'); syncPlanOpts(${id}); render()">${opts}</select>
+            <select id="p${id}-seg" onchange="syncDot('p${id}','p${id}-seg'); syncPlanOpts(${id}); renderPlanCards(); render()">${opts}</select>
           </div>
         </div>
         <div class="fg">
@@ -604,6 +669,15 @@ function renderPlanCards() {
           <button class="cop-btn${!cop?' active-nao':''}" id="cop-p${id}-nao" onclick="setCop('p${id}',false)">✕ Sem Coparticipação</button>
         </div>
       </div>
+      ${cop && (saved[id]?.seg || 'bradesco') === 'amil' ? `
+      <div class="fg">
+        <label>Tipo de Coparticipação Amil</label>
+        <div class="cop-toggle">
+          <button class="cop-btn${copTypeMap[id]==='parcial'?' active-sim':''}" onclick="setCopType(${id},'parcial')">Parcial</button>
+          <button class="cop-btn${copTypeMap[id]==='completo'?' active-sim':''}" onclick="setCopType(${id},'completo')">Completo</button>
+        </div>
+      </div>
+      ` : ''}
       <div class="fg">
         <label>Reembolso por consulta (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
         <input id="p${id}-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
@@ -649,6 +723,7 @@ function renderPlanCards() {
     const reembolso = document.getElementById(`p${id}-reembolso`);
     if (reembolso && s.reembolso) reembolso.value = s.reembolso;
     if (s.copSlide !== undefined) copSlideMap[id] = s.copSlide;
+    if (s.copType  !== undefined) copTypeMap[id]  = s.copType;
     if (s.reaj !== undefined) reajMap[id] = s.reaj;
     const reaj5  = document.getElementById(`p${id}-reaj5`);
     const reajat = document.getElementById(`p${id}-reajat`);
@@ -688,6 +763,7 @@ function getData() {
         vidas: parseInt(document.getElementById(`p${id}-vidas`)?.value) || 1,
         valor: parseFloat(document.getElementById(`p${id}-valor`)?.value) || 0,
         cop:      copMap['p'+id] || false,
+        copType:  copTypeMap[id] || null,
         reembolso: parseFloat(document.getElementById(`p${id}-reembolso`)?.value) || 0,
         reaj:     reajMap[id] || false,
         reaj5:    parseFloat(document.getElementById(`p${id}-reaj5`)?.value) || 0,
@@ -705,13 +781,14 @@ function render() {
   const d = getData();
   const wrap = document.getElementById('doc-wrap');
   // Group cop slides by insurer (one slide per insurer with all selected plans)
-  const copByIns = {};
+  const copByKey = {};
   d.plans.filter(p => p.cop && copSlideMap[p.id]).forEach(p => {
-    if (!copByIns[p.seg]) copByIns[p.seg] = [];
-    if (!copByIns[p.seg].includes(p.plano)) copByIns[p.seg].push(p.plano);
+    const key = p.seg === 'amil' ? `amil-${p.copType || 'completo'}` : p.seg;
+    if (!copByKey[key]) copByKey[key] = { seg: p.seg, copType: p.copType || null, planos: [] };
+    if (!copByKey[key].planos.includes(p.plano)) copByKey[key].planos.push(p.plano);
   });
-  const copSlides = Object.entries(copByIns)
-    .map(([seg, planos]) => buildCopSlide(seg, planos))
+  const copSlides = Object.values(copByKey)
+    .map(info => buildCopSlide(info.seg, info.planos, info.copType))
     .join('');
   wrap.innerHTML = buildCover(d) + buildComp(d) + copSlides + buildBackCover();
 
@@ -736,12 +813,12 @@ function buildCover(d) {
       <div class="bg-lines"></div>
       <div class="bg-circle"></div>
       <div class="bg-circle2"></div>
-      <div class="tag">A sua Consultoria em Seguros</div>
       <div class="title">Estudo de<br><strong>mercado</strong></div>
       <div class="company">${esc(d.empresa)}</div>
       <div class="date">${esc(d.mesano)}${d.consultor ? ' · ' + esc(d.consultor) : ''}</div>
       <div class="logo-area">
         <img src="e3_hor_branco.png" style="height:46px;max-width:180px;object-fit:contain">
+        <div class="tag">A sua Consultoria em Seguros</div>
       </div>
     </div>
   </div>`;
@@ -762,10 +839,14 @@ function buildBackCover() {
 }
 
 /* ═══════════════════ SLIDE — COPARTICIPAÇÃO ═══════════════════ */
-function buildCopSlide(seg, planos) {
-  const ins  = INS[seg] || INS.outro;
-  const data = COPDATA[seg];
+function buildCopSlide(seg, planos, copType) {
+  const ins = INS[seg] || INS.outro;
+  const raw = COPDATA[seg];
+  const data = (seg === 'amil' && raw && raw.parcial)
+    ? (raw[copType] || raw.completo)
+    : raw;
   if (!data || !data.procedimentos.length) return '';
+  const slideId = `sl-cop-${seg}${copType ? '-' + copType : ''}`;
 
   // Deduplicate: group planos with identical value arrays
   const groups = [];
@@ -792,15 +873,19 @@ function buildCopSlide(seg, planos) {
     return `<tr><td style="${tdProc}">${proc}</td>${cols}</tr>`;
   }).join('');
 
+  const tipoTag = data.tipo
+    ? `<span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:20px;background:${ins.color}1a;color:${ins.color};font-size:11px;font-weight:800;vertical-align:middle">${data.tipo}</span>`
+    : '';
+
   return `
-  <div class="slide-box" id="sl-cop-${seg}">
-    <div style="width:960px;min-height:540px;background:#fff;padding:44px 60px;position:relative;font-family:'Segoe UI',system-ui,sans-serif;box-sizing:border-box">
+  <div class="slide-box" id="${slideId}">
+    <div style="width:960px;min-height:540px;background:#fff;padding:44px 60px;position:relative;font-family:'Open Sans',sans-serif;box-sizing:border-box">
       <img src="e3_hor_azul.png" style="position:absolute;top:22px;right:36px;height:28px;max-width:110px;object-fit:contain;opacity:.55">
       <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px">
         <div style="width:6px;height:40px;background:${ins.color};border-radius:3px;flex-shrink:0"></div>
         <div>
           <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:${ins.color}">${ins.label}</div>
-          <div style="font-size:20px;font-weight:800;color:#1A1A3E">Exemplos de Coparticipação</div>
+          <div style="font-size:20px;font-weight:800;color:#1A1A3E">Exemplos de Coparticipação${tipoTag}</div>
         </div>
       </div>
       ${data.subtitulo ? `<div style="font-size:10px;color:#6B6B8A;margin-bottom:20px;margin-left:20px">${data.subtitulo}</div>` : ''}
@@ -868,7 +953,11 @@ function buildComp(d) {
             const ganhos = d.plans.map(p => (d.atual.valor - p.valor) * 12);
             const rows = [
               d.plans.map(p => `<span class="plan-name-label" style="color:${p.color}">${esc(p.plano)}</span>`),
-              d.plans.map(p => `<span class="cop-chip ${p.cop?'sim':'nao'}">${p.cop?'C/Cop':'S/Cop'}</span>`),
+              d.plans.map(p => {
+                let label = p.cop ? 'C/Cop' : 'S/Cop';
+                if (p.cop && p.seg === 'amil' && p.copType) label = `C/Cop ${p.copType.charAt(0).toUpperCase() + p.copType.slice(1)}`;
+                return `<span class="cop-chip ${p.cop?'sim':'nao'}">${label}</span>`;
+              }),
               d.plans.map(p => `<span class="vidas-chip">${p.vidas} vida${p.vidas!==1?'s':''}</span>`),
               d.plans.map((p,i) => { const g=ganhos[i]; const cls=g>0?'positivo':g<0?'negativo':'neutro'; const icon=g>0?'▼':g<0?'▲':'='; return `<span class="ganho-chip ${cls}">${icon} ${fmt(Math.abs(g))}</span>`; }),
               d.plans.map((p,i) => { const g=ganhos[i]; const lbl=g>0?'Economia anual':g<0?'Acréscimo anual':'Sem variação'; return `<span class="ganho-label">${lbl}</span>`; }),
@@ -921,7 +1010,7 @@ function drawCharts(d) {
           const v = ds.data[i]; if (!v) return;
           ctx.save();
           // value inside bar
-          ctx.font = 'bold 11px Segoe UI';
+          ctx.font = 'bold 11px "Open Sans"';
           ctx.fillStyle = '#fff';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
@@ -968,8 +1057,12 @@ async function gerarPDF() {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [297, 167] });
 
-    const copSegs = [...new Set(getData().plans.filter(p => p.cop && copSlideMap[p.id]).map(p => p.seg))];
-    const slideIds = ['sl-cover', 'sl-comp', ...copSegs.map(s => `sl-cop-${s}`), 'sl-back'];
+    const copKeys = [];
+    getData().plans.filter(p => p.cop && copSlideMap[p.id]).forEach(p => {
+      const key = p.seg === 'amil' ? `amil-${p.copType || 'completo'}` : p.seg;
+      if (!copKeys.includes(key)) copKeys.push(key);
+    });
+    const slideIds = ['sl-cover', 'sl-comp', ...copKeys.map(k => `sl-cop-${k}`), 'sl-back'];
     for (const [idx, sid] of slideIds.entries()) {
       const el = document.getElementById(sid);
       if (!el) continue;
