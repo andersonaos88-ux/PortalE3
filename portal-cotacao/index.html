@@ -172,6 +172,25 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--gray-bg
 .s-cover .logo-txt { font-size: 10px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
 
 /* ═══════════════════════════════
+   SLIDE 3 — BACK COVER
+═══════════════════════════════ */
+.s-back {
+  width: 960px; height: 540px;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+}
+.s-back .back-logo-wrap {
+  display: flex; flex-direction: column; align-items: center;
+  padding-right: 60px;
+}
+.s-back .back-logo-wrap img { width: 130px; object-fit: contain; }
+.s-back .back-sep { width: 1px; height: 110px; background: rgba(255,255,255,.3); }
+.s-back .back-tagline {
+  padding-left: 60px;
+  font-size: 22px; font-weight: 300; color: rgba(255,255,255,.85); letter-spacing: .3px;
+}
+
+/* ═══════════════════════════════
    SLIDE 2 — COMPARISON
 ═══════════════════════════════ */
 .s-comp {
@@ -588,7 +607,7 @@ function render() {
 
   const d = getData();
   const wrap = document.getElementById('doc-wrap');
-  wrap.innerHTML = buildCover(d) + buildComp(d);
+  wrap.innerHTML = buildCover(d) + buildComp(d) + buildBackCover();
 
   applyZoom();
   const gen = ++renderGen;
@@ -618,6 +637,20 @@ function buildCover(d) {
       <div class="logo-area">
         <img src="e3_hor_branco.png" style="height:46px;max-width:180px;object-fit:contain">
       </div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════════════ SLIDE 3 — BACK COVER ═══════════════════ */
+function buildBackCover() {
+  return `
+  <div class="slide-box" id="sl-back">
+    <div class="s-back">
+      <div class="back-logo-wrap">
+        <img src="e3_vert_branco.png">
+      </div>
+      <div class="back-sep"></div>
+      <div class="back-tagline">A sua consultoria em seguros!</div>
     </div>
   </div>`;
 }
@@ -771,13 +804,13 @@ async function gerarPDF() {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [297, 167] });
 
-    for (const [i, id] of [['sl-cover',0],['sl-comp',1]]) {
+    for (const [i, id] of [['sl-cover',0],['sl-comp',1],['sl-back',2]]) {
       const el = document.getElementById(i);
       if (!el) continue;
       // Temporarily remove zoom for capture
       const prevZoom = el.style.zoom;
       el.style.zoom = 1;
-      const canvas = await html2canvas(el.firstElementChild, { scale: 2, useCORS: true, logging: false, backgroundColor: id===0?'#0A0A2E':'#ffffff' });
+      const canvas = await html2canvas(el.firstElementChild, { scale: 2, useCORS: true, logging: false, backgroundColor: id===1?'#ffffff':'#0A0A2E' });
       el.style.zoom = prevZoom;
       const img = canvas.toDataURL('image/jpeg', 0.95);
       if (id > 0) pdf.addPage();
