@@ -311,7 +311,7 @@ canvas { display: block; }
           </div>
         </div>
         <div class="fg">
-          <label>Reembolso Mensal (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+          <label>Reembolso por consulta (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
           <input id="a-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
         </div>
       </div>
@@ -468,7 +468,7 @@ function renderPlanCards() {
         </div>
       </div>
       <div class="fg">
-        <label>Reembolso Mensal (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+        <label>Reembolso por consulta (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
         <input id="p${id}-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
       </div>
     </div>`;
@@ -603,7 +603,7 @@ function buildComp(d) {
             <span class="plan-name-label" style="color:var(--atual)">${esc(d.atual.plano)}</span>
             <span class="cop-chip ${d.atual.cop?'sim':'nao'}">${d.atual.cop?'Com Coparticipação':'Sem Coparticipação'}</span>
             <span class="vidas-chip">${d.atual.vidas} vida${d.atual.vidas!==1?'s':''}</span>
-            ${d.atual.reembolso ? `<span class="reembolso-chip">↩ Reembolso ${fmt(d.atual.reembolso)}/mês</span>` : ''}
+            ${d.atual.reembolso ? `<span class="reembolso-chip">↩ Reembolso consulta ${fmt(d.atual.reembolso)}</span>` : ''}
           </div>
         </div>
 
@@ -627,7 +627,7 @@ function buildComp(d) {
                 <span class="vidas-chip">${p.vidas} vida${p.vidas!==1?'s':''}</span>
                 <span class="ganho-chip ${cls}">${icon} ${fmt(Math.abs(ganhoAnual))}</span>
                 <span class="ganho-label">${lbl}</span>
-                ${p.reembolso ? `<span class="reembolso-chip">↩ Reembolso ${fmt(p.reembolso)}/mês</span>` : ''}
+                ${p.reembolso ? `<span class="reembolso-chip">↩ Reembolso consulta ${fmt(p.reembolso)}</span>` : ''}
               </div>`;
             }).join('')}
           </div>
