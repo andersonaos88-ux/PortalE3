@@ -206,6 +206,10 @@ canvas { display: block; }
 .cop-chip.sim { background: #dcfce7; color: #15803d; }
 .cop-chip.nao { background: #fee2e2; color: #b91c1c; }
 .vidas-chip { font-size: 9px; color: var(--muted); }
+.reembolso-chip {
+  font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 10px;
+  background: #eff6ff; color: #1d4ed8; letter-spacing: .3px;
+}
 
 /* ganho anual */
 .ganho-chip {
@@ -305,6 +309,10 @@ canvas { display: block; }
             <button class="cop-btn" id="cop-a-sim" onclick="setCop('a',true)">✔ Com Coparticipação</button>
             <button class="cop-btn active-nao" id="cop-a-nao" onclick="setCop('a',false)">✕ Sem Coparticipação</button>
           </div>
+        </div>
+        <div class="fg">
+          <label>Reembolso Mensal (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+          <input id="a-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
         </div>
       </div>
 
@@ -408,10 +416,11 @@ function renderPlanCards() {
   const saved = {};
   plans.forEach(id => {
     saved[id] = {
-      seg:   document.getElementById(`p${id}-seg`)?.value,
-      plano: document.getElementById(`p${id}-plano`)?.value,
-      vidas: document.getElementById(`p${id}-vidas`)?.value,
-      valor: document.getElementById(`p${id}-valor`)?.value,
+      seg:       document.getElementById(`p${id}-seg`)?.value,
+      plano:     document.getElementById(`p${id}-plano`)?.value,
+      vidas:     document.getElementById(`p${id}-vidas`)?.value,
+      valor:     document.getElementById(`p${id}-valor`)?.value,
+      reembolso: document.getElementById(`p${id}-reembolso`)?.value,
     };
   });
 
@@ -458,6 +467,10 @@ function renderPlanCards() {
           <button class="cop-btn${!cop?' active-nao':''}" id="cop-p${id}-nao" onclick="setCop('p${id}',false)">✕ Sem Coparticipação</button>
         </div>
       </div>
+      <div class="fg">
+        <label>Reembolso Mensal (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+        <input id="p${id}-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
+      </div>
     </div>`;
   }).join('');
 
@@ -473,6 +486,8 @@ function renderPlanCards() {
     if (plano && s.plano) plano.value = s.plano;
     if (vidas && s.vidas) vidas.value = s.vidas;
     if (valor && s.valor) valor.value = s.valor;
+    const reembolso = document.getElementById(`p${id}-reembolso`);
+    if (reembolso && s.reembolso) reembolso.value = s.reembolso;
   });
 }
 
@@ -494,7 +509,8 @@ function getData() {
       plano: document.getElementById('a-plano').value.trim() || '—',
       vidas: parseInt(document.getElementById('a-vidas').value) || 1,
       valor: parseFloat(document.getElementById('a-valor').value) || 0,
-      cop:   copMap['a'] || false,
+      cop:      copMap['a'] || false,
+      reembolso: parseFloat(document.getElementById('a-reembolso').value) || 0,
     },
     plans: plans.map((id,i) => {
       const seg = document.getElementById(`p${id}-seg`)?.value || 'outro';
@@ -505,7 +521,8 @@ function getData() {
         plano: document.getElementById(`p${id}-plano`)?.value.trim() || '—',
         vidas: parseInt(document.getElementById(`p${id}-vidas`)?.value) || 1,
         valor: parseFloat(document.getElementById(`p${id}-valor`)?.value) || 0,
-        cop:   copMap['p'+id] || false,
+        cop:      copMap['p'+id] || false,
+        reembolso: parseFloat(document.getElementById(`p${id}-reembolso`)?.value) || 0,
       };
     }),
   };
@@ -586,6 +603,7 @@ function buildComp(d) {
             <span class="plan-name-label" style="color:var(--atual)">${esc(d.atual.plano)}</span>
             <span class="cop-chip ${d.atual.cop?'sim':'nao'}">${d.atual.cop?'Com Coparticipação':'Sem Coparticipação'}</span>
             <span class="vidas-chip">${d.atual.vidas} vida${d.atual.vidas!==1?'s':''}</span>
+            ${d.atual.reembolso ? `<span class="reembolso-chip">↩ Reembolso ${fmt(d.atual.reembolso)}/mês</span>` : ''}
           </div>
         </div>
 
@@ -609,6 +627,7 @@ function buildComp(d) {
                 <span class="vidas-chip">${p.vidas} vida${p.vidas!==1?'s':''}</span>
                 <span class="ganho-chip ${cls}">${icon} ${fmt(Math.abs(ganhoAnual))}</span>
                 <span class="ganho-label">${lbl}</span>
+                ${p.reembolso ? `<span class="reembolso-chip">↩ Reembolso ${fmt(p.reembolso)}/mês</span>` : ''}
               </div>`;
             }).join('')}
           </div>
