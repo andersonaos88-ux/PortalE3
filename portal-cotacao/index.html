@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal de Cotação — Plano de Saúde</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy:    #0A0A2E;
+  --purple:  #4B4BDB;
+  --gray-bg: #F4F4F8;
+  --border:  #E0E0EC;
+  --text:    #1A1A3E;
+  --muted:   #6B6B8A;
+  --white:   #FFFFFF;
+  --danger:  #E53935;
+
+  --bradesco:    #CC0000;
+  --sulamerica:  #E8661A;
+  --amil:        #3B2F9E;
+  --portoseguro: #005FAF;
+  --hapvida:     #00873D;
+  --atual:       #2563EB;
+}
+
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--gray-bg); color: var(--text); min-height: 100vh; }
+
+/* ── HEADER ── */
+.header {
+  background: var(--navy); color: var(--white);
+  padding: 14px 28px; display: flex; align-items: center; gap: 14px;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 16px rgba(0,0,0,.35);
+}
+.header .logo { width: 38px; height: 38px; background: var(--white); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; color: var(--navy); letter-spacing: -1px; }
+.header h1 { font-size: 17px; font-weight: 700; }
+.header p  { font-size: 11px; color: rgba(255,255,255,.5); }
+
+/* ── LAYOUT ── */
+.layout { display: grid; grid-template-columns: 430px 1fr; min-height: calc(100vh - 66px); }
+
+/* ── SIDEBAR ── */
+.sidebar { background: var(--white); border-right: 1px solid var(--border); overflow-y: auto; max-height: calc(100vh - 66px); position: sticky; top: 66px; display: flex; flex-direction: column; }
+.sidebar-body { flex: 1; padding: 22px; overflow-y: auto; }
+.sidebar-footer { padding: 14px 22px; border-top: 1px solid var(--border); background: var(--white); }
+
+/* section title */
+.stitle { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.4px; color: var(--purple); border-bottom: 2px solid var(--purple); padding-bottom: 6px; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+.stitle span { font-size: 15px; }
+.fsec { margin-bottom: 26px; }
+
+/* form elements */
+.fg { margin-bottom: 12px; }
+.fg label { display: block; font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .6px; }
+.fg input, .fg select {
+  width: 100%; padding: 9px 11px; border: 1.5px solid var(--border);
+  border-radius: 8px; font-size: 13px; color: var(--text); background: var(--white);
+  outline: none; transition: border-color .15s, box-shadow .15s;
+}
+.fg input:focus, .fg select:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(75,75,219,.12); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+
+/* cop toggle */
+.cop-toggle { display: flex; gap: 8px; }
+.cop-btn {
+  flex: 1; padding: 8px 6px; border: 1.5px solid var(--border); border-radius: 8px;
+  font-size: 12px; font-weight: 700; cursor: pointer; background: var(--white); color: var(--muted);
+  transition: all .15s; text-align: center;
+}
+.cop-btn.active-sim { border-color: #16a34a; background: #f0fdf4; color: #15803d; }
+.cop-btn.active-nao { border-color: #dc2626; background: #fef2f2; color: #b91c1c; }
+.cop-btn:hover { border-color: var(--purple); }
+
+/* insurer select */
+.ins-wrap { position: relative; }
+.ins-dot { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 9px; height: 9px; border-radius: 50%; pointer-events: none; }
+.ins-wrap select { padding-left: 26px; }
+
+/* plan card */
+.pcard {
+  background: var(--gray-bg); border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 14px; margin-bottom: 10px;
+}
+.pcard-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.pcard-title { font-size: 11px; font-weight: 800; color: var(--purple); text-transform: uppercase; letter-spacing: .8px; display: flex; align-items: center; gap: 6px; }
+.pnum { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; color: var(--white); }
+.rm-btn { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 16px; padding: 2px 5px; border-radius: 4px; line-height: 1; transition: all .15s; }
+.rm-btn:hover { background: #fee2e2; color: var(--danger); }
+
+/* add plan */
+.add-btn {
+  width: 100%; padding: 10px; border: 2px dashed var(--border);
+  border-radius: 10px; background: none; cursor: pointer;
+  color: var(--purple); font-size: 13px; font-weight: 700;
+  transition: all .15s; display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.add-btn:hover:not(:disabled) { border-color: var(--purple); background: #f0f0ff; }
+.add-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* footer button */
+.gen-btn {
+  width: 100%; padding: 13px; background: var(--purple); color: var(--white);
+  border: none; border-radius: 10px; font-size: 14px; font-weight: 800;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: all .2s;
+}
+.gen-btn:hover { background: var(--navy); box-shadow: 0 4px 18px rgba(75,75,219,.3); }
+
+/* ── PREVIEW AREA ── */
+.preview { padding: 28px 24px; overflow-y: auto; background: #DDDDE8; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+
+.preview-bar {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  background: var(--white); border-radius: 10px; padding: 10px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.preview-bar span { font-size: 12px; font-weight: 600; color: var(--muted); }
+.pdf-btn {
+  padding: 8px 18px; background: var(--navy); color: var(--white); border: none;
+  border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;
+  display: flex; align-items: center; gap: 6px; transition: background .15s;
+}
+.pdf-btn:hover { background: var(--purple); }
+.pdf-btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.slides-wrap { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.slide-box { box-shadow: 0 6px 28px rgba(0,0,0,.2); border-radius: 8px; overflow: hidden; }
+
+/* empty */
+.empty { min-height: 360px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--muted); gap: 10px; }
+.empty .icon { font-size: 44px; opacity: .35; }
+.empty p { font-size: 13px; }
+
+/* ═══════════════════════════════
+   SLIDE 1 — COVER
+═══════════════════════════════ */
+.s-cover {
+  width: 960px; height: 540px;
+  background: var(--navy);
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 52px 60px;
+}
+.s-cover .bg-circle {
+  position: absolute; right: -80px; top: -80px;
+  width: 520px; height: 520px; border-radius: 50%;
+  background: rgba(75,75,219,.18);
+}
+.s-cover .bg-circle2 {
+  position: absolute; right: 80px; top: 60px;
+  width: 340px; height: 340px; border-radius: 50%;
+  background: rgba(75,75,219,.12);
+}
+.s-cover .bg-lines {
+  position: absolute; right: 50px; top: 0;
+  width: 440px; height: 440px; border-radius: 50%;
+  background: repeating-linear-gradient(32deg,transparent,transparent 5px,rgba(100,100,220,.3) 5px,rgba(100,100,220,.3) 7px);
+  opacity: .5;
+}
+.s-cover .tag { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,.45); text-transform: uppercase; margin-bottom: 12px; }
+.s-cover .title { font-size: 54px; font-weight: 300; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
+.s-cover .title strong { font-weight: 800; }
+.s-cover .company { font-size: 17px; font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
+.s-cover .date { font-size: 13px; color: rgba(255,255,255,.5); }
+.s-cover .logo-area { position: absolute; left: 60px; bottom: 36px; display: flex; align-items: center; gap: 10px; }
+.s-cover .logo-box { width: 46px; height: 46px; background: var(--white); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; color: var(--navy); letter-spacing: -1px; }
+.s-cover .logo-txt { font-size: 10px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+
+/* ═══════════════════════════════
+   SLIDE 2 — COMPARISON
+═══════════════════════════════ */
+.s-comp {
+  width: 960px; min-height: 540px;
+  background: var(--white);
+  padding: 36px 44px 28px;
+}
+.s-comp .s-title { text-align: center; font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 28px; }
+.s-comp .s-title em { font-style: normal; font-weight: 400; color: var(--muted); }
+
+.comp-grid { display: flex; gap: 0; align-items: stretch; }
+.comp-col { display: flex; flex-direction: column; }
+.comp-col.atual { width: 200px; flex-shrink: 0; }
+.comp-col.study { flex: 1; }
+
+.col-label { text-align: center; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text); margin-bottom: 10px; }
+
+.ins-tag {
+  display: inline-block; padding: 4px 14px; border-radius: 20px;
+  border: 1.5px solid; font-size: 11px; font-weight: 700; margin-bottom: 4px;
+}
+
+.chart-wrap { height: 260px; position: relative; }
+canvas { display: block; }
+
+.plan-meta { display: flex; flex-direction: column; align-items: center; margin-top: 5px; gap: 2px; }
+.plan-name-label { font-size: 10px; font-weight: 700; }
+.cop-chip {
+  font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 10px;
+  text-transform: uppercase; letter-spacing: .4px;
+}
+.cop-chip.sim { background: #dcfce7; color: #15803d; }
+.cop-chip.nao { background: #fee2e2; color: #b91c1c; }
+.vidas-chip { font-size: 9px; color: var(--muted); }
+
+/* ganho anual */
+.ganho-chip {
+  font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 20px;
+  letter-spacing: .3px; margin-top: 3px; white-space: nowrap;
+}
+.ganho-chip.positivo { background: #dcfce7; color: #15803d; }
+.ganho-chip.negativo { background: #fee2e2; color: #b91c1c; }
+.ganho-chip.neutro   { background: #f1f5f9; color: var(--muted); }
+.ganho-label { font-size: 8px; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); margin-top: 1px; }
+
+/* study plans row */
+.study-plans-row { display: flex; gap: 0; }
+.study-plan-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+
+/* reembolso removed, just empty for alignment */
+.divider { height: 3px; background: linear-gradient(90deg, var(--purple), #818cf8); border-radius: 2px; margin: 20px 0 12px; }
+.legend-row { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.leg-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--muted); font-weight: 700; }
+.leg-dot { width: 9px; height: 9px; border-radius: 50%; }
+
+/* ── Separator between atual and study ── */
+.vert-sep { width: 1px; background: var(--border); margin: 0 20px; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">E3</div>
+  <div>
+    <h1>Portal de Cotação — Plano de Saúde</h1>
+    <p>Bradesco · SulAmérica · Amil · Porto Seguro · Hapvida</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="sidebar-body">
+
+      <!-- Dados do cliente -->
+      <div class="fsec">
+        <div class="stitle"><span>🏢</span> Dados do Cliente</div>
+        <div class="fg">
+          <label>Nome da empresa / cliente</label>
+          <input id="empresa" type="text" placeholder="Ex: Empresa ABC Ltda" oninput="render()">
+        </div>
+        <div class="row2">
+          <div class="fg">
+            <label>Mês / Ano</label>
+            <input id="mesano" type="month" oninput="render()">
+          </div>
+          <div class="fg">
+            <label>Consultor</label>
+            <input id="consultor" type="text" placeholder="Seu nome" oninput="render()">
+          </div>
+        </div>
+      </div>
+
+      <!-- Plano atual -->
+      <div class="fsec">
+        <div class="stitle"><span>📋</span> Plano Atual</div>
+        <div class="row2">
+          <div class="fg">
+            <label>Seguradora</label>
+            <div class="ins-wrap">
+              <div class="ins-dot" id="dot-atual" style="background:var(--atual)"></div>
+              <select id="a-seg" onchange="syncDot('atual','a-seg'); render()">
+                <option value="bradesco">Bradesco</option>
+                <option value="sulamerica">SulAmérica</option>
+                <option value="amil">Amil</option>
+                <option value="portoseguro">Porto Seguro</option>
+                <option value="hapvida">Hapvida</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg">
+            <label>Nome do Plano</label>
+            <input id="a-plano" type="text" placeholder="Ex: Prata Nacional" oninput="render()">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="fg">
+            <label>Nº de Vidas</label>
+            <input id="a-vidas" type="number" min="1" value="3" oninput="render()">
+          </div>
+          <div class="fg">
+            <label>Valor Mensal (R$)</label>
+            <input id="a-valor" type="number" min="0" step="0.01" placeholder="4140.00" oninput="render()">
+          </div>
+        </div>
+        <div class="fg">
+          <label>Coparticipação</label>
+          <div class="cop-toggle">
+            <button class="cop-btn" id="cop-a-sim" onclick="setCop('a',true)">✔ Com Coparticipação</button>
+            <button class="cop-btn active-nao" id="cop-a-nao" onclick="setCop('a',false)">✕ Sem Coparticipação</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planos cotados -->
+      <div class="fsec">
+        <div class="stitle"><span>🔍</span> Planos Cotados</div>
+        <div id="plans-list"></div>
+        <button class="add-btn" id="add-btn" onclick="addPlan()">＋ Adicionar plano</button>
+      </div>
+
+    </div>
+    <div class="sidebar-footer">
+      <button class="gen-btn" onclick="render()">🔄 Atualizar Preview</button>
+    </div>
+  </aside>
+
+  <!-- ══ PREVIEW ══ -->
+  <main class="preview">
+    <div class="preview-bar">
+      <span>📄 Preview do documento</span>
+      <button class="pdf-btn" id="pdf-btn" onclick="gerarPDF()">⬇ Baixar PDF</button>
+    </div>
+    <div id="doc-wrap" class="slides-wrap">
+      <div class="empty"><div class="icon">📊</div><p>Preencha os dados e o preview aparece aqui</p></div>
+    </div>
+  </main>
+
+</div>
+
+<script>
+/* ═══════════════════ CONSTANTS ═══════════════════ */
+const INS = {
+  bradesco:    { label: 'Bradesco',    color: '#CC0000' },
+  sulamerica:  { label: 'SulAmérica',  color: '#E8661A' },
+  amil:        { label: 'Amil',        color: '#3B2F9E' },
+  portoseguro: { label: 'Porto Seguro',color: '#005FAF' },
+  hapvida:     { label: 'Hapvida',     color: '#00873D' },
+  outro:       { label: 'Outro',       color: '#888888' },
+};
+const INS_OPTIONS = ['bradesco','sulamerica','amil','portoseguro','hapvida','outro'];
+const PLAN_COLORS = ['#CC0000','#3B2F9E','#E8661A','#005FAF'];
+
+/* ═══════════════════ STATE ═══════════════════ */
+let plans = [];    // {id, seg, plano, vidas, valor, cop}
+let copMap = { a: false };  // coparticipação state per card
+let counter = 0;
+let charts = [];
+let renderGen = 0;
+
+/* ═══════════════════ INIT ═══════════════════ */
+window.addEventListener('DOMContentLoaded', () => {
+  const now = new Date();
+  document.getElementById('mesano').value = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+  addPlan();
+  render();
+});
+
+/* ═══════════════════ COP TOGGLE ═══════════════════ */
+function setCop(id, val) {
+  copMap[id] = val;
+  const sim = document.getElementById(`cop-${id}-sim`);
+  const nao = document.getElementById(`cop-${id}-nao`);
+  if (!sim || !nao) return;
+  sim.className = 'cop-btn' + (val ? ' active-sim' : '');
+  nao.className = 'cop-btn' + (!val ? ' active-nao' : '');
+  render();
+}
+
+/* ═══════════════════ INSURER DOT ═══════════════════ */
+function syncDot(dotId, selId) {
+  const sel = document.getElementById(selId);
+  const dot = document.getElementById('dot-' + dotId);
+  if (sel && dot) dot.style.background = (INS[sel.value] || INS.outro).color;
+}
+
+/* ═══════════════════ PLANS ═══════════════════ */
+function addPlan() {
+  if (plans.length >= 4) return;
+  const id = ++counter;
+  plans.push(id);
+  copMap['p' + id] = false;
+  renderPlanCards();
+  updateAddBtn();
+  render();
+}
+
+function removePlan(id) {
+  plans = plans.filter(x => x !== id);
+  delete copMap['p' + id];
+  renderPlanCards();
+  updateAddBtn();
+  render();
+}
+
+function updateAddBtn() {
+  document.getElementById('add-btn').disabled = plans.length >= 4;
+}
+
+function renderPlanCards() {
+  // Save existing input values before rebuilding DOM
+  const saved = {};
+  plans.forEach(id => {
+    saved[id] = {
+      seg:   document.getElementById(`p${id}-seg`)?.value,
+      plano: document.getElementById(`p${id}-plano`)?.value,
+      vidas: document.getElementById(`p${id}-vidas`)?.value,
+      valor: document.getElementById(`p${id}-valor`)?.value,
+    };
+  });
+
+  const opts = INS_OPTIONS.map(k => `<option value="${k}">${INS[k].label}</option>`).join('');
+  document.getElementById('plans-list').innerHTML = plans.map((id, i) => {
+    const col = PLAN_COLORS[i];
+    const cop = copMap['p' + id] || false;
+    return `
+    <div class="pcard" id="pcard-${id}">
+      <div class="pcard-header">
+        <div class="pcard-title">
+          <div class="pnum" style="background:${col}">${i+1}</div>
+          Plano ${i+1}
+        </div>
+        <button class="rm-btn" onclick="removePlan(${id})">✕</button>
+      </div>
+      <div class="row2">
+        <div class="fg">
+          <label>Seguradora</label>
+          <div class="ins-wrap">
+            <div class="ins-dot" id="dot-p${id}" style="background:${col}"></div>
+            <select id="p${id}-seg" onchange="syncDot('p${id}','p${id}-seg'); render()">${opts}</select>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Nome do Plano</label>
+          <input id="p${id}-plano" type="text" placeholder="Ex: Nacional" oninput="render()">
+        </div>
+      </div>
+      <div class="row3">
+        <div class="fg">
+          <label>Nº de Vidas</label>
+          <input id="p${id}-vidas" type="number" min="1" value="3" oninput="render()">
+        </div>
+        <div class="fg" style="grid-column: span 2">
+          <label>Valor da Cotação (R$)</label>
+          <input id="p${id}-valor" type="number" min="0" step="0.01" placeholder="4266.89" oninput="render()">
+        </div>
+      </div>
+      <div class="fg">
+        <label>Coparticipação</label>
+        <div class="cop-toggle">
+          <button class="cop-btn${cop?' active-sim':''}" id="cop-p${id}-sim" onclick="setCop('p${id}',true)">✔ Com Coparticipação</button>
+          <button class="cop-btn${!cop?' active-nao':''}" id="cop-p${id}-nao" onclick="setCop('p${id}',false)">✕ Sem Coparticipação</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Restore values (DOM was just rebuilt)
+  plans.forEach(id => {
+    const s = saved[id];
+    if (!s) return;
+    const seg = document.getElementById(`p${id}-seg`);
+    const plano = document.getElementById(`p${id}-plano`);
+    const vidas = document.getElementById(`p${id}-vidas`);
+    const valor = document.getElementById(`p${id}-valor`);
+    if (seg   && s.seg)   { seg.value   = s.seg;   syncDot(`p${id}`, `p${id}-seg`); }
+    if (plano && s.plano) plano.value = s.plano;
+    if (vidas && s.vidas) vidas.value = s.vidas;
+    if (valor && s.valor) valor.value = s.valor;
+  });
+}
+
+/* ═══════════════════ COLLECT DATA ═══════════════════ */
+function getData() {
+  const mv = document.getElementById('mesano').value;
+  let label = '';
+  if (mv) {
+    const [y, m] = mv.split('-');
+    const M = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    label = `${M[+m-1]}/${y}`;
+  }
+  return {
+    empresa:   document.getElementById('empresa').value.trim() || 'Nome da Empresa',
+    mesano:    label || 'Mês/Ano',
+    consultor: document.getElementById('consultor').value.trim(),
+    atual: {
+      seg:   document.getElementById('a-seg').value,
+      plano: document.getElementById('a-plano').value.trim() || '—',
+      vidas: parseInt(document.getElementById('a-vidas').value) || 1,
+      valor: parseFloat(document.getElementById('a-valor').value) || 0,
+      cop:   copMap['a'] || false,
+    },
+    plans: plans.map((id,i) => ({
+      id,
+      color: PLAN_COLORS[i],
+      seg:   document.getElementById(`p${id}-seg`)?.value || 'outro',
+      plano: document.getElementById(`p${id}-plano`)?.value.trim() || '—',
+      vidas: parseInt(document.getElementById(`p${id}-vidas`)?.value) || 1,
+      valor: parseFloat(document.getElementById(`p${id}-valor`)?.value) || 0,
+      cop:   copMap['p'+id] || false,
+    })),
+  };
+}
+
+/* ═══════════════════ RENDER ═══════════════════ */
+function render() {
+  charts.forEach(c => { try { c.destroy(); } catch(_){} });
+  charts = [];
+
+  const d = getData();
+  const wrap = document.getElementById('doc-wrap');
+  wrap.innerHTML = buildCover(d) + buildComp(d);
+
+  applyZoom();
+  const gen = ++renderGen;
+  setTimeout(() => { if (gen === renderGen) drawCharts(d); }, 60);
+}
+
+function applyZoom() {
+  const area = document.querySelector('.preview');
+  const avail = (area?.clientWidth || 800) - 48;
+  const z = Math.min(1, avail / 960);
+  document.querySelectorAll('.slide-box').forEach(el => el.style.zoom = z);
+}
+window.addEventListener('resize', applyZoom);
+
+/* ═══════════════════ SLIDE 1 — COVER ═══════════════════ */
+function buildCover(d) {
+  return `
+  <div class="slide-box" id="sl-cover">
+    <div class="s-cover">
+      <div class="bg-lines"></div>
+      <div class="bg-circle"></div>
+      <div class="bg-circle2"></div>
+      <div class="tag">Consultoria de Benefícios — Estudo de Mercado</div>
+      <div class="title">Estudo de<br><strong>mercado</strong></div>
+      <div class="company">${esc(d.empresa)}</div>
+      <div class="date">${esc(d.mesano)}${d.consultor ? ' · ' + esc(d.consultor) : ''}</div>
+      <div class="logo-area">
+        <div class="logo-box">E3</div>
+        <div class="logo-txt">E3 Consultoria</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════════════ SLIDE 2 — COMPARISON ═══════════════════ */
+function buildComp(d) {
+  const totalVidas = d.atual.vidas;
+
+  const insLegend = [...new Set([d.atual.seg, ...d.plans.map(p=>p.seg)])].map(k => {
+    const ins = INS[k] || INS.outro;
+    return `<div class="leg-item"><div class="leg-dot" style="background:${ins.color}"></div>${ins.label}</div>`;
+  }).join('');
+
+  const estudoTags = d.plans.map(p => {
+    const ins = INS[p.seg] || INS.outro;
+    return `<span class="ins-tag" style="border-color:${ins.color}; color:${ins.color}">${ins.label}</span>`;
+  }).join(' ');
+
+  const atualIns = INS[d.atual.seg] || INS.outro;
+
+  return `
+  <div class="slide-box" id="sl-comp">
+    <div class="s-comp">
+      <div class="s-title">Resumo Financeiro — <em>${d.atual.vidas} vida${d.atual.vidas!==1?'s':''}</em></div>
+
+      <div class="comp-grid">
+        <!-- ATUAL -->
+        <div class="comp-col atual">
+          <div class="col-label">Plano Atual</div>
+          <div style="text-align:center; margin-bottom:8px">
+            <span class="ins-tag" style="border-color:var(--atual); color:var(--atual)">${atualIns.label}</span>
+          </div>
+          <div class="chart-wrap"><canvas id="ch-atual"></canvas></div>
+          <div class="plan-meta">
+            <span class="plan-name-label" style="color:var(--atual)">${esc(d.atual.plano)}</span>
+            <span class="cop-chip ${d.atual.cop?'sim':'nao'}">${d.atual.cop?'Com Coparticipação':'Sem Coparticipação'}</span>
+            <span class="vidas-chip">${d.atual.vidas} vida${d.atual.vidas!==1?'s':''}</span>
+          </div>
+        </div>
+
+        <div class="vert-sep"></div>
+
+        <!-- ESTUDO -->
+        <div class="comp-col study">
+          <div class="col-label">Estudo de Planos</div>
+          <div style="text-align:center; margin-bottom:8px">${estudoTags}</div>
+          <div class="chart-wrap"><canvas id="ch-estudo"></canvas></div>
+          <div class="study-plans-row">
+            ${d.plans.map(p => {
+              const ganhoMensal = d.atual.valor - p.valor;
+              const ganhoAnual  = ganhoMensal * 12;
+              const cls = ganhoAnual > 0 ? 'positivo' : ganhoAnual < 0 ? 'negativo' : 'neutro';
+              const icon = ganhoAnual > 0 ? '▼' : ganhoAnual < 0 ? '▲' : '=';
+              const lbl  = ganhoAnual > 0 ? 'Economia anual' : ganhoAnual < 0 ? 'Acréscimo anual' : 'Sem variação';
+              return `<div class="study-plan-col">
+                <span class="plan-name-label" style="color:${p.color}">${esc(p.plano)}</span>
+                <span class="cop-chip ${p.cop?'sim':'nao'}">${p.cop?'C/Cop':'S/Cop'}</span>
+                <span class="vidas-chip">${p.vidas} vida${p.vidas!==1?'s':''}</span>
+                <span class="ganho-chip ${cls}">${icon} ${fmt(Math.abs(ganhoAnual))}</span>
+                <span class="ganho-label">${lbl}</span>
+              </div>`;
+            }).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div style="text-align:center; font-size:9px; color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:8px">Legenda das Seguradoras/Operadoras</div>
+      <div class="legend-row">${insLegend}</div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════════════ CHARTS ═══════════════════ */
+function drawCharts(d) {
+  const allVals = [d.atual.valor, ...d.plans.map(p=>p.valor)].filter(v=>v>0);
+  const maxV = Math.max(...allVals, 1);
+  const yMax = Math.ceil(maxV * 1.3 / 500) * 500;
+
+  const baseOpts = {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { enabled: false } },
+    animation: { duration: 250 },
+    layout: { padding: { top: 28 } },
+    scales: {
+      x: { grid: { display: false }, border: { display: false }, ticks: { display: false } },
+      y: {
+        min: 0, max: yMax, border: { display: false },
+        grid: { color: '#F0F0F5' },
+        ticks: {
+          callback: v => 'R$' + (v/1000).toLocaleString('pt-BR',{minimumFractionDigits:0}) + 'k',
+          font: { size: 9 }, color: '#9999AA', maxTicksLimit: 6,
+        },
+      },
+    },
+  };
+
+  const labelPlugin = (ganhos) => ({
+    id: 'lbl',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      chart.data.datasets.forEach((ds, di) => {
+        chart.getDatasetMeta(di).data.forEach((bar, i) => {
+          const v = ds.data[i]; if (!v) return;
+          ctx.save();
+          // value inside bar
+          ctx.font = 'bold 11px Segoe UI';
+          ctx.fillStyle = '#fff';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(fmt(v), bar.x, bar.y + bar.height / 2);
+          // ganho anual above bar
+          if (ganhos && ganhos[i] !== undefined) {
+            const g = ganhos[i];
+            const label = (g > 0 ? '▼ ' : g < 0 ? '▲ ' : '') + fmt(Math.abs(g));
+            ctx.font = 'bold 9px Segoe UI';
+            ctx.fillStyle = g > 0 ? '#15803d' : g < 0 ? '#b91c1c' : '#6B6B8A';
+            ctx.fillText(label, bar.x, bar.y - 8);
+          }
+          ctx.restore();
+        });
+      });
+    },
+  });
+
+  const ganhosPorPlano = d.plans.map(p => (d.atual.valor - p.valor) * 12);
+
+  // Atual chart (no ganho label)
+  const ca = document.getElementById('ch-atual');
+  if (ca) {
+    charts.push(new Chart(ca, {
+      type: 'bar',
+      data: { labels: [''], datasets: [{ data: [d.atual.valor], backgroundColor: ['#2563EB'], borderRadius: 8, borderSkipped: false }] },
+      options: baseOpts,
+      plugins: [labelPlugin(null)],
+    }));
+  }
+
+  // Estudo chart (with ganho anual above each bar)
+  const ce = document.getElementById('ch-estudo');
+  if (ce && d.plans.length) {
+    charts.push(new Chart(ce, {
+      type: 'bar',
+      data: {
+        labels: d.plans.map(p => INS[p.seg]?.label || p.seg),
+        datasets: [{ data: d.plans.map(p=>p.valor), backgroundColor: d.plans.map(p=>p.color), borderRadius: 8, borderSkipped: false }],
+      },
+      options: { ...baseOpts, layout: { padding: { top: 40 } } },
+      plugins: [labelPlugin(ganhosPorPlano)],
+    }));
+  }
+}
+
+/* ═══════════════════ PDF ═══════════════════ */
+async function gerarPDF() {
+  const btn = document.getElementById('pdf-btn');
+  btn.disabled = true; btn.textContent = '⏳ Gerando PDF...';
+  try {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [297, 167] });
+
+    for (const [i, id] of [['sl-cover',0],['sl-comp',1]]) {
+      const el = document.getElementById(i);
+      if (!el) continue;
+      // Temporarily remove zoom for capture
+      const prevZoom = el.style.zoom;
+      el.style.zoom = 1;
+      const canvas = await html2canvas(el.firstElementChild, { scale: 2, useCORS: true, logging: false, backgroundColor: id===0?'#0A0A2E':'#ffffff' });
+      el.style.zoom = prevZoom;
+      const img = canvas.toDataURL('image/jpeg', 0.95);
+      if (id > 0) pdf.addPage();
+      pdf.addImage(img, 'JPEG', 0, 0, 297, 167);
+    }
+
+    const d = getData();
+    const name = `cotacao_${d.empresa.replace(/[^\w]/g,'_').slice(0,25)}_${d.mesano.replace('/','_')}.pdf`;
+    pdf.save(name);
+  } catch(e) { alert('Erro ao gerar PDF: ' + e.message); }
+  btn.disabled = false; btn.innerHTML = '⬇ Baixar PDF';
+}
+
+/* ═══════════════════ UTILS ═══════════════════ */
+function fmt(v) { return 'R$ ' + (+v).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+</script>
+</body>
+</html>
