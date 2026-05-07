@@ -616,9 +616,7 @@ function buildCover(d) {
       <div class="company">${esc(d.empresa)}</div>
       <div class="date">${esc(d.mesano)}${d.consultor ? ' · ' + esc(d.consultor) : ''}</div>
       <div class="logo-area">
-        ${logoDataUrl
-          ? `<img src="${logoDataUrl}" style="height:46px;max-width:160px;object-fit:contain">`
-          : `<div class="logo-box">E3</div><div class="logo-txt">E3 Consultoria</div>`}
+        <img src="e3_hor_branco.png" style="height:46px;max-width:180px;object-fit:contain">
       </div>
     </div>
   </div>`;
@@ -643,7 +641,7 @@ function buildComp(d) {
   return `
   <div class="slide-box" id="sl-comp">
     <div class="s-comp">
-      ${logoDataUrl ? `<img src="${logoDataUrl}" style="position:absolute;top:22px;right:36px;height:32px;max-width:130px;object-fit:contain;opacity:.55">` : ''}
+      <img src="e3_hor_azul.png" style="position:absolute;top:22px;right:36px;height:32px;max-width:130px;object-fit:contain;opacity:.6">
       <div class="s-title">Resumo Financeiro — <em>${d.atual.vidas} vida${d.atual.vidas!==1?'s':''}</em></div>
 
       <div class="comp-grid">
