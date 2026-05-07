@@ -233,6 +233,19 @@ canvas { display: block; }
 
 /* ── Separator between atual and study ── */
 .vert-sep { width: 1px; background: var(--border); margin: 0 20px; }
+
+/* ── Logo upload ── */
+.logo-upload-area {
+  border: 2px dashed var(--border); border-radius: 10px;
+  padding: 14px; text-align: center; cursor: pointer;
+  transition: border-color .15s; position: relative; overflow: hidden;
+}
+.logo-upload-area:hover { border-color: var(--purple); }
+.logo-upload-area input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.logo-upload-area .lup-preview { max-height: 48px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; }
+.logo-upload-area .lup-placeholder { font-size: 12px; color: var(--muted); }
+.logo-clear { font-size: 11px; color: var(--danger); background: none; border: none; cursor: pointer; margin-top: 4px; display: none; }
+.logo-clear.show { display: inline-block; }
 </style>
 </head>
 <body>
@@ -250,6 +263,20 @@ canvas { display: block; }
   <!-- ══ SIDEBAR ══ -->
   <aside class="sidebar">
     <div class="sidebar-body">
+
+      <!-- Logo da empresa -->
+      <div class="fsec">
+        <div class="stitle"><span>🖼</span> Logo da Empresa</div>
+        <div class="fg">
+          <label>Logo para os slides</label>
+          <div class="logo-upload-area" id="logo-upload-area">
+            <input type="file" accept="image/*" onchange="handleLogo(event)">
+            <img id="logo-preview" class="lup-preview" style="display:none">
+            <span class="lup-placeholder" id="logo-placeholder">Clique para enviar o PNG/SVG do logo</span>
+          </div>
+          <button class="logo-clear" id="logo-clear" onclick="clearLogo()">✕ Remover logo</button>
+        </div>
+      </div>
 
       <!-- Dados do cliente -->
       <div class="fsec">
@@ -361,6 +388,7 @@ let copMap = { a: false };  // coparticipação state per card
 let counter = 0;
 let charts = [];
 let renderGen = 0;
+let logoDataUrl = null;
 
 /* ═══════════════════ INIT ═══════════════════ */
 window.addEventListener('DOMContentLoaded', () => {
@@ -369,6 +397,30 @@ window.addEventListener('DOMContentLoaded', () => {
   addPlan();
   render();
 });
+
+/* ═══════════════════ LOGO UPLOAD ═══════════════════ */
+function handleLogo(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    logoDataUrl = ev.target.result;
+    document.getElementById('logo-preview').src = logoDataUrl;
+    document.getElementById('logo-preview').style.display = 'block';
+    document.getElementById('logo-placeholder').style.display = 'none';
+    document.getElementById('logo-clear').classList.add('show');
+    render();
+  };
+  reader.readAsDataURL(file);
+}
+function clearLogo() {
+  logoDataUrl = null;
+  document.getElementById('logo-preview').src = '';
+  document.getElementById('logo-preview').style.display = 'none';
+  document.getElementById('logo-placeholder').style.display = '';
+  document.getElementById('logo-clear').classList.remove('show');
+  render();
+}
 
 /* ═══════════════════ COP TOGGLE ═══════════════════ */
 function setCop(id, val) {
@@ -563,8 +615,9 @@ function buildCover(d) {
       <div class="company">${esc(d.empresa)}</div>
       <div class="date">${esc(d.mesano)}${d.consultor ? ' · ' + esc(d.consultor) : ''}</div>
       <div class="logo-area">
-        <div class="logo-box">E3</div>
-        <div class="logo-txt">E3 Consultoria</div>
+        ${logoDataUrl
+          ? `<img src="${logoDataUrl}" style="height:46px;max-width:160px;object-fit:contain">`
+          : `<div class="logo-box">E3</div><div class="logo-txt">E3 Consultoria</div>`}
       </div>
     </div>
   </div>`;
@@ -632,7 +685,10 @@ function buildComp(d) {
       </div>
 
       <div class="divider"></div>
-      <div style="text-align:center; font-size:9px; color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:1.2px; margin-bottom:8px">Legenda das Seguradoras/Operadoras</div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px">
+        <div style="font-size:9px; color:var(--muted); font-weight:800; text-transform:uppercase; letter-spacing:1.2px">Legenda das Seguradoras/Operadoras</div>
+        ${logoDataUrl ? `<img src="${logoDataUrl}" style="height:28px;max-width:100px;object-fit:contain;opacity:.7;filter:brightness(0)">` : ''}
+      </div>
       <div class="legend-row">${insLegend}</div>
     </div>
   </div>`;
