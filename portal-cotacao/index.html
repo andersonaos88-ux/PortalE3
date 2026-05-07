@@ -226,6 +226,16 @@ canvas { display: block; }
 .cop-chip.sim { background: #dcfce7; color: #15803d; }
 .cop-chip.nao { background: #fee2e2; color: #b91c1c; }
 .vidas-chip { font-size: 9px; color: var(--muted); }
+/* cop slide toggle */
+.cop-slide-toggle {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border-radius: 8px;
+  background: #f0fdf4; border: 1.5px solid #16a34a;
+  cursor: pointer; margin-top: 8px;
+}
+.cop-slide-toggle input { accent-color: #16a34a; width: 15px; height: 15px; cursor: pointer; }
+.cop-slide-toggle label { font-size: 11px; font-weight: 700; color: #15803d; cursor: pointer; line-height: 1.3; }
+
 .reembolso-chip {
   font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 10px;
   background: #eff6ff; color: #1d4ed8; letter-spacing: .3px;
@@ -376,9 +386,39 @@ const INS = {
 const INS_OPTIONS = ['bradesco','sulamerica','amil','portoseguro','hapvida','outro'];
 const PLAN_COLORS = ['#CC0000','#3B2F9E','#E8661A','#005FAF'];
 
+/* ═══════════════════ COPARTICIPAÇÃO DATA (preencher por seguradora) ═══════════════════ */
+const COPDATA = {
+  bradesco: {
+    titulo: 'Coparticipação — Bradesco',
+    obs: 'Conteúdo a preencher',
+    itens: [{ procedimento: '—', valor: '—' }],
+  },
+  sulamerica: {
+    titulo: 'Coparticipação — SulAmérica',
+    obs: 'Conteúdo a preencher',
+    itens: [{ procedimento: '—', valor: '—' }],
+  },
+  amil: {
+    titulo: 'Coparticipação — Amil',
+    obs: 'Conteúdo a preencher',
+    itens: [{ procedimento: '—', valor: '—' }],
+  },
+  portoseguro: {
+    titulo: 'Coparticipação — Porto Seguro',
+    obs: 'Conteúdo a preencher',
+    itens: [{ procedimento: '—', valor: '—' }],
+  },
+  hapvida: {
+    titulo: 'Coparticipação — Hapvida',
+    obs: 'Conteúdo a preencher',
+    itens: [{ procedimento: '—', valor: '—' }],
+  },
+};
+
 /* ═══════════════════ STATE ═══════════════════ */
-let plans = [];    // {id, seg, plano, vidas, valor, cop}
-let copMap = { a: false };  // coparticipação state per card
+let plans = [];
+let copMap = { a: false };
+let copSlideMap = {};   // id → true/false: incluir slide de cop
 let counter = 0;
 let charts = [];
 let renderGen = 0;
@@ -395,11 +435,15 @@ window.addEventListener('DOMContentLoaded', () => {
 /* ═══════════════════ COP TOGGLE ═══════════════════ */
 function setCop(id, val) {
   copMap[id] = val;
-  const sim = document.getElementById(`cop-${id}-sim`);
-  const nao = document.getElementById(`cop-${id}-nao`);
-  if (!sim || !nao) return;
-  sim.className = 'cop-btn' + (val ? ' active-sim' : '');
-  nao.className = 'cop-btn' + (!val ? ' active-nao' : '');
+  // For plan cards, rebuild to show/hide cop slide checkbox
+  if (id !== 'a') {
+    renderPlanCards();
+  } else {
+    const sim = document.getElementById(`cop-${id}-sim`);
+    const nao = document.getElementById(`cop-${id}-nao`);
+    if (sim) sim.className = 'cop-btn' + (val ? ' active-sim' : '');
+    if (nao) nao.className = 'cop-btn' + (!val ? ' active-nao' : '');
+  }
   render();
 }
 
@@ -416,6 +460,7 @@ function addPlan() {
   const id = ++counter;
   plans.push(id);
   copMap['p' + id] = false;
+  copSlideMap[id] = false;
   renderPlanCards();
   updateAddBtn();
   render();
@@ -424,8 +469,14 @@ function addPlan() {
 function removePlan(id) {
   plans = plans.filter(x => x !== id);
   delete copMap['p' + id];
+  delete copSlideMap[id];
   renderPlanCards();
   updateAddBtn();
+  render();
+}
+
+function toggleCopSlide(id) {
+  copSlideMap[id] = !copSlideMap[id];
   render();
 }
 
@@ -443,6 +494,7 @@ function renderPlanCards() {
       vidas:     document.getElementById(`p${id}-vidas`)?.value,
       valor:     document.getElementById(`p${id}-valor`)?.value,
       reembolso: document.getElementById(`p${id}-reembolso`)?.value,
+      copSlide:  copSlideMap[id],
     };
   });
 
@@ -493,6 +545,11 @@ function renderPlanCards() {
         <label>Reembolso por consulta (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
         <input id="p${id}-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
       </div>
+      ${cop ? `
+      <div class="cop-slide-toggle" onclick="toggleCopSlide(${id})">
+        <input type="checkbox" id="cs-${id}" ${copSlideMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleCopSlide(${id})">
+        <label for="cs-${id}">Inserir slide de exemplos de coparticipação desta seguradora</label>
+      </div>` : ''}
     </div>`;
   }).join('');
 
@@ -510,6 +567,7 @@ function renderPlanCards() {
     if (valor && s.valor) valor.value = s.valor;
     const reembolso = document.getElementById(`p${id}-reembolso`);
     if (reembolso && s.reembolso) reembolso.value = s.reembolso;
+    if (s.copSlide !== undefined) copSlideMap[id] = s.copSlide;
   });
 }
 
@@ -557,7 +615,11 @@ function render() {
 
   const d = getData();
   const wrap = document.getElementById('doc-wrap');
-  wrap.innerHTML = buildCover(d) + buildComp(d) + buildBackCover();
+  const copSlides = d.plans
+    .filter(p => p.cop && copSlideMap[p.id])
+    .map(p => buildCopSlide(p.seg, p.plano))
+    .join('');
+  wrap.innerHTML = buildCover(d) + buildComp(d) + copSlides + buildBackCover();
 
   applyZoom();
   const gen = ++renderGen;
@@ -601,6 +663,42 @@ function buildBackCover() {
       </div>
       <div class="back-sep"></div>
       <div class="back-tagline">A sua consultoria em seguros!</div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════════════ SLIDE — COPARTICIPAÇÃO ═══════════════════ */
+function buildCopSlide(seg, plano) {
+  const ins  = INS[seg] || INS.outro;
+  const data = COPDATA[seg];
+  if (!data) return '';
+  const rows = data.itens.map(r => `
+    <tr>
+      <td style="padding:8px 12px; border-bottom:1px solid #f0f0f5; font-size:12px; color:#1A1A3E">${r.procedimento}</td>
+      <td style="padding:8px 12px; border-bottom:1px solid #f0f0f5; font-size:12px; font-weight:700; color:${ins.color}; text-align:right">${r.valor}</td>
+    </tr>`).join('');
+  return `
+  <div class="slide-box" id="sl-cop-${seg}">
+    <div style="width:960px; min-height:540px; background:#fff; padding:44px 60px; position:relative; font-family:'Segoe UI',system-ui,sans-serif">
+      <img src="e3_hor_azul.png" style="position:absolute;top:22px;right:36px;height:28px;max-width:110px;object-fit:contain;opacity:.55">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px">
+        <div style="width:6px;height:40px;background:${ins.color};border-radius:3px"></div>
+        <div>
+          <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:${ins.color}">${ins.label}</div>
+          <div style="font-size:20px;font-weight:800;color:#1A1A3E">Exemplos de Coparticipação</div>
+        </div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;background:#fafafa;border-radius:10px;overflow:hidden">
+        <thead>
+          <tr style="background:${ins.color}">
+            <th style="padding:10px 12px;text-align:left;font-size:11px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.8px">Procedimento</th>
+            <th style="padding:10px 12px;text-align:right;font-size:11px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.8px">Coparticipação</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+      ${data.obs ? `<div style="margin-top:16px;font-size:10px;color:#6B6B8A;font-style:italic">* ${data.obs}</div>` : ''}
+      <div style="position:absolute;bottom:28px;left:60px;font-size:9px;color:#9999AA;font-weight:700;text-transform:uppercase;letter-spacing:1px">Plano: ${esc(plano)}</div>
     </div>
   </div>`;
 }
@@ -754,16 +852,20 @@ async function gerarPDF() {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [297, 167] });
 
-    for (const [i, id] of [['sl-cover',0],['sl-comp',1],['sl-back',2]]) {
-      const el = document.getElementById(i);
+    const slideIds = ['sl-cover', 'sl-comp',
+      ...getData().plans.filter(p => p.cop && copSlideMap[p.id]).map(p => `sl-cop-${p.seg}`),
+      'sl-back'
+    ];
+    for (const [idx, sid] of slideIds.entries()) {
+      const el = document.getElementById(sid);
       if (!el) continue;
-      // Temporarily remove zoom for capture
       const prevZoom = el.style.zoom;
       el.style.zoom = 1;
-      const canvas = await html2canvas(el.firstElementChild, { scale: 2, useCORS: true, logging: false, backgroundColor: id===1?'#ffffff':'#0A0A2E' });
+      const isWhite = sid === 'sl-comp' || sid.startsWith('sl-cop-');
+      const canvas = await html2canvas(el.firstElementChild, { scale: 2, useCORS: true, logging: false, backgroundColor: isWhite ? '#ffffff' : '#0A0A2E' });
       el.style.zoom = prevZoom;
       const img = canvas.toDataURL('image/jpeg', 0.95);
-      if (id > 0) pdf.addPage();
+      if (idx > 0) pdf.addPage();
       pdf.addImage(img, 'JPEG', 0, 0, 297, 167);
     }
 
