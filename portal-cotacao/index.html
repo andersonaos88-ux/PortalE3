@@ -403,10 +403,11 @@ canvas { display: block; }
             <button class="cop-btn active-nao" id="cop-a-nao" onclick="setCop('a',false)">✕ Sem Coparticipação</button>
           </div>
         </div>
-        <div class="fg">
-          <label>Reembolso por consulta (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
-          <input id="a-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
+        <div class="reaj-toggle" onclick="toggleAtualReembShow()">
+          <input type="checkbox" id="rs-atual" onclick="event.stopPropagation(); toggleAtualReembShow()">
+          <label for="rs-atual">Exibir reembolso por consulta no documento</label>
         </div>
+        <div id="a-reembolso-container" style="display:none"></div>
       </div>
 
       <!-- Planos cotados -->
@@ -689,6 +690,7 @@ let copSlideMap = {};   // id → true/false: incluir slide de cop
 let copTypeMap  = {};  // id → 'parcial' | 'completo' (Amil e Hapvida)
 let reajMap = {};      // id → true/false: mostrar reajuste
 let reembShowMap = {}; // id → true/false: exibir reembolso no slide
+let atualReembShow = false;
 let counter = 0;
 let charts = [];
 let renderGen = 0;
@@ -819,18 +821,30 @@ function autoFillReembolso(id) {
   render();
 }
 
+function toggleAtualReembShow() {
+  atualReembShow = !atualReembShow;
+  const cb = document.getElementById('rs-atual');
+  if (cb) cb.checked = atualReembShow;
+  const container = document.getElementById('a-reembolso-container');
+  if (container) container.style.display = atualReembShow ? '' : 'none';
+  if (atualReembShow) autoFillAtualReembolso();
+  render();
+}
+
 function autoFillAtualReembolso() {
-  const seg   = document.getElementById('a-seg')?.value;
-  const plano = document.getElementById('a-plano')?.value;
-  const val   = REEMBOLSO_DATA[seg]?.[plano];
-  const input = document.getElementById('a-reembolso');
-  if (!input) return;
+  const seg      = document.getElementById('a-seg')?.value;
+  const plano    = document.getElementById('a-plano')?.value;
+  const val      = REEMBOLSO_DATA[seg]?.[plano];
+  const container = document.getElementById('a-reembolso-container');
+  if (!container || !atualReembShow) return;
+  const sel = `style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:13px"`;
   if (Array.isArray(val)) {
-    input.value = val[0].toFixed(2);
+    const opts = val.map(v => `<option value="${v}">R$ ${v.toFixed(2).replace('.',',')}</option>`).join('');
+    container.innerHTML = `<div class="fg"><label>Reembolso por consulta (R$)</label><select id="a-reembolso" onchange="render()" ${sel}><option value="">Selecionar opção...</option>${opts}</select></div>`;
   } else if (val) {
-    input.value = val.toFixed(2);
+    container.innerHTML = `<div class="fg"><label>Reembolso por consulta (R$)</label><input id="a-reembolso" type="number" min="0" step="0.01" value="${val.toFixed(2)}" readonly style="background:var(--sidebar);color:var(--muted);cursor:default" oninput="render()"></div>`;
   } else {
-    input.value = '';
+    container.innerHTML = `<div class="fg"><label>Reembolso por consulta (R$)</label><input id="a-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()"></div>`;
   }
   render();
 }
@@ -1004,7 +1018,7 @@ function getData() {
       vidas: parseInt(document.getElementById('a-vidas').value) || 1,
       valor: parseFloat(document.getElementById('a-valor').value) || 0,
       cop:      copMap['a'] || false,
-      reembolso: parseFloat(document.getElementById('a-reembolso').value) || 0,
+      reembolso: atualReembShow ? (parseFloat(document.getElementById('a-reembolso')?.value) || 0) : 0,
     },
     plans: plans.map((id,i) => {
       const seg = document.getElementById(`p${id}-seg`)?.value || 'outro';
