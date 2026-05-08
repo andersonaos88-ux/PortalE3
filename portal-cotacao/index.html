@@ -740,7 +740,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /* ═══════════════════ COP TOGGLE ═══════════════════ */
 function setCop(id, val) {
-  copMap[id !== 'a' ? 'p' + id : id] = val;
+  copMap[id] = val;
   // For plan cards, rebuild to show/hide cop slide checkbox
   if (id !== 'a') {
     renderPlanCards();
