@@ -1173,8 +1173,16 @@ function buildCopSlide(seg, planos, copType) {
   ).join('');
 
   const rows = data.procedimentos.map((proc, i) => {
-    const cols = groups.map(g => `<td style="${tdVal}">${g.vals[i] || '—'}</td>`).join('');
-    return `<tr><td style="${tdProc}">${proc}</td>${cols}</tr>`;
+    const pcts = groups.map(g => { const m = (g.vals[i] || '').match(/^(\d+%)\·/); return m ? m[1] : null; });
+    const allSamePct = pcts[0] && pcts.every(p => p === pcts[0]);
+    const procLabel = allSamePct
+      ? `${proc}&ensp;<span style="color:${ins.color};font-weight:800;font-size:10px">${pcts[0]}</span>`
+      : proc;
+    const cols = groups.map(g => {
+      const val = allSamePct ? (g.vals[i] || '—').replace(/^\d+%·/, '') : (g.vals[i] || '—');
+      return `<td style="${tdVal}">${val}</td>`;
+    }).join('');
+    return `<tr><td style="${tdProc}">${procLabel}</td>${cols}</tr>`;
   }).join('');
 
   const tipoTag = data.tipo
