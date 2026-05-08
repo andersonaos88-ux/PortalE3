@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corretor Tech — Aplicativos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0E0E2C;
+      --navy2:  #16163A;
+      --card:   #1C1C45;
+      --border: rgba(255,255,255,.08);
+      --orange: #E8661A;
+      --orange2:#FF7A2F;
+      --text:   #F0F0FF;
+      --muted:  #8888AA;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 48px;
+      border-bottom: 1px solid var(--border);
+      background: var(--navy2);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 14px; }
+    .logo-box {
+      width: 40px; height: 40px;
+      background: var(--orange);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -1px;
+    }
+    .logo-name { font-size: 17px; font-weight: 800; color: var(--text); letter-spacing: .3px; }
+    .logo-sub  { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .8px; text-transform: uppercase; }
+    .header-tag {
+      font-size: 11px; font-weight: 700; color: var(--orange);
+      background: rgba(232,102,26,.12);
+      border: 1px solid rgba(232,102,26,.25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      letter-spacing: .5px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 64px 48px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      font-size: 11px; font-weight: 800; color: var(--orange);
+      text-transform: uppercase; letter-spacing: 1.6px;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-size: 36px; font-weight: 800; color: var(--text);
+      line-height: 1.2; margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--orange); }
+    .hero p {
+      font-size: 15px; color: var(--muted); font-weight: 400; max-width: 520px;
+    }
+
+    /* ── GRID ── */
+    .section-title {
+      font-size: 11px; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 1.4px; color: var(--muted);
+      padding: 0 48px; max-width: 1100px; margin: 0 auto 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 48px 64px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── APP CARD ── */
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 28px 24px;
+      display: flex; flex-direction: column; gap: 16px;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      position: relative; overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .app-card:hover {
+      border-color: rgba(232,102,26,.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.35);
+    }
+    .app-card.soon {
+      opacity: .55;
+      cursor: default;
+      pointer-events: none;
+    }
+    .app-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .app-card:hover::before { opacity: 1; }
+
+    .card-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .card-badge {
+      font-size: 10px; font-weight: 800; padding: 3px 10px;
+      border-radius: 20px; text-transform: uppercase; letter-spacing: .5px;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .badge-active {
+      background: rgba(22,163,74,.15);
+      color: #4ade80;
+      border: 1px solid rgba(22,163,74,.25);
+    }
+    .badge-soon {
+      background: rgba(136,136,170,.1);
+      color: var(--muted);
+      border: 1px solid rgba(136,136,170,.2);
+    }
+
+    .card-name {
+      font-size: 17px; font-weight: 800; color: var(--text);
+      line-height: 1.2; margin-bottom: 4px;
+    }
+    .card-desc {
+      font-size: 12px; color: var(--muted); line-height: 1.55;
+    }
+    .card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 14px; margin-top: auto;
+    }
+    .card-tag {
+      font-size: 10px; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .6px;
+    }
+    .card-arrow {
+      width: 28px; height: 28px;
+      background: rgba(232,102,26,.12);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--orange); font-size: 14px;
+      transition: background .2s;
+    }
+    .app-card:hover .card-arrow { background: var(--orange); color: #fff; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px 48px;
+      border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 18px 20px; }
+      .hero  { padding: 40px 20px 28px; }
+      .hero h1 { font-size: 26px; }
+      .section-title, .grid { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <div class="logo-box">CT</div>
+      <div>
+        <div class="logo-name">Corretor Tech</div>
+        <div class="logo-sub">Tecnologia para corretores de seguros</div>
+      </div>
+    </div>
+    <div class="header-tag">Acesso Restrito</div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-label">Painel de Aplicativos</div>
+    <h1>Bem-vindo, <span>Corretor Tech</span> 👋</h1>
+    <p>Acesse as ferramentas internas da consultoria. Novos aplicativos serão adicionados conforme forem desenvolvidos.</p>
+  </div>
+
+  <div class="section-title">Aplicativos disponíveis</div>
+
+  <div class="grid">
+
+    <!-- Bradesco Rede -->
+    <a class="app-card" href="https://bradesco.corretortech.com" target="_blank">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(204,0,0,.10)">🏥</div>
+        <span class="card-badge badge-active">Ativo</span>
+      </div>
+      <div>
+        <div class="card-name">Bradesco Rede</div>
+        <div class="card-desc">Gere apresentações profissionais a partir da cotação SPG Bradesco Saúde. Para corretores do Canal Rede.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-tag">Bradesco · Canal Rede</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </a>
+
+    <!-- Portal de Cotação -->
+    <a class="app-card" href="https://cotacao.corretortech.com" target="_blank">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(14,134,255,.12)">🏥</div>
+        <span class="card-badge badge-active">Ativo</span>
+      </div>
+      <div>
+        <div class="card-name">Portal de Cotação</div>
+        <div class="card-desc">Gere estudos de mercado comparando planos de saúde empresariais com coparticipação, reembolso e reajuste.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-tag">Plano de Saúde · PME</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </a>
+
+    <!-- Em breve 1 -->
+    <div class="app-card soon">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(136,136,170,.08)">📋</div>
+        <span class="card-badge badge-soon">Em breve</span>
+      </div>
+      <div>
+        <div class="card-name">Gerador de Proposta</div>
+        <div class="card-desc">Crie propostas personalizadas para clientes com layouts profissionais prontos para envio.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-tag">Propostas · PDF</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Em breve 2 -->
+    <div class="app-card soon">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(136,136,170,.08)">💳</div>
+        <span class="card-badge badge-soon">Em breve</span>
+      </div>
+      <div>
+        <div class="card-name">Consulta de Saldo</div>
+        <div class="card-desc">Verifique saldos e benefícios de cartões de convênio e planos odontológicos dos clientes.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-tag">Cartões · Benefícios</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Em breve 3 -->
+    <div class="app-card soon">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(136,136,170,.08)">📊</div>
+        <span class="card-badge badge-soon">Em breve</span>
+      </div>
+      <div>
+        <div class="card-name">Dashboard Comercial</div>
+        <div class="card-desc">Acompanhe indicadores de vendas, renovações e carteira de clientes em tempo real.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-tag">Gestão · Métricas</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Corretor Tech · Acesso restrito à equipe autorizada
+  </footer>
+
+</body>
+</html>
