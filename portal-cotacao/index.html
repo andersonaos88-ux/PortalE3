@@ -283,6 +283,49 @@ canvas { display: block; }
 /* ── Separator between atual and study ── */
 .vert-sep { width: 1px; background: var(--border); margin: 0 20px; }
 
+/* ══════════════════════════════════════
+   RESPONSIVO — MOBILE (≤ 767px)
+   Desktop permanece 100% inalterado
+══════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* Layout: empilha sidebar + preview */
+  .layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  /* Sidebar: deixa de ser sticky e usa altura natural */
+  .sidebar {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Preview: menos padding lateral */
+  .preview {
+    padding: 16px 10px;
+    gap: 14px;
+  }
+
+  /* Header: oculta subtítulo de seguradoras */
+  .header p { display: none; }
+  .header h1 { font-size: 15px; }
+
+  /* Formulário: colunas colapsam em 1 */
+  .row2 { grid-template-columns: 1fr; }
+  .row3 { grid-template-columns: 1fr 1fr 1fr; } /* mantém 3 cols (vidas + valor) */
+
+  /* Botão gerar PDF na barra de preview */
+  .preview-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+  .pdf-btn { width: 100%; justify-content: center; }
+}
+
 </style>
 </head>
 <body>
@@ -799,7 +842,10 @@ function render() {
 
 function applyZoom() {
   const area = document.querySelector('.preview');
-  const avail = (area?.clientWidth || 800) - 48;
+  if (!area) return;
+  const st = getComputedStyle(area);
+  const hPad = parseFloat(st.paddingLeft) + parseFloat(st.paddingRight);
+  const avail = area.clientWidth - hPad;
   const z = Math.min(1, avail / 960);
   document.querySelectorAll('.slide-box').forEach(el => el.style.zoom = z);
 }
