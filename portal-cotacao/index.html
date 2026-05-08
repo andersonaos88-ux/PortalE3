@@ -457,6 +457,71 @@ const PLANS = {
   outro:       [],
 };
 
+/* ═══════════════════ REEMBOLSO DATA ═══════════════════ */
+/* ═══════════════════ REAJUSTE DATA ═══════════════════ */
+const REAJUSTE_DATA = {
+  bradesco:    { media5: 17.6, vigente: 15.11 },
+  sulamerica:  { media5: 17.7, vigente: 15.23 },
+  amil:        { media5: 17.8, vigente: 15.98 },
+  portoseguro: { media5: 16.4, vigente: 15.87 },
+  hapvida:     { media5: 14.6, vigente: 11.50 },
+};
+
+/* ═══════════════════ REEMBOLSO DATA ═══════════════════ */
+const REEMBOLSO_DATA = {
+  bradesco: {
+    'Saúde +':      109.76,
+    'Efetivo':      109.76,
+    'Efetivo Plus': 109.76,
+    'Nacional':     [109.76, 219.52, 329.27],
+    'Nacional Plus':[439.03, 658.55, 878.06],
+  },
+  sulamerica: {
+    'Direto Nacional E':  90.00,
+    'Direto Nacional Q':  90.00,
+    'Clássico Vital E':   110.25,
+    'Clássico Vital Q':   110.25,
+    'Clássico 100 E':     110.25,
+    'Especial 100 Q':     150.30,
+    'Especial Mais Vital':330.75,
+    'Especial Mais':      330.75,
+    'Executivo':          [500.00, 660.00, 880.00],
+    'Prestige':           1000.00,
+  },
+  amil: {
+    'Ouro':        96.00,
+    'Ouro II':     80.00,
+    'Platinum R1': 240.00,
+    'Platinum R2': 328.00,
+    'S380 E':      80.00,
+    'S380 Q':      80.00,
+    'S450 E':      96.00,
+    'S450 Q':      96.00,
+    'S750 R1':     136.00,
+    'S750 R2':     240.00,
+    'S750 R3':     328.00,
+    'Black I':     [432.00, 600.00],
+    'S2500':       [432.00, 600.00],
+    'Black II':    [600.00, 800.00, 1040.00],
+    'S6500 Black': 600.00,
+  },
+  portoseguro: {
+    'Bronze Brasil E': 95.00,
+    'Bronze Brasil Q': 95.00,
+    'Prata Mais E':    95.00,
+    'Prata Mais Q':    95.00,
+    'Ouro Mais':       152.00,
+    'Ouro Max':        249.00,
+    'Diamante Mais':   370.00,
+  },
+  hapvida: {
+    '600 E': 75.00,
+    '600 Q': 75.00,
+    '700 E': 96.00,
+    '700 Q': 96.00,
+  },
+};
+
 /* ═══════════════════ COPARTICIPAÇÃO DATA ═══════════════════ */
 const COPDATA = {
   bradesco: {
@@ -482,7 +547,28 @@ const COPDATA = {
       'Nacional Plus': ['R$ 320,00', 'R$ 160,00', 'R$ 320,00', 'R$ 160,00', 'R$ 320,00', 'R$ 160,00', 'R$ 550,00'],
     },
   },
-  sulamerica:  { titulo: 'Coparticipação — SulAmérica',  subtitulo: '', procedimentos: [], planos: {} },
+  sulamerica: {
+    titulo: 'Coparticipação — SulAmérica',
+    subtitulo: '30% sobre todos os procedimentos · Internação: valor fixo por evento · Grupos de 3 a 99 vidas',
+    procedimentos: [
+      'Consultas Médicas',
+      'Atendimento em Pronto Socorro',
+      'Exames Complementares A',
+      'Exames Complementares B',
+      'Procedimentos Ambulatoriais',
+      'Terapias',
+      'Internação (3 a 29 vidas)',
+      'Internação (30 a 99 vidas)',
+    ],
+    planos: {
+      'Direto':    ['30%·R$33,37',  '30%·R$100,11', '30%·R$55,62',  '30%·R$133,48', '30%·R$166,85', '30%·R$55,62',  'R$300,33', 'R$270,00'],
+      'Exato':     ['30%·R$44,49',  '30%·R$139,04', '30%·R$66,74',  '30%·R$166,85', '30%·R$177,97', '30%·R$66,74',  'R$355,94', 'R$320,00'],
+      'Clássico':  ['30%·R$44,49',  '30%·R$139,04', '30%·R$66,74',  '30%·R$166,85', '30%·R$177,97', '30%·R$66,74',  'R$355,94', 'R$320,00'],
+      'Especial':  ['30%·R$83,42',  '30%·R$155,72', '30%·R$77,86',  '30%·R$189,09', '30%·R$222,46', '30%·R$77,86',  'R$556,16', 'R$500,00'],
+      'Executivo': ['30%·R$166,85', '30%·R$355,94', '30%·R$88,99',  '30%·R$222,46', '30%·R$278,08', '30%·R$100,11', 'R$634,02', 'R$570,00'],
+      'Prestige':  ['30%·R$189,09', '30%·R$389,31', '30%·R$100,11', '30%·R$389,31', '30%·R$444,93', '30%·R$166,85', 'R$778,62', 'R$700,00'],
+    },
+  },
   amil: {
     parcial: {
       tipo: 'Parcial',
@@ -535,16 +621,74 @@ const COPDATA = {
       },
     },
   },
-  portoseguro: { titulo: 'Coparticipação — Porto Seguro',subtitulo: '', procedimentos: [], planos: {} },
-  hapvida:     { titulo: 'Coparticipação — Hapvida',     subtitulo: '', procedimentos: [], planos: {} },
+  portoseguro: {
+    titulo: 'Coparticipação — Porto Seguro',
+    subtitulo: '30% sobre todos os procedimentos · Terapias: 40% nos planos regionais · Internação: valor fixo por evento',
+    procedimentos: [
+      'Consultas',
+      'Terapias',
+      'Exames Simples',
+      'Pronto Socorro',
+      'Exames Especiais',
+      'Internação',
+      'Internação Psiquiátrica',
+    ],
+    planos: {
+      'Bronze Pro':              ['30%·R$32,00', '30%·R$40,00',  '30%·R$30,00', '30%·R$102,00', '30%·R$100,00', 'R$250,00', '—'],
+      'Prata Pro':               ['30%·R$34,00', '30%·R$48,00',  '30%·R$32,00', '30%·R$106,00', '30%·R$109,00', 'R$300,00', 'R$300,00'],
+      'Ouro Pro':                ['30%·R$44,00', '30%·R$60,00',  '30%·R$44,00', '30%·R$136,00', '30%·R$125,00', 'R$400,00', 'R$400,00'],
+      'Diamante Pro':            ['30%·R$73,00', '30%·R$76,00',  '30%·R$73,00', '30%·R$192,00', '30%·R$153,00', 'R$400,00', 'R$400,00'],
+      'Bronze Ribeirão Preto':   ['30%·R$30,00', '40%·R$60,00',  '30%·R$30,00', '30%·R$80,00',  '30%·R$100,00', 'R$250,00', '—'],
+      'Prata Ribeirão Preto':    ['30%·R$30,00', '40%·R$60,00',  '30%·R$30,00', '30%·R$80,00',  '30%·R$100,00', 'R$250,00', 'R$250,00'],
+      'Bronze Piracicaba':       ['30%·R$32,00', '40%·R$60,00',  '30%·R$30,00', '30%·R$102,00', '30%·R$100,00', 'R$250,00', 'R$250,00'],
+      'Prata Piracicaba':        ['30%·R$32,00', '40%·R$60,00',  '30%·R$30,00', '30%·R$102,00', '30%·R$100,00', 'R$250,00', 'R$250,00'],
+      'Bronze Sorocaba':         ['30%·R$35,00', '40%·R$60,00',  '30%·R$30,00', '30%·R$80,00',  '30%·R$100,00', 'R$250,00', 'R$250,00'],
+      'Prata Sorocaba':          ['30%·R$35,00', '40%·R$60,00',  '30%·R$30,00', '30%·R$80,00',  '30%·R$100,00', 'R$250,00', 'R$250,00'],
+      'P220 / Bronze Brasil I':  ['30%·R$35,00', '30%·R$55,00',  '30%·R$55,00', '30%·R$120,00', '30%·R$130,00', 'R$320,00', 'R$320,00'],
+      'P320 / Prata Mais I':     ['30%·R$50,00', '30%·R$70,00',  '30%·R$70,00', '30%·R$130,00', '30%·R$160,00', 'R$340,00', 'R$340,00'],
+      'P420 / Ouro Mais I':      ['30%·R$75,00', '30%·R$80,00',  '30%·R$80,00', '30%·R$140,00', '30%·R$170,00', 'R$500,00', 'R$500,00'],
+      'P470 / Ouro Max I':       ['30%·R$115,00','30%·R$90,00',  '30%·R$90,00', '30%·R$320,00', '30%·R$200,00', 'R$570,00', 'R$570,00'],
+      'P520 / Diamante Mais I':  ['30%·R$170,00','30%·R$150,00', '30%·R$100,00','30%·R$350,00', '30%·R$350,00', 'R$700,00', 'R$700,00'],
+    },
+  },
+  hapvida: {
+    parcial: {
+      tipo: 'Parcial',
+      subtitulo: 'Coparticipação apenas em terapias · Consultas, exames e internação: isentos',
+      procedimentos: ['Consultas eletivas','Consultas de urgência','Exames simples','Exames complexos','Terapias Especiais','Demais Terapias','Internações'],
+      planos: {
+        'Ambulatorial':          ['Isento','Isento','Isento','Isento','R$78,87','40%·R$60,00','Isento'],
+        'Nosso Médico S200/UP':  ['Isento','Isento','Isento','Isento','R$78,87','40%·R$60,00','Isento'],
+        'Smart 300 / Smart 500': ['Isento','Isento','Isento','Isento','R$78,87','40%·R$65,00','Isento'],
+        'Smart Prime Advance':   ['Isento','Isento','Isento','Isento','R$85,22','30%·R$70,00','Isento'],
+        'Premium 900':           ['Isento','Isento','Isento','Isento','R$129,04','40%·R$70,00','Isento'],
+        'Infinity':              ['Isento','Isento','Isento','Isento','R$129,04','40%·R$90,00','Isento'],
+      },
+    },
+    completo: {
+      tipo: 'Completo',
+      subtitulo: '% coparticipação e limite máximo por procedimento · Internação: valor fixo por evento',
+      procedimentos: ['Consultas eletivas','Consultas de urgência','Exames simples','Exames complexos','Terapias Especiais','Demais Terapias','Internações'],
+      planos: {
+        'Ambulatorial':          ['30%·R$30,00','40%·R$80,00','30%·R$20,00','30%·R$100,00','R$78,87','40%·R$60,00','Isento'],
+        'Nosso Médico':          ['40%·R$40,00','40%·R$80,00','40%·R$29,00','40%·R$120,00','R$78,87','40%·R$60,00','R$180,00'],
+        'Smart 200 / 200 UP':    ['30%·R$30,00','40%·R$80,00','30%·R$20,00','30%·R$100,00','R$78,87','40%·R$60,00','R$180,00'],
+        'Smart 300 / Smart 500': ['30%·R$32,50','40%·R$90,00','30%·R$25,00','30%·R$105,00','R$78,87','40%·R$65,00','R$250,00'],
+        'Smart Prime Advance':   ['30%·R$35,00','30%·R$120,00','30%·R$35,00','30%·R$130,00','R$85,22','30%·R$70,00','R$320,00'],
+        'Premium 900':           ['30%·R$55,00','40%·R$130,00','30%·R$35,00','30%·R$130,00','R$129,04','40%·R$70,00','R$400,00'],
+        'Infinity':              ['30%·R$90,00','40%·R$200,00','30%·R$45,00','30%·R$150,00','R$129,04','40%·R$90,00','R$550,00'],
+      },
+    },
+  },
 };
 
 /* ═══════════════════ STATE ═══════════════════ */
 let plans = [];
 let copMap = { a: false };
 let copSlideMap = {};   // id → true/false: incluir slide de cop
-let copTypeMap  = {};  // id → 'parcial' | 'completo' (Amil only)
+let copTypeMap  = {};  // id → 'parcial' | 'completo' (Amil e Hapvida)
 let reajMap = {};      // id → true/false: mostrar reajuste
+let reembShowMap = {}; // id → true/false: exibir reembolso no slide
 let counter = 0;
 let charts = [];
 let renderGen = 0;
@@ -590,6 +734,7 @@ function addPlan() {
   copSlideMap[id] = false;
   copTypeMap[id] = null;
   reajMap[id] = false;
+  reembShowMap[id] = false;
   renderPlanCards();
   updateAddBtn();
   render();
@@ -601,6 +746,7 @@ function removePlan(id) {
   delete copSlideMap[id];
   delete copTypeMap[id];
   delete reajMap[id];
+  delete reembShowMap[id];
   renderPlanCards();
   updateAddBtn();
   render();
@@ -636,6 +782,39 @@ function toggleCopSlide(id) {
 function toggleReaj(id) {
   reajMap[id] = !reajMap[id];
   renderPlanCards();
+  if (reajMap[id]) autoFillReaj(id);
+  render();
+}
+
+function autoFillReaj(id) {
+  const seg = document.getElementById(`p${id}-seg`)?.value;
+  const data = REAJUSTE_DATA[seg];
+  if (!data) return;
+  const reaj5  = document.getElementById(`p${id}-reaj5`);
+  const reajat = document.getElementById(`p${id}-reajat`);
+  if (reaj5  && !reaj5.value)  reaj5.value  = data.media5;
+  if (reajat && !reajat.value) reajat.value = data.vigente;
+}
+
+function toggleReembShow(id) {
+  reembShowMap[id] = !reembShowMap[id];
+  renderPlanCards();
+  render();
+}
+
+function autoFillReembolso(id) {
+  const seg   = document.getElementById(`p${id}-seg`)?.value;
+  const plano = document.getElementById(`p${id}-plano`)?.value;
+  const val   = REEMBOLSO_DATA[seg]?.[plano];
+  const input = document.getElementById(`p${id}-reembolso`);
+  if (!input) return;
+  if (Array.isArray(val)) {
+    input.value = '';
+  } else if (val) {
+    input.value = val.toFixed(2);
+  } else {
+    input.value = '';
+  }
   render();
 }
 
@@ -662,6 +841,7 @@ function renderPlanCards() {
       copSlide:  copSlideMap[id],
       copType:   copTypeMap[id],
       reaj:      reajMap[id],
+      reembShow: reembShowMap[id],
       reaj5:     document.getElementById(`p${id}-reaj5`)?.value,
       reajat:    document.getElementById(`p${id}-reajat`)?.value,
     };
@@ -690,7 +870,7 @@ function renderPlanCards() {
         </div>
         <div class="fg">
           <label>Nome do Plano</label>
-          <select id="p${id}-plano" onchange="render()">
+          <select id="p${id}-plano" onchange="autoFillReembolso(${id}); render()">
             ${(PLANS[saved[id]?.seg || 'bradesco'] || []).map(p => `<option value="${p}">${p}</option>`).join('')}
           </select>
         </div>
@@ -712,9 +892,9 @@ function renderPlanCards() {
           <button class="cop-btn${!cop?' active-nao':''}" id="cop-p${id}-nao" onclick="setCop('p${id}',false)">✕ Sem Coparticipação</button>
         </div>
       </div>
-      ${cop && (saved[id]?.seg || 'bradesco') === 'amil' ? `
+      ${cop && ['amil','hapvida'].includes(saved[id]?.seg || 'bradesco') ? `
       <div class="fg">
-        <label>Tipo de Coparticipação Amil</label>
+        <label>Tipo de Coparticipação ${(saved[id]?.seg||'') === 'hapvida' ? 'Hapvida' : 'Amil'}</label>
         <div class="cop-toggle">
           <button class="cop-btn${copTypeMap[id]==='parcial'?' active-sim':''}" onclick="setCopType(${id},'parcial')">Parcial</button>
           <button class="cop-btn${copTypeMap[id]==='completo'?' active-sim':''}" onclick="setCopType(${id},'completo')">Completo</button>
@@ -722,8 +902,20 @@ function renderPlanCards() {
       </div>
       ` : ''}
       <div class="fg">
-        <label>Reembolso por consulta (R$) <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+        <label>Reembolso por consulta (R$)</label>
         <input id="p${id}-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
+        ${(() => {
+          const reembVal = REEMBOLSO_DATA[saved[id]?.seg]?.[saved[id]?.plano];
+          if (Array.isArray(reembVal) && reembShowMap[id]) {
+            const opts = reembVal.map(v => `<option value="${v}">${'R$ ' + v.toFixed(2).replace('.',',')}</option>`).join('');
+            return `<select class="reemb-opc-sel" style="margin-top:6px;width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:13px" onchange="document.getElementById('p${id}-reembolso').value=this.value;render()"><option value="">Selecionar opção de reembolso...</option>${opts}</select>`;
+          }
+          return '';
+        })()}
+      </div>
+      <div class="reaj-toggle" onclick="toggleReembShow(${id})">
+        <input type="checkbox" id="rs-${id}" ${reembShowMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleReembShow(${id})">
+        <label for="rs-${id}">Exibir reembolso por consulta no documento</label>
       </div>
       <div class="reaj-toggle" onclick="toggleReaj(${id})">
         <input type="checkbox" id="rj-${id}" ${reajMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleReaj(${id})">
@@ -741,7 +933,7 @@ function renderPlanCards() {
             <input id="p${id}-reajat" type="number" min="0" step="0.1" placeholder="Ex: 18.2" oninput="render()">
           </div>
         </div>
-        <div style="font-size:10px;color:#6B6B8A;margin-top:6px">Vigência: Mai/${new Date().getFullYear()} — Abr/${new Date().getFullYear()+1}</div>
+        <div style="font-size:10px;color:#6B6B8A;margin-top:6px">Ciclo: Mai/2025 — Abr/2026 · Fonte: operadoras/BenefíciosRH</div>
       </div>` : ''}
       ${cop ? `
       <div class="cop-slide-toggle" onclick="toggleCopSlide(${id})">
@@ -765,9 +957,10 @@ function renderPlanCards() {
     if (valor && s.valor) valor.value = s.valor;
     const reembolso = document.getElementById(`p${id}-reembolso`);
     if (reembolso && s.reembolso) reembolso.value = s.reembolso;
-    if (s.copSlide !== undefined) copSlideMap[id] = s.copSlide;
-    if (s.copType  !== undefined) copTypeMap[id]  = s.copType;
-    if (s.reaj !== undefined) reajMap[id] = s.reaj;
+    if (s.copSlide  !== undefined) copSlideMap[id]  = s.copSlide;
+    if (s.copType   !== undefined) copTypeMap[id]   = s.copType;
+    if (s.reaj      !== undefined) reajMap[id]      = s.reaj;
+    if (s.reembShow !== undefined) reembShowMap[id] = s.reembShow;
     const reaj5  = document.getElementById(`p${id}-reaj5`);
     const reajat = document.getElementById(`p${id}-reajat`);
     if (reaj5  && s.reaj5)  reaj5.value  = s.reaj5;
@@ -807,7 +1000,7 @@ function getData() {
         valor: parseFloat(document.getElementById(`p${id}-valor`)?.value) || 0,
         cop:      copMap['p'+id] || false,
         copType:  copTypeMap[id] || null,
-        reembolso: parseFloat(document.getElementById(`p${id}-reembolso`)?.value) || 0,
+        reembolso: reembShowMap[id] ? (parseFloat(document.getElementById(`p${id}-reembolso`)?.value) || 0) : 0,
         reaj:     reajMap[id] || false,
         reaj5:    parseFloat(document.getElementById(`p${id}-reaj5`)?.value) || 0,
         reajat:   parseFloat(document.getElementById(`p${id}-reajat`)?.value) || 0,
@@ -826,7 +1019,7 @@ function render() {
   // Group cop slides by insurer (one slide per insurer with all selected plans)
   const copByKey = {};
   d.plans.filter(p => p.cop && copSlideMap[p.id]).forEach(p => {
-    const key = p.seg === 'amil' ? `amil-${p.copType || 'completo'}` : p.seg;
+    const key = ['amil','hapvida'].includes(p.seg) ? `${p.seg}-${p.copType || 'completo'}` : p.seg;
     if (!copByKey[key]) copByKey[key] = { seg: p.seg, copType: p.copType || null, planos: [] };
     if (!copByKey[key].planos.includes(p.plano)) copByKey[key].planos.push(p.plano);
   });
@@ -888,7 +1081,7 @@ function buildBackCover() {
 function buildCopSlide(seg, planos, copType) {
   const ins = INS[seg] || INS.outro;
   const raw = COPDATA[seg];
-  const data = (seg === 'amil' && raw && raw.parcial)
+  const data = (['amil','hapvida'].includes(seg) && raw && raw.parcial)
     ? (raw[copType] || raw.completo)
     : raw;
   if (!data || !data.procedimentos.length) return '';
@@ -1001,7 +1194,7 @@ function buildComp(d) {
               d.plans.map(p => `<span class="plan-name-label" style="color:${p.color}">${esc(p.plano)}</span>`),
               d.plans.map(p => {
                 let label = p.cop ? 'C/Cop' : 'S/Cop';
-                if (p.cop && p.seg === 'amil' && p.copType) label = `C/Cop ${p.copType.charAt(0).toUpperCase() + p.copType.slice(1)}`;
+                if (p.cop && ['amil','hapvida'].includes(p.seg) && p.copType) label = `C/Cop ${p.copType.charAt(0).toUpperCase() + p.copType.slice(1)}`;
                 return `<span class="cop-chip ${p.cop?'sim':'nao'}">${label}</span>`;
               }),
               d.plans.map(p => `<span class="vidas-chip">${p.vidas} vida${p.vidas!==1?'s':''}</span>`),
@@ -1105,7 +1298,7 @@ async function gerarPDF() {
 
     const copKeys = [];
     getData().plans.filter(p => p.cop && copSlideMap[p.id]).forEach(p => {
-      const key = p.seg === 'amil' ? `amil-${p.copType || 'completo'}` : p.seg;
+      const key = ['amil','hapvida'].includes(p.seg) ? `${p.seg}-${p.copType || 'completo'}` : p.seg;
       if (!copKeys.includes(key)) copKeys.push(key);
     });
     const slideIds = ['sl-cover', 'sl-comp', ...copKeys.map(k => `sl-cop-${k}`), 'sl-back'];
