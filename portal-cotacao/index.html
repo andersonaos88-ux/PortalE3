@@ -965,6 +965,11 @@ function renderPlanCards() {
         </div>
       </div>
       ` : ''}
+      ${cop ? `
+      <div class="cop-slide-toggle" onclick="toggleCopSlide(${id})">
+        <input type="checkbox" id="cs-${id}" ${copSlideMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleCopSlide(${id})">
+        <label for="cs-${id}">Inserir slide de exemplos de coparticipação desta seguradora</label>
+      </div>` : ''}
       <div class="reaj-toggle" onclick="toggleReembShow(${id})">
         <input type="checkbox" id="rs-${id}" ${reembShowMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleReembShow(${id})">
         <label for="rs-${id}">Exibir reembolso por consulta no documento</label>
@@ -998,11 +1003,6 @@ function renderPlanCards() {
           </div>
         </div>
         <div style="font-size:10px;color:#6B6B8A;margin-top:6px">Ciclo: Mai/2026 — Abr/2027 · Fonte: operadoras</div>
-      </div>` : ''}
-      ${cop ? `
-      <div class="cop-slide-toggle" onclick="toggleCopSlide(${id})">
-        <input type="checkbox" id="cs-${id}" ${copSlideMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleCopSlide(${id})">
-        <label for="cs-${id}">Inserir slide de exemplos de coparticipação desta seguradora</label>
       </div>` : ''}
     </div>`;
   }).join('');
