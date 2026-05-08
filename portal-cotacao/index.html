@@ -460,11 +460,11 @@ const PLANS = {
 /* ═══════════════════ REEMBOLSO DATA ═══════════════════ */
 /* ═══════════════════ REAJUSTE DATA ═══════════════════ */
 const REAJUSTE_DATA = {
-  bradesco:    { media5: 17.6, vigente: 15.11 },
-  sulamerica:  { media5: 17.7, vigente: 15.23 },
-  amil:        { media5: 17.8, vigente: 15.98 },
-  portoseguro: { media5: 16.4, vigente: 15.87 },
-  hapvida:     { media5: 14.6, vigente: 11.50 },
+  bradesco:    { media5: 17.6, vigente: 12.96 },
+  sulamerica:  { media5: 17.7, vigente: 11.83 },
+  amil:        { media5: 17.8, vigente: 11.98 },
+  portoseguro: { media5: 16.4, vigente: 12.47 },
+  hapvida:     { media5: 14.6, vigente: 12.90 },
 };
 
 /* ═══════════════════ REEMBOLSO DATA ═══════════════════ */
@@ -950,7 +950,7 @@ function renderPlanCards() {
             <input id="p${id}-reajat" type="number" min="0" step="0.1" placeholder="Ex: 18.2" oninput="render()">
           </div>
         </div>
-        <div style="font-size:10px;color:#6B6B8A;margin-top:6px">Ciclo: Mai/2025 — Abr/2026 · Fonte: operadoras/BenefíciosRH</div>
+        <div style="font-size:10px;color:#6B6B8A;margin-top:6px">Ciclo: Mai/2026 — Abr/2027 · Fonte: operadoras</div>
       </div>` : ''}
       ${cop ? `
       <div class="cop-slide-toggle" onclick="toggleCopSlide(${id})">
