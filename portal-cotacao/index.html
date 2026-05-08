@@ -371,7 +371,7 @@ canvas { display: block; }
             <label>Seguradora</label>
             <div class="ins-wrap">
               <div class="ins-dot" id="dot-atual" style="background:var(--atual)"></div>
-              <select id="a-seg" onchange="syncDot('atual','a-seg'); syncAtualPlanOpts(); render()">
+              <select id="a-seg" onchange="syncDot('atual','a-seg'); syncAtualPlanOpts(); autoFillAtualReembolso(); render()">
                 <option value="bradesco">Bradesco</option>
                 <option value="sulamerica">SulAmérica</option>
                 <option value="amil">Amil</option>
@@ -383,7 +383,7 @@ canvas { display: block; }
           </div>
           <div class="fg">
             <label>Nome do Plano</label>
-            <select id="a-plano" onchange="render()"></select>
+            <select id="a-plano" onchange="autoFillAtualReembolso(); render()"></select>
           </div>
         </div>
         <div class="row2">
@@ -815,6 +815,23 @@ function autoFillReembolso(id) {
   } else {
     input.value = '';
   }
+  renderPlanCards();
+  render();
+}
+
+function autoFillAtualReembolso() {
+  const seg   = document.getElementById('a-seg')?.value;
+  const plano = document.getElementById('a-plano')?.value;
+  const val   = REEMBOLSO_DATA[seg]?.[plano];
+  const input = document.getElementById('a-reembolso');
+  if (!input) return;
+  if (Array.isArray(val)) {
+    input.value = val[0].toFixed(2);
+  } else if (val) {
+    input.value = val.toFixed(2);
+  } else {
+    input.value = '';
+  }
   render();
 }
 
@@ -901,22 +918,22 @@ function renderPlanCards() {
         </div>
       </div>
       ` : ''}
-      <div class="fg">
-        <label>Reembolso por consulta (R$)</label>
-        <input id="p${id}-reembolso" type="number" min="0" step="0.01" placeholder="Ex: 300.00" oninput="render()">
-        ${(() => {
-          const reembVal = REEMBOLSO_DATA[saved[id]?.seg]?.[saved[id]?.plano];
-          if (Array.isArray(reembVal) && reembShowMap[id]) {
-            const opts = reembVal.map(v => `<option value="${v}">${'R$ ' + v.toFixed(2).replace('.',',')}</option>`).join('');
-            return `<select class="reemb-opc-sel" style="margin-top:6px;width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:13px" onchange="document.getElementById('p${id}-reembolso').value=this.value;render()"><option value="">Selecionar opção de reembolso...</option>${opts}</select>`;
-          }
-          return '';
-        })()}
-      </div>
       <div class="reaj-toggle" onclick="toggleReembShow(${id})">
         <input type="checkbox" id="rs-${id}" ${reembShowMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleReembShow(${id})">
         <label for="rs-${id}">Exibir reembolso por consulta no documento</label>
       </div>
+      ${reembShowMap[id] ? (() => {
+        const reembVal = REEMBOLSO_DATA[saved[id]?.seg]?.[saved[id]?.plano];
+        const savedVal = parseFloat(saved[id]?.reembolso) || 0;
+        if (Array.isArray(reembVal)) {
+          const opts = reembVal.map(v => `<option value="${v}" ${Math.abs(v - savedVal) < 0.01 && savedVal > 0 ? 'selected' : ''}>R$ ${v.toFixed(2).replace('.',',')}</option>`).join('');
+          return `<div class="fg"><label>Reembolso por consulta (R$)</label><select id="p${id}-reembolso" onchange="render()" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-size:13px"><option value="">Selecionar opção...</option>${opts}</select></div>`;
+        } else {
+          const fixedVal = reembVal ? reembVal.toFixed(2) : (savedVal || '');
+          const ro = reembVal ? 'readonly style="background:var(--sidebar);color:var(--muted);cursor:default"' : '';
+          return `<div class="fg"><label>Reembolso por consulta (R$)</label><input id="p${id}-reembolso" type="number" min="0" step="0.01" value="${fixedVal}" placeholder="Ex: 300.00" ${ro} oninput="render()"></div>`;
+        }
+      })() : `<input type="hidden" id="p${id}-reembolso" value="${saved[id]?.reembolso || ''}">`}
       <div class="reaj-toggle" onclick="toggleReaj(${id})">
         <input type="checkbox" id="rj-${id}" ${reajMap[id] ? 'checked' : ''} onclick="event.stopPropagation(); toggleReaj(${id})">
         <label for="rj-${id}">Informar reajuste anual</label>
