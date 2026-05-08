@@ -471,6 +471,9 @@ const REAJUSTE_DATA = {
 /* ═══════════════════ REEMBOLSO DATA ═══════════════════ */
 const REEMBOLSO_DATA = {
   bradesco: {
+    'Regional':     109.76,
+    'Flex':         109.76,
+    'Ideal':        109.76,
     'Saúde +':      109.76,
     'Efetivo':      109.76,
     'Efetivo Plus': 109.76,
@@ -520,6 +523,36 @@ const REEMBOLSO_DATA = {
     '600 Q': 75.00,
     '700 E': 96.00,
     '700 Q': 96.00,
+  },
+};
+
+/* Traduz nome do plano (dropdown) → chave do COPDATA */
+const COP_PLAN_KEY = {
+  sulamerica: {
+    'Direto Nacional E': 'Direto',   'Direto Nacional Q': 'Direto',
+    'Exato E':           'Exato',    'Exato Q':           'Exato',
+    'Clássico Vital E':  'Clássico', 'Clássico Vital Q':  'Clássico', 'Clássico 100 E': 'Clássico',
+    'Especial 100 Q':    'Especial', 'Especial Mais Vital':'Especial', 'Especial Mais':  'Especial',
+    'Executivo':         'Executivo',
+    'Prestige':          'Prestige',
+  },
+  portoseguro: {
+    'Pró ABCDM':      'Bronze Pro',
+    'Prata Pró E':    'Prata Pro',              'Prata Pró Q':    'Prata Pro',
+    'Ouro Pró':       'Ouro Pro',
+    'Diamante Pró':   'Diamante Pro',
+    'Bronze Brasil E':'P220 / Bronze Brasil I',  'Bronze Brasil Q':'P220 / Bronze Brasil I',
+    'Prata Mais E':   'P320 / Prata Mais I',     'Prata Mais Q':   'P320 / Prata Mais I',
+    'Ouro Mais':      'P420 / Ouro Mais I',
+    'Ouro Max':       'P470 / Ouro Max I',
+    'Diamante Mais':  'P520 / Diamante Mais I',
+  },
+  hapvida: {
+    '200 ABC':  'Ambulatorial',
+    '200 UP':   'Nosso Médico S200/UP',
+    '300 E':    'Smart 300 / Smart 500', '500 E': 'Smart 300 / Smart 500', '500 Q': 'Smart 300 / Smart 500',
+    '600 E':    'Smart Prime Advance',   '600 Q': 'Smart Prime Advance',
+    '700 E':    'Premium 900',           '700 Q': 'Premium 900',
   },
 };
 
@@ -707,7 +740,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /* ═══════════════════ COP TOGGLE ═══════════════════ */
 function setCop(id, val) {
-  copMap[id] = val;
+  copMap[id !== 'a' ? 'p' + id : id] = val;
   // For plan cards, rebuild to show/hide cop slide checkbox
   if (id !== 'a') {
     renderPlanCards();
@@ -1121,7 +1154,8 @@ function buildCopSlide(seg, planos, copType) {
   // Deduplicate: group planos with identical value arrays
   const groups = [];
   planos.forEach(nome => {
-    const vals = data.planos[nome];
+    const copKey = (COP_PLAN_KEY[seg] || {})[nome] || nome;
+    const vals = data.planos[copKey];
     if (!vals) return;
     const key = vals.join('|');
     const existing = groups.find(g => g.key === key);
