@@ -144,6 +144,22 @@
       color: var(--muted);
       border: 1px solid rgba(136,136,170,.2);
     }
+    .badge-dev {
+      background: rgba(245,158,11,.12);
+      color: #FBBF24;
+      border: 1px solid rgba(245,158,11,.28);
+    }
+    .app-card.dev {
+      border-color: rgba(245,158,11,.18);
+      cursor: default;
+      pointer-events: none;
+      opacity: .82;
+    }
+    .app-card.dev::before {
+      background: linear-gradient(90deg, #F59E0B, #FBBF24);
+    }
+    /* seção de rodapé separando grupos */
+    .section-title.mt { margin-top: 32px; }
 
     .card-name {
       font-size: 17px; font-weight: 800; color: var(--text);
@@ -229,7 +245,7 @@
     <!-- Portal de Cotação -->
     <a class="app-card" href="https://cotacao.corretortech.com" target="_blank">
       <div class="card-header">
-        <div class="card-icon" style="background:rgba(14,134,255,.12)">🏥</div>
+        <div class="card-icon" style="background:rgba(14,134,255,.12)">💊</div>
         <span class="card-badge badge-active">Ativo</span>
       </div>
       <div>
@@ -242,7 +258,7 @@
       </div>
     </a>
 
-    <!-- Em breve 1 -->
+    <!-- Em breve: Gerador de Proposta -->
     <div class="app-card soon">
       <div class="card-header">
         <div class="card-icon" style="background:rgba(136,136,170,.08)">📋</div>
@@ -258,34 +274,57 @@
       </div>
     </div>
 
-    <!-- Em breve 2 -->
-    <div class="app-card soon">
+  </div>
+
+  <!-- ── MÓDULOS EM DESENVOLVIMENTO ── -->
+  <div class="section-title mt">Em desenvolvimento</div>
+
+  <div class="grid">
+
+    <!-- Chat de Suporte -->
+    <div class="app-card dev">
       <div class="card-header">
-        <div class="card-icon" style="background:rgba(136,136,170,.08)">💳</div>
-        <span class="card-badge badge-soon">Em breve</span>
+        <div class="card-icon" style="background:rgba(245,158,11,.10)">💬</div>
+        <span class="card-badge badge-dev">Em dev.</span>
       </div>
       <div>
-        <div class="card-name">Consulta de Saldo</div>
-        <div class="card-desc">Verifique saldos e benefícios de cartões de convênio e planos odontológicos dos clientes.</div>
+        <div class="card-name">Chat de Suporte</div>
+        <div class="card-desc">Canal de dúvidas sobre produtos de saúde integrado dentro dos apps. Histórico por cliente e respostas rápidas.</div>
       </div>
       <div class="card-footer">
-        <span class="card-tag">Cartões · Benefícios</span>
+        <span class="card-tag">Suporte · Dúvidas · Tempo real</span>
         <div class="card-arrow">→</div>
       </div>
     </div>
 
-    <!-- Em breve 3 -->
-    <div class="app-card soon">
+    <!-- Integração WhatsApp -->
+    <div class="app-card dev">
       <div class="card-header">
-        <div class="card-icon" style="background:rgba(136,136,170,.08)">📊</div>
-        <span class="card-badge badge-soon">Em breve</span>
+        <div class="card-icon" style="background:rgba(37,211,102,.10)">📱</div>
+        <span class="card-badge badge-dev">Em dev.</span>
       </div>
       <div>
-        <div class="card-name">Dashboard Comercial</div>
-        <div class="card-desc">Acompanhe indicadores de vendas, renovações e carteira de clientes em tempo real.</div>
+        <div class="card-name">WhatsApp Connect</div>
+        <div class="card-desc">Envie cotações, propostas e notificações direto pelo WhatsApp a partir de qualquer app da plataforma.</div>
       </div>
       <div class="card-footer">
-        <span class="card-tag">Gestão · Métricas</span>
+        <span class="card-tag">WhatsApp · Mensagens · API</span>
+        <div class="card-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- CRM -->
+    <div class="app-card dev">
+      <div class="card-header">
+        <div class="card-icon" style="background:rgba(99,102,241,.10)">🗂️</div>
+        <span class="card-badge badge-dev">Em dev.</span>
+      </div>
+      <div>
+        <div class="card-name">CRM Comercial</div>
+        <div class="card-desc">Gerencie oportunidades, pipeline de vendas e carteira de clientes. Integrado ao chat e ao WhatsApp.</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-tag">CRM · Pipeline · Clientes</span>
         <div class="card-arrow">→</div>
       </div>
     </div>
