@@ -13,3 +13,7 @@ zone_name = "corretortech.com"
 [[routes]]
 pattern = "corretortech.com/api/*"
 zone_name = "corretortech.com"
+
+[[routes]]
+pattern = "admin.corretortech.com/api/*"
+zone_name = "corretortech.com"
