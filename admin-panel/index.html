@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · CorretorTech</title>
+<style>
+  :root {
+    --bg: #0d0d1a; --surface: #13132a; --card: #1a1a35;
+    --border: #2a2a4a; --blue: #3b82f6; --green: #22c55e;
+    --red: #ef4444; --orange: #f97316; --text: #e2e8f0;
+    --muted: #64748b; --radius: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 32px; display: flex; align-items: center; gap: 16px; }
+  header h1 { font-size: 18px; font-weight: 700; }
+  .badge { background: var(--blue); color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 20px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+  .tabs { display: flex; gap: 4px; margin-bottom: 28px; background: var(--surface); padding: 4px; border-radius: var(--radius); width: fit-content; }
+  .tab { padding: 8px 20px; border-radius: 8px; border: none; background: none; color: var(--muted); cursor: pointer; font-size: 14px; font-weight: 600; transition: all .2s; }
+  .tab.active { background: var(--blue); color: #fff; }
+  .section { display: none; }
+  .section.active { display: block; }
+  .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .section-header h2 { font-size: 16px; font-weight: 700; }
+  .btn { padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; font-weight: 600; transition: opacity .2s; }
+  .btn:hover { opacity: .85; }
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-danger  { background: var(--red);  color: #fff; }
+  .btn-sm { padding: 5px 10px; font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: var(--radius); overflow: hidden; }
+  th { background: var(--surface); padding: 12px 16px; text-align: left; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+  td { padding: 13px 16px; border-top: 1px solid var(--border); font-size: 14px; }
+  .status { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .status.on  { background: var(--green); }
+  .status.off { background: var(--red); }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .pill-admin  { background: rgba(59,130,246,.2);  color: var(--blue); }
+  .pill-pro    { background: rgba(249,115,22,.2);  color: var(--orange); }
+  .pill-basico { background: rgba(100,116,139,.2); color: var(--muted); }
+  /* Modal */
+  .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 100; align-items: center; justify-content: center; }
+  .overlay.open { display: flex; }
+  .modal { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 28px; width: 460px; max-width: 95vw; }
+  .modal h3 { margin-bottom: 20px; font-size: 16px; }
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .field input, .field select { width: 100%; padding: 9px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--blue); }
+  .modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; }
+  .cards-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .card-toggle { display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); cursor: pointer; font-size: 13px; user-select: none; }
+  .card-toggle input { cursor: pointer; }
+  .card-toggle.checked { border-color: var(--blue); background: rgba(59,130,246,.1); }
+  .empty { text-align: center; color: var(--muted); padding: 48px; font-size: 14px; }
+  .toast { position: fixed; bottom: 24px; right: 24px; background: var(--green); color: #fff; padding: 12px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; z-index: 999; display: none; }
+  .toast.err { background: var(--red); }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://corretortech.com/logo.png" height="28" onerror="this.style.display='none'">
+  <h1>Painel de Gestão</h1>
+  <span class="badge" id="admin-email">carregando…</span>
+</header>
+
+<div class="container">
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('users')">👥 Usuários</button>
+    <button class="tab" onclick="switchTab('plans')">📦 Planos</button>
+    <button class="tab" onclick="switchTab('cards')">🃏 Cards</button>
+    <button class="tab" onclick="switchTab('admins')">🔑 Admins</button>
+  </div>
+
+  <!-- USUÁRIOS -->
+  <div class="section active" id="section-users">
+    <div class="section-header">
+      <h2>Usuários</h2>
+      <button class="btn btn-primary" onclick="openUserModal()">+ Novo usuário</button>
+    </div>
+    <table>
+      <thead><tr><th>E-mail</th><th>Nome</th><th>Plano</th><th>Status</th><th></th></tr></thead>
+      <tbody id="users-body"><tr><td colspan="5" class="empty">Carregando…</td></tr></tbody>
+    </table>
+  </div>
+
+  <!-- PLANOS -->
+  <div class="section" id="section-plans">
+    <div class="section-header">
+      <h2>Planos</h2>
+      <button class="btn btn-primary" onclick="openPlanModal()">+ Novo plano</button>
+    </div>
+    <table>
+      <thead><tr><th>ID</th><th>Nome</th><th>Cards</th><th></th></tr></thead>
+      <tbody id="plans-body"><tr><td colspan="4" class="empty">Carregando…</td></tr></tbody>
+    </table>
+  </div>
+
+  <!-- CARDS -->
+  <div class="section" id="section-cards">
+    <div class="section-header">
+      <h2>Cards disponíveis</h2>
+      <button class="btn btn-primary" onclick="openCardModal()">+ Novo card</button>
+    </div>
+    <table>
+      <thead><tr><th>ID</th><th>Nome</th><th>URL</th><th></th></tr></thead>
+      <tbody id="cards-body"><tr><td colspan="4" class="empty">Carregando…</td></tr></tbody>
+    </table>
+  </div>
+
+  <!-- ADMINS -->
+  <div class="section" id="section-admins">
+    <div class="section-header">
+      <h2>Administradores</h2>
+      <button class="btn btn-primary" onclick="openAdminModal()">+ Adicionar admin</button>
+    </div>
+    <table>
+      <thead><tr><th>E-mail</th><th></th></tr></thead>
+      <tbody id="admins-body"><tr><td colspan="2" class="empty">Carregando…</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Usuário -->
+<div class="overlay" id="modal-user">
+  <div class="modal">
+    <h3 id="modal-user-title">Novo usuário</h3>
+    <div class="field"><label>E-mail *</label><input id="u-email" type="email" placeholder="usuario@email.com"></div>
+    <div class="field"><label>Nome</label><input id="u-nome" type="text" placeholder="Nome completo"></div>
+    <div class="field"><label>Plano *</label><select id="u-plano"></select></div>
+    <div class="field"><label>Status</label>
+      <select id="u-ativo"><option value="true">Ativo</option><option value="false">Inativo</option></select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('modal-user')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveUser()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Plano -->
+<div class="overlay" id="modal-plan">
+  <div class="modal">
+    <h3 id="modal-plan-title">Novo plano</h3>
+    <div class="field"><label>ID (sem espaços) *</label><input id="p-id" type="text" placeholder="ex: pro"></div>
+    <div class="field"><label>Nome *</label><input id="p-label" type="text" placeholder="ex: Pro"></div>
+    <div class="field"><label>Cards permitidos</label><div class="cards-grid" id="p-cards"></div></div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('modal-plan')">Cancelar</button>
+      <button class="btn btn-primary" onclick="savePlan()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Card -->
+<div class="overlay" id="modal-card">
+  <div class="modal">
+    <h3>Novo card</h3>
+    <div class="field"><label>ID (sem espaços) *</label><input id="c-id" type="text" placeholder="ex: cotacao"></div>
+    <div class="field"><label>Nome *</label><input id="c-label" type="text" placeholder="ex: Portal de Cotação"></div>
+    <div class="field"><label>Descrição</label><input id="c-desc" type="text" placeholder="Breve descrição"></div>
+    <div class="field"><label>URL *</label><input id="c-url" type="url" placeholder="https://..."></div>
+    <div class="field"><label>Ícone (emoji)</label><input id="c-icon" type="text" placeholder="💊"></div>
+    <div class="field"><label>Tag</label><input id="c-tag" type="text" placeholder="ex: Mercado"></div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('modal-card')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveCard()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Admin -->
+<div class="overlay" id="modal-admin">
+  <div class="modal">
+    <h3>Adicionar administrador</h3>
+    <div class="field"><label>E-mail *</label><input id="a-email" type="email" placeholder="admin@email.com"></div>
+    <div class="modal-footer">
+      <button class="btn" onclick="closeModal('modal-admin')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveAdmin()">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API = 'https://api.corretortech.com';
+let allCards = [], allPlans = [], allAdmins = [], editingEmail = null;
+
+async function api(path, method = 'GET', body = null) {
+  const opts = { method, headers: { 'Content-Type': 'application/json' } };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(API + path, opts);
+  return res.json();
+}
+
+function toast(msg, err = false) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast' + (err ? ' err' : '');
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 3000);
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', ['users','plans','cards','admins'][i] === name));
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('section-' + name).classList.add('active');
+}
+
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+function openModal(id)  { document.getElementById(id).classList.add('open'); }
+
+/* ── Usuários ── */
+async function loadUsers() {
+  const users = await api('/admin/users');
+  const tb = document.getElementById('users-body');
+  if (!users.length) { tb.innerHTML = '<tr><td colspan="5" class="empty">Nenhum usuário cadastrado</td></tr>'; return; }
+  tb.innerHTML = users.map(u => `
+    <tr>
+      <td>${u.email}</td>
+      <td>${u.nome || '—'}</td>
+      <td><span class="pill pill-${u.plano}">${u.plano}</span></td>
+      <td><span class="status ${u.ativo ? 'on' : 'off'}"></span>${u.ativo ? 'Ativo' : 'Inativo'}</td>
+      <td style="text-align:right;display:flex;gap:8px;justify-content:flex-end">
+        <button class="btn btn-sm btn-primary" onclick="editUser('${u.email}','${u.nome||''}','${u.plano}',${u.ativo})">Editar</button>
+        <button class="btn btn-sm btn-danger" onclick="deleteUser('${u.email}')">Remover</button>
+      </td>
+    </tr>`).join('');
+}
+
+function openUserModal(email='', nome='', plano='', ativo=true) {
+  editingEmail = email || null;
+  document.getElementById('modal-user-title').textContent = email ? 'Editar usuário' : 'Novo usuário';
+  document.getElementById('u-email').value = email;
+  document.getElementById('u-email').disabled = !!email;
+  document.getElementById('u-nome').value = nome;
+  document.getElementById('u-ativo').value = String(ativo);
+  const sel = document.getElementById('u-plano');
+  sel.innerHTML = allPlans.map(p => `<option value="${p.id}" ${p.id===plano?'selected':''}>${p.label}</option>`).join('');
+  openModal('modal-user');
+}
+
+function editUser(email, nome, plano, ativo) { openUserModal(email, nome, plano, ativo); }
+
+async function saveUser() {
+  const email = editingEmail || document.getElementById('u-email').value.trim();
+  const nome  = document.getElementById('u-nome').value.trim();
+  const plano = document.getElementById('u-plano').value;
+  const ativo = document.getElementById('u-ativo').value === 'true';
+  if (!email || !plano) return toast('E-mail e plano obrigatórios', true);
+  await api('/admin/users', 'POST', { email, nome, plano, ativo });
+  closeModal('modal-user'); toast('Usuário salvo!'); loadUsers();
+}
+
+async function deleteUser(email) {
+  if (!confirm(`Remover ${email}?`)) return;
+  await api(`/admin/users/${encodeURIComponent(email)}`, 'DELETE');
+  toast('Usuário removido'); loadUsers();
+}
+
+/* ── Planos ── */
+async function loadPlans() {
+  allPlans = await api('/admin/plans');
+  const tb = document.getElementById('plans-body');
+  if (!allPlans.length) { tb.innerHTML = '<tr><td colspan="4" class="empty">Nenhum plano</td></tr>'; return; }
+  tb.innerHTML = allPlans.map(p => `
+    <tr>
+      <td><code>${p.id}</code></td>
+      <td>${p.label}</td>
+      <td>${(p.cards||[]).join(', ') || '—'}</td>
+      <td style="text-align:right">
+        <button class="btn btn-sm btn-danger" onclick="deletePlan('${p.id}')">Remover</button>
+      </td>
+    </tr>`).join('');
+}
+
+function openPlanModal() {
+  document.getElementById('p-id').value = '';
+  document.getElementById('p-label').value = '';
+  const grid = document.getElementById('p-cards');
+  grid.innerHTML = allCards.map(c => `
+    <label class="card-toggle" id="toggle-${c.id}">
+      <input type="checkbox" value="${c.id}" onchange="this.closest('label').classList.toggle('checked',this.checked)">
+      ${c.icon || ''} ${c.label}
+    </label>`).join('');
+  openModal('modal-plan');
+}
+
+async function savePlan() {
+  const id    = document.getElementById('p-id').value.trim().replace(/\s+/g,'');
+  const label = document.getElementById('p-label').value.trim();
+  const cards = [...document.querySelectorAll('#p-cards input:checked')].map(i => i.value);
+  if (!id || !label) return toast('ID e nome obrigatórios', true);
+  await api('/admin/plans', 'POST', { id, label, cards });
+  closeModal('modal-plan'); toast('Plano salvo!'); loadPlans();
+}
+
+async function deletePlan(id) {
+  if (!confirm(`Remover plano "${id}"?`)) return;
+  await api(`/admin/plans/${id}`, 'DELETE');
+  toast('Plano removido'); loadPlans();
+}
+
+/* ── Cards ── */
+async function loadCards() {
+  allCards = await api('/admin/cards');
+  const tb = document.getElementById('cards-body');
+  if (!allCards.length) { tb.innerHTML = '<tr><td colspan="4" class="empty">Nenhum card</td></tr>'; return; }
+  tb.innerHTML = allCards.map((c,i) => `
+    <tr>
+      <td><code>${c.id}</code></td>
+      <td>${c.icon||''} ${c.label}</td>
+      <td><a href="${c.url}" target="_blank" style="color:var(--blue)">${c.url}</a></td>
+      <td style="text-align:right">
+        <button class="btn btn-sm btn-danger" onclick="deleteCard(${i})">Remover</button>
+      </td>
+    </tr>`).join('');
+}
+
+function openCardModal() {
+  ['c-id','c-label','c-desc','c-url','c-icon','c-tag'].forEach(id => document.getElementById(id).value = '');
+  openModal('modal-card');
+}
+
+async function saveCard() {
+  const card = {
+    id:    document.getElementById('c-id').value.trim().replace(/\s+/g,''),
+    label: document.getElementById('c-label').value.trim(),
+    desc:  document.getElementById('c-desc').value.trim(),
+    url:   document.getElementById('c-url').value.trim(),
+    icon:  document.getElementById('c-icon').value.trim(),
+    tag:   document.getElementById('c-tag').value.trim(),
+  };
+  if (!card.id || !card.label || !card.url) return toast('ID, nome e URL obrigatórios', true);
+  const updated = [...allCards, card];
+  await api('/admin/cards', 'POST', updated);
+  closeModal('modal-card'); toast('Card adicionado!'); loadCards();
+}
+
+async function deleteCard(idx) {
+  if (!confirm('Remover este card?')) return;
+  const updated = allCards.filter((_,i) => i !== idx);
+  await api('/admin/cards', 'POST', updated);
+  toast('Card removido'); loadCards();
+}
+
+/* ── Admins ── */
+async function loadAdmins() {
+  allAdmins = await api('/admin/admins');
+  const tb = document.getElementById('admins-body');
+  if (!allAdmins.length) { tb.innerHTML = '<tr><td colspan="2" class="empty">Nenhum admin</td></tr>'; return; }
+  tb.innerHTML = allAdmins.map(a => `
+    <tr>
+      <td>${a}</td>
+      <td style="text-align:right">
+        <button class="btn btn-sm btn-danger" onclick="deleteAdmin('${a}')">Remover</button>
+      </td>
+    </tr>`).join('');
+}
+
+function openAdminModal() { document.getElementById('a-email').value = ''; openModal('modal-admin'); }
+
+async function saveAdmin() {
+  const email = document.getElementById('a-email').value.trim();
+  if (!email) return toast('E-mail obrigatório', true);
+  const updated = [...new Set([...allAdmins, email])];
+  await api('/admin/admins', 'POST', updated);
+  closeModal('modal-admin'); toast('Admin adicionado!'); loadAdmins();
+}
+
+async function deleteAdmin(email) {
+  if (!confirm(`Remover admin "${email}"?`)) return;
+  const updated = allAdmins.filter(a => a !== email);
+  await api('/admin/admins', 'POST', updated);
+  toast('Admin removido'); loadAdmins();
+}
+
+/* ── Init ── */
+async function init() {
+  const me = await api('/me');
+  document.getElementById('admin-email').textContent = me.email || 'sem acesso';
+  if (!me.admin) {
+    document.body.innerHTML = '<div style="text-align:center;padding:80px;color:#ef4444;font-size:18px">⛔ Acesso negado — apenas administradores podem acessar este painel.</div>';
+    return;
+  }
+  await Promise.all([loadCards(), loadPlans(), loadAdmins()]);
+  loadUsers();
+}
+
+init();
+</script>
+</body>
+</html>

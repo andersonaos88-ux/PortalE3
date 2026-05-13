@@ -1,0 +1,11 @@
+name = "corretortech-auth"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "b1658bcecdcd4d2db5aab57dc382f012"
+
+[[routes]]
+pattern = "api.corretortech.com/*"
+zone_name = "corretortech.com"
