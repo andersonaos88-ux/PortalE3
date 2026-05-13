@@ -1,6 +1,0 @@
-[
-  {"id":"bradesco-rede","label":"Bradesco Rede","desc":"Apresentações Canal Rede","url":"https://bradesco.corretortech.com","icon":"🏥","tag":"Bradesco · Canal Rede"},
-  {"id":"bradesco-e3","label":"Bradesco E3","desc":"Apresentações para funcionários E3","url":"https://bradesco-e3.corretortech.com","icon":"🏥","tag":"Bradesco · E3"},
-  {"id":"cotacao","label":"Portal de Cotação","desc":"Apresentação de mercado","url":"https://cotacao.corretortech.com","icon":"💊","tag":"Mercado"},
-  {"id":"chat","label":"Chat de Suporte","desc":"Assistente IA para corretores","url":"https://chat.corretortech.com","icon":"💬","tag":"Suporte"}
-]
