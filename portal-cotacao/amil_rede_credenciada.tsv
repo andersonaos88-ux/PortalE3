@@ -1,0 +1,411 @@
+regiao	cidade	hospital	Bronze SP Enf	Bronze SP Mais Enf	Prata Enf	Prata Quarto	Ouro Enf	Ouro Quarto	Ouro II Quarto	Platinum R1 Quarto	Platinum R2 Quarto	S380 Enf	S380 Quarto	S450 Enf	S450 Quarto	S750 R1 Quarto	S750 R2 Quarto	S750 R3 Quarto	Black I R1 Quarto	Black I R2 Quarto	Black I R3 Quarto	S2500 R1 Quarto	S2500 R2 Quarto	Black II R1 Quarto	Black II R2 Quarto	Black II R3 Quarto	S6500 Black R1 Quarto	S6500 Black R2 Quarto	S6500 Black R3 Quarto
+São Paulo - Centro	Bela Vista	Paulistano - SP	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Centro	Bela Vista	Samaritano - Paulista	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Centro	Bela Vista	Hospital BP	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	H¹,M,PS¹	H¹,M,PS¹	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Centro	Liberdade	Leforte	-	-	-	-	H¹,PS¹	H¹,PS¹	-	H¹,PS¹	H¹,PS¹	-	-	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Centro	Jardim Paulista	H Nove de Julho	-	-	-	-	-	-	PA,PS	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Bela Vista	Oswaldo Cruz - Paulista	-	-	-	-	-	-	H¹,PS	H¹,PS	H¹,PS	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS
+São Paulo - Centro	Santa Cecília	Samaritano - Higienópolis	-	-	-	-	-	-	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	-	-	-	-	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹
+São Paulo - Centro	Bela Vista	Sta Catarina	-	-	-	-	-	H¹,PS¹	-	H¹,PS¹	H¹,PS¹	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Centro	Liberdade	A C Camargo - Antônio Prudente	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS
+São Paulo - Centro	Consolação	H Infantil Sabará	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Centro	B Vista	Pro Matre	-	-	-	-	-	-	-	M,PS¹	M,PS¹	-	-	-	-	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹
+São Paulo - Centro	Bela Vista	Sírio Libanês	-	-	-	-	-	-	-	H,PS	H,PS	-	-	-	-	-	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+São Paulo - Centro	Bela Vista	BP Mirante	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M
+São Paulo - Centro	Liberdade	H Adventista - Aclimação	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Centro	Bela Vista	H Igesp Paulista	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS
+São Paulo - Centro	Liberdade	H Saha	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Zona Oeste	Butantã	H Luz	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹
+São Paulo - Zona Oeste	Vila Romana	Metropolitano	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Zona Oeste	Jardim Jaraguá (São Domingos)	Irmãs Hospitaleiras	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Vila Progredior	Leforte - Morumbi	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Oeste	Vila Pompéia	São Camilo Pompéia	-	-	-	-	H,PS	H,PS	-	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Cerqueira César	Clínicas FMUSP - Incor	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H,PS¹	H,PS¹	H,PS¹	H¹,PS¹	H¹,PS¹	H,PS¹	H,PS¹	H,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Oeste	Cerqueira César	Clínicas FMUSP - Instituto Central	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H¹,PS
+São Paulo - Zona Oeste	Perdizes	CM Albert Einstein	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹
+São Paulo - Zona Oeste	Cidade Jardim	H e Mat São Luíz - Morumbi	-	-	-	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	-	-	-	H,PS	H,PS	-	-	-	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Higienópolis	Sta Isabel	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Sul	Vila Mariana	H Luz - Vl Mariana	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Zona Sul	Santo Amaro	H Luz Sto Amaro	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS
+São Paulo - Zona Sul	Vila Clementino	GRACC	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Sul	Moema	Ophthal H Especializado	-	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS
+São Paulo - Zona Sul	Indianópolis	Alvorada - Moema	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Sul	Indianópolis	API Psiquiátrica Integrada	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Olímpia	Blanc	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Zona Sul	Capão Redondo	Clinisul	-	-	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS
+São Paulo - Zona Sul	Vila Mariana	H e Mat Sepaco	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹
+São Paulo - Zona Sul	Vila Mariana	H Sta Cruz	-	-	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Sul	Chácara Santo Antônio (Zona Sul)	Sta Isabella	-	-	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP
+São Paulo - Zona Sul	Vila Clementino	AACD	-	-	-	-	H	H	-	H	H	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+São Paulo - Zona Sul	Jardim Vista Linda	CM Adventista - Capão Redondo	-	-	-	-	PA,PS¹	PA,PS¹	-	PA,PS¹	PA,PS¹	-	-	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹
+São Paulo - Zona Sul	Vila Clementino	Rim e Hipertensão	-	-	-	-	H	H	-	H	H	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+São Paulo - Zona Sul	Indianópolis	Ruben Berta	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Clementino	H Paulista Otorrinolaringologia	-	-	-	-	-	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Paraíso	Santa Joana	-	-	-	-	-	M,PS¹	M,PS¹	M,PS¹	M,PS¹	-	-	-	-	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹
+São Paulo - Zona Sul	Vila Monumento	São Camilo Ipiranga	-	-	-	-	H,PS	H,PS	-	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Brooklin Paulista	Sta Paula	-	-	-	-	H¹,PS¹	H¹,PS¹	-	H¹,PS¹	H¹,PS¹	-	-	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS
+São Paulo - Zona Sul	Ipiranga	Dom Alvarenga	-	-	-	-	-	-	-	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Paraíso	HCOR	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Sul	Indianópolis	Cruz Vermelha	-	-	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	-	-	-	-	-	-	-	-	-	-	-
+São Paulo - Zona Sul	Paraíso	H e Mat Sta Maria	-	-	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	M,PS¹	-	-	-	-	-	-	-	-	-	-	-
+São Paulo - Zona Sul	Itaim Bibi	Sírio Libanês - Itaim	-	-	-	-	-	-	-	H¹	H¹	-	-	-	-	-	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Zona Sul	Jardim Leonor	Albert Einstein Morumbi	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹
+São Paulo - Zona Sul	Vila Firmiano Pinto	CM Albert Einstein - C. Klabin	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹
+São Paulo - Zona Sul	Ibirapuera	CM Albert Einstein	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+São Paulo - Zona Sul	Planalto Paulista	H Moriah	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Zona Sul	Vila Mariana	Sta Rita	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Zona Sul	Vila Parque Jabaquara	H da Criança - Jabaquara	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Sul	Vila Parque Jabaquara	H e Mat São Luíz - Jabaquara	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Sul	Vila Nova Conceição	H e Mat São Luíz - Itaim	-	-	-	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	-	-	-	H¹,PS	H¹,PS	-	-	-	H¹,PS	H¹,PS	H¹,PS
+São Paulo - Zona Sul	Vila Olímpia	M São Luíz Star	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PA	H¹,M,PA	-	-	-	H¹,M,PA	H¹,M,PA	H¹,M,PA
+São Paulo - Zona Sul	Vila Nova Conceição	H Vila Nova Star	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Leste	Vila Azevedo	Amil Espaço Saúde - Tatuapé	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP	PA,PSP
+São Paulo - Zona Leste	Vila Regente Feijó	Vitória - Anália Franco	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Zona Leste	Vila Silva Teles	CM Sto Antônio - Itaim Pta	-	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+São Paulo - Zona Leste	Vila Matilde	H e Mat Sta Clara Vila Matilde	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Leste	Vila Carmosina	Sta Marcelina	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Zona Leste	Brás	Sta Virginia	-	-	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Leste	Quarta Parada	Cema - ZL Belém	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Brás	IBCC	-	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Zona Leste	Moóca	H San Gennaro -SP	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+São Paulo - Zona Leste	Quarta Parada	H Central Tatuapé	-	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	-	-	-	H,PS	H,PS	-	-	-	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Alto Da Moóca	H Villa Lobos	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+São Paulo - Zona Leste	Tatuapé	H São Luíz - Anália Franco	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Zona Leste	Vila Iolanda(Lajeado)	H Central Leste	-	-	-	-	-	-	-	-	-	H¹,M,PS	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+São Paulo - Zona Norte	Santana	Amil Espaço Saúde	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+São Paulo - Zona Norte	Santana	HSANP	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Zona Norte	Parque Novo Mundo	Nipo Brasileiro	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+São Paulo - Zona Norte	Santana	Hospital Sao Camilo	-	-	-	-	H,PS	H,PS	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Norte	Santana	São Camilo Santana	-	-	-	-	-	-	H,PS¹	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+ABCD	São Bernardo do Campo	Sta Helena	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹
+ABCD	Santo André	Sta Helena	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS
+ABCD	São Bernardo do Campo	Sta Helena SBC	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+ABCD	São Caetano do Sul	H Central	-	H¹,M	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+ABCD	Santo André	H e Mat Dr Christovão da Gama	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+ABCD	São Bernardo do Campo	Ophthal H Especializado Unid SBC	-	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	H,PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS
+ABCD	Mauá	Sta Casa	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+ABCD	Santo André	Beneficência Portuguesa de Sto André	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+ABCD	São Caetano do Sul	H Benef Portuguesa São Caetano	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+ABCD	Diadema	H Christóvão da Gama	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS	H,PS	H,PS	H,PS
+ABCD	Santo André	H Bartira	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+ABCD	Ribeirão Pires	H e M Ribeirão Pires	-	-	-	-	-	-	-	-	-	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	H¹,M,PA,PS¹	-	-	-	H¹,PA,PS¹	H¹,PA,PS¹	-	-	-	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹
+ABCD	São Bernardo do Campo	H São Bernardo	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H¹,PS
+ABCD	São Bernardo do Campo	H Assunção	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+ABCD	Mauá	H Brasil Mauá	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+ABCD	São Bernardo do Campo	H Ifor	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+ABCD	Santo André	H e M Brasil	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+ABCD	São Caetano do Sul	H São Luíz SCS	-	-	-	-	-	-	-	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	-	-	-	H,M,PS	H,M,PS	-	-	-	H,M,PS	H,M,PS	H,M,PS
+ABCD	Mauá	CM Hospitalar	PA	PA	PA	PA	-	-	PA	-	-	PA	PA	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+ABCD	São Bernardo do Campo	CM Hospitalar	PA	PA	PA	PA	-	-	PA	-	-	PA	PA	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Grande SP	Guarulhos	H Carlos Chagas	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Grande SP	Caieiras	H Clín Caieiras	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Grande SP	Guarulhos	Unid Avançada Carlos Chagas	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹
+Grande SP	Osasco	Amil Espaço Saúde	-	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+Grande SP	Itapevi	Crusam	-	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA
+Grande SP	Cotia	H São Francisco	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Grande SP	Osasco	H Vidas Osasco	-	H,PS¹	H,PS¹	H,PS¹	H,PS	H,PS	H,PS¹	H,PS¹	H,PS¹	H,PS	H,PS	H,PS	H,PS	H,PS¹	H,PS¹	H,PS¹	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H¹,PS
+Grande SP	Itapevi	H Yes	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Grande SP	Barueri	Nove de Julho - Alphaville	-	PA,PS¹	PA,PS¹	PA,PS¹	H,PA,PS¹	H,PA,PS¹	PA,PS¹	H,PA,PS¹	H,PA,PS¹	PA,PS¹	PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹	H,PA,PS¹
+Grande SP	Osasco	H e Mat Cruzeiro do Sul	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Grande SP	Taboão da Serra	H Family	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Grande SP	Itapecerica da Serra	Sta Mônica	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Grande SP	Osasco	Projeto Criança	-	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	-	-	-	-	-	-	-	-	-	-	-
+Grande SP	Carapicuíba	Central Oeste	-	-	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,M,PS¹	-	-	-	H¹,PS	H¹,PS	-	-	-	H¹,PS	H¹,PS	H¹,PS
+Grande SP	Jandira	CC NDI Nova Vida I	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+Grande SP	Barueri	CM Albert Einstein - Alphaville	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹	PA,PS¹
+Grande SP	Osasco	GTO	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹
+Grande SP	Itapevi	H e Mat Nova Vida	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M
+Grande SP	Osasco	H e M São Luíz	-	-	-	-	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Alto Tietê	Itaquaquecetuba	H e M Ipiranga Unid Avançada Itaquá	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+Alto Tietê	Mogi das Cruzes	H Ipiranga	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Alto Tietê	Arujá	Ipiranga (AMA)	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Alto Tietê	Suzano	H Sta Maria de Suzano	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹
+Alto Tietê	Guararema	Sta Casa	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Alto Tietê	Santa Isabel	Sta Casa	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Alto Tietê	Mogi das Cruzes	H e Mat Mogi Mater	-	-	M,PS¹	M,PS¹	H¹,M,PS¹	H¹,M,PS¹	M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Alto Tietê	Suzano	H Saint Nicholas	-	-	PS¹	PS¹	H¹,PS¹	H¹,PS¹	PS¹	H¹,PS¹	H¹,PS¹	PS¹	PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Alto Tietê	Mogi das Cruzes	H Biocor	-	-	-	-	H¹	H¹	-	H¹	H¹	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+Baixada Santista	Cubatão	H Ana Costa	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+Baixada Santista	Santos	H Ana Costa - Dr Aloísio F	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H	H	H	H	H	H	H	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Baixada Santista	Guarujá	H Ana Costa	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS	PA,PS
+Baixada Santista	Praia Grande	H Ana Costa	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS
+Baixada Santista	São Vicente	H Ana Costa	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS
+Baixada Santista	Guarujá	H Sto Amaro	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+Baixada Santista	Santos	H Benef Portuguesa de Santos	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Santos	H Infantil de Santos	-	-	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP
+Baixada Santista	Santos	H São Lucas de Santos	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	H¹,M,PS¹	H¹,M,PS¹	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Jundiaí	H Dia Oftalmológico	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Jundiaí	Pitangueiras	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Campinas	Casa de Saúde Vera Cruz Campinas	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Campinas	Clín de Olhos Raskin	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Campinas	H Boldrini	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Campinas e Região	Campinas	H PUC	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Campinas	Madre Theodora	-	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS	H,M,PA,PS
+Campinas e Região	Louveira	Sta Casa	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Valinhos	Sta Casa	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Campinas e Região	Vinhedo	Sta Casa	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP	H¹,M,PSP
+Campinas e Região	Atibaia	Albert Sabin	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Indaiatuba	CM São Camilo	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Campinas e Região	Hortolândia	Cto Clín de Cirurgia	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Amparo	H Benef Portuguesa de Amparo	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Campinas e Região	Artur Nogueira	H Bom Samaritano	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Águas de Lindóia	H Dr Francisco Tozzi	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Valinhos	H e Mat Galileo	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Campinas e Região	Itatiba	H Itatiba	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Indaiatuba	H Sta Ignês	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Bragança Paulista	H Universitário HUSF	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Piracicaba	HFC	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Itapira	Inst Bairral Psiquiatria	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Rio Claro	IORC	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Monte Mor	Sagrado Coração de Jesus	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Campinas	Samaritano de Campinas	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M
+Campinas e Região	Serra Negra	Santa Rosa de Lima	-	-	H	H	H	H	H	H	H	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H	H	H	H¹	H¹	H	H	H	H¹	H¹	H¹
+Campinas e Região	Americana	São Francisco de Americana	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Campinas e Região	Bragança Paulista	Sta Casa	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Campinas e Região	Capivari	Sta Casa	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+Campinas e Região	Cosmópolis	Sta Casa	-	-	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹
+Campinas e Região	Itatiba	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Campinas e Região	Leme	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Limeira	Sta Casa	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Campinas e Região	Pirassununga	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	São Pedro	Sta Casa	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Campinas e Região	Casa Branca	Sta Casa de Casa Branca	-	-	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M
+Campinas e Região	Piracaia	Sta Casa São Vicente de Paulo	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Campinas e Região	Rio Claro	Sta Filomena	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Cosmópolis	Sta Gertrudes	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Campinas	H Vera Cruz	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	H¹,M,PS¹	H¹,M,PS¹	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Campinas	H Geral e Mat Sta Tereza	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	H¹,M,PS¹	H¹,M,PS¹	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Campinas e Região	Jundiaí	H Sta Elisa	-	-	-	-	H,M,PS¹	H,M,PS¹	-	H,M,PS¹	H,M,PS¹	-	-	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹
+Campinas e Região	Campinas	Inst Oftalmootorrinolaringológico	-	-	-	-	H	H	-	H	H	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Campinas	Campinas Day H	-	-	-	-	-	-	-	H	H	-	-	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Campinas	Centro Médico Campinas	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Campinas e Região	Campinas	H Sta Sofia	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+Campinas e Região	Atibaia	H Novo Atibaia	-	-	-	-	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Campinas e Região	Campinas	CC Campinas	-	-	-	-	H	H	-	H	H	-	-	H	H	H	H	H	-	-	-	-	-	-	-	-	-	-	-
+Campinas e Região	Campinas	H São Luiz	-	-	-	-	-	-	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Jarinu	H Jarinu	-	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS
+Interior	São José do Rio Preto	Casa de Saúde Sta Helena	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Presidente Prudente	Cto de Fraturas São Lucas	-	-	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹	H,PS¹
+Interior	Ribeirão Preto	GCS Neurocirurgia	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+Interior	São José do Rio Preto	H Austa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M
+Interior	Bauru	H Bauru	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Ribeirão Preto	H das Clín Faculdade de Medicina	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	São José do Rio Preto	H de Base	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Franca	H de Franca	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Assis	H de Olhos Oeste Paulista	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Interior	São José do Rio Preto	H do Coração S J Rio Preto	-	-	H	H	H	H	H	H	H	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H	H	H	H¹	H¹	H	H	H	H¹	H¹	H¹
+Interior	Estrela d'Oeste	H Dr Onofre S Rosateli	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Interior	Caçapava	H e M Policlin Caçapava	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Mirassol	H e Mat Mãe do Divino Amor	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Franca	H e Mat São Joaquim	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Registro	H e Mat São José	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Lins	H e Mat São Lucas	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Presidente Prudente	H Iamada	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Ribeirão Preto	H Oftalmológico Ribeirão Preto	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Interior	Catanduva	H Padre Albino	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Interior	Araras	H Pro Saúde Geral Araras	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Interior	Ribeirão Preto	H São Francisco	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Sertãozinho	H São Francisco - Unid Netto Campello	-	-	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹
+Interior	Registro	H São João	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Barretos	H São Jorge	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Ituverava	H São Jorge	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Ribeirão Preto	H São Lucas	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Ribeirão Preto	H São Lucas Ribeirânia	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Jaboticabal	H São Marcos	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Marília	H Unimar	-	-	H¹,M	H¹,M	H¹,M,PS¹	H¹,M,PS¹	H¹,M	H¹,M,PS¹	H¹,M,PS¹	H¹,M	H¹,M	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Birigui	H Unimed Birigui	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Bebedouro	H Unimed Sta Casa	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Interior	São José do Rio Preto	HIMO	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+Interior	São José do Rio Preto	HO Redentora	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Interior	Caçapava	La Serenité	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Interior	Lençóis Paulista	Libertá	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Interior	Jaú	Olhos SJT	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Interior	Monte Aprazível	Santa Casa Monte Apraziel	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Interior	Assis	Sta Casa	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Interior	Cravinhos	Sta Casa	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Interior	Dracena	Sta Casa	-	-	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹	H¹
+Interior	Fernandópolis	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Itararé	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Jaú	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	José Bonifácio	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Lins	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Lucélia	Sta Casa	-	-	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹
+Interior	Marília	Sta Casa	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Pederneiras	Sta Casa	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Penápolis	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Presidente Venceslau	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Ribeirão Preto	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	São Carlos	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	São José do Rio Preto	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Serrana	Sta Casa	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Interior	Votuporanga	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Batatais	Sta Casa Batatais	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Andradina	Sta Casa de Andradina	-	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Interior	Capão Bonito	Sta Casa de Capão Bonito	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Jales	Sta Casa de Jales	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Presidente Prudente	Sta Casa de Presidente Prudente	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	Apiaí	Ass Benef de Apiaí	-	-	-	-	H¹,M,PS	H¹,M,PS	-	H¹,M,PS	H¹,M,PS	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Interior	São José do Rio Preto	HORP	-	-	-	-	H	H	-	H	H	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Interior	São Carlos	Norden Hospital	-	-	-	-	H¹,PS	H¹,PS	-	H¹,PS	H¹,PS	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS	H¹,PS	H¹,PS	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Araraquara	Sta Casa	-	-	-	-	H¹,PS¹	H¹,PS¹	-	H¹,PS¹	H¹,PS¹	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Tanabi	Sta Casa São Vicente P Tanabi	-	-	-	-	H¹,M,PS	H¹,M,PS	-	H¹,M,PS	H¹,M,PS	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Interior	Ribeirão Preto	H Sta Lydia	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Interior	Bauru	H Benef Portuguesa de Bauru	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	-	-	-	-	-	-	-	-
+Interior	Barretos	Sta Casa de Barretos	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	-	-	-	-	-	-	-	-	-	-
+Interior	Assis	IAM	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹
+Interior	Jaú	Perlatti	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H	H
+Sorocaba e Região	Sorocaba	GPACI	-	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS
+Sorocaba e Região	Sorocaba	H Evangélico de Sorocaba	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Sorocaba e Região	Sorocaba	H Oftalmológico de Sorocaba	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Sorocaba	H Sta Lucinda	-	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M	H¹,M	H¹,M	H¹,M,PS¹	H¹,M,PS¹	H¹,M	H¹,M	H¹,M	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Sorocaba e Região	Votorantim	H Sto Antônio	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,M,PS	H,M,PS	H,PS	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Sorocaba	CORTS	-	-	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+Sorocaba e Região	Ibiúna	Estância Morro Grande	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Sorocaba e Região	Sorocaba	H Modelo Sorocaba	-	-	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹	PS¹
+Sorocaba e Região	Boituva	H São Luiz	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Sorocaba e Região	Sorocaba	Notrecare	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Sorocaba e Região	Sorocaba	Pró Infância	-	-	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA	PA
+Sorocaba e Região	Cerquilho	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Sorocaba e Região	Laranjal Paulista	Sta Casa	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Sorocaba e Região	Piedade	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Sorocaba e Região	Porto Feliz	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Sorocaba e Região	Salto de Pirapora	Sta Casa	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Sorocaba e Região	Cerqueira César	Sta Casa de Cerqueira César	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Sorocaba e Região	Salto	Unimed Salto/Itu	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Vale do Paraíba	São José dos Campos	Antoninho da Rocha Marmo	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Caraguatatuba	CM São Camilo	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Vale do Paraíba	Jacareí	H Alvorada	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Vale do Paraíba	São Sebastião	H de Clín de São Sebastião	-	-	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹	H,M,PS¹
+Vale do Paraíba	São José dos Campos	H e M Policlin	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Vale do Paraíba	Taubaté	H e M Policlin Taubaté	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Vale do Paraíba	Guaratinguetá	H e Mat Frei Galvão	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	São José dos Campos	H GACC	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	H Infantil Prontil	-	-	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP
+Vale do Paraíba	São José dos Campos	H Pio XII	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Vale do Paraíba	São José dos Campos	H Pro Infância	-	-	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP	H¹,PSP
+Vale do Paraíba	Taubaté	H Regional de Taubaté	-	-	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹
+Vale do Paraíba	São José dos Campos	H São José	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Caraguatatuba	H Stella Maris	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Taubaté	H Ubarana	-	-	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA	H¹,PA	H¹,PA	H¹,PA,PS¹	H¹,PA,PS¹	H¹,PA,PS¹
+Vale do Paraíba	São José dos Campos	Inst Chui de Psiquiatria	-	-	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Vale do Paraíba	Jacareí	Policlin Saúde	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Vale do Paraíba	Jacareí	São Francisco Assis	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H¹,PS	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H,PS	H,PS	H,PS	H¹,PS	H¹,PS	H¹,PS
+Vale do Paraíba	Guaratinguetá	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Lorena	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Pindamonhangaba	Sta Casa	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Vale do Paraíba	São José dos Campos	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Ubatuba	Sta Casa	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Aparecida	Sta Casa de Aparecida	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	Cruzeiro	Sta Casa	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	H¹,M,PS¹	H¹,M,PS¹	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	São Bento do Sapucaí	Sta Casa	-	-	-	-	H¹,M,PS	H¹,M,PS	-	H¹,M,PS	H¹,M,PS	-	-	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS	H¹,M,PS
+Vale do Paraíba	Jacareí	H Clín Antônio Afonso	-	-	-	-	-	-	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	-	-	-	H¹,M,PS¹	H¹,M,PS¹	H¹,M,PS¹
+Vale do Paraíba	São José dos Campos	H Vivalle	-	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	-	-	-	H,PS	H,PS	-	-	-	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	Orthoservice	-	-	-	-	-	-	-	-	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	-	-	-	H¹,PS¹	H¹,PS¹	H¹,PS¹
+Laboratórios	Laboratório	A Frealdo	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	A+ (Grupo Fleury) - SP	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Acta	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Albert Einstein - Cidade Jardim	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Alpha	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Alta	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Anchieta	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Behring	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Bio Nuclear	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Biolab	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Bragança	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Carlos Chagas	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CDB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Clin Dig Dra Valderez	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CM Cavalcante	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Confiance	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cruzeiro	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cytolab	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Delboni Auriemo	-	-	-	-	LAB	LAB	-	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Delboni Auriemo - Guarulhos	-	-	-	-	LAB	LAB	-	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Diagcel	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Diagmed	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dirceu Dalpino - Bauru	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dr Edna - Indaiatuba	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dr Tajara	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dr Vicente Coutinho	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ellinger	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	-	-	-
+Laboratórios	Laboratório	Exatto	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Femme	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ferdinando Costa	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Fleury	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Franceschi	-	-	-	-	LAB	LAB	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Hermes Pardini	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Hormon	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	IACS	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	ICON	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	IDS	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Imedi	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Inst do Sono	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	-	-	-
+Laboratórios	Laboratório	Inst Fleming	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Inst Radioterapia ABC	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Instituto de Medicina Nuclear	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Itapema	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Itulab	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	JCA	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Jorge Eid	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Lab Dracena	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labclin	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labor Med - Batatais	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Laboratório Santista	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Laborclin	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	-	LAB	LAB	-	-	-	LAB	LAB	LAB
+Laboratórios	Laboratório	Laborfase	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labormed	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labortest	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Lavoisier - SP	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	LSF	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	LSL	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Magna	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	-	-	-	-	-	LAB	LAB	LAB	-	-	LAB	LAB	LAB	-	-	-
+Laboratórios	Laboratório	Med Sonic	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Medical Imagem Ltda	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Mil	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Mult Imagem - SP	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Notrelabs	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Nova	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Nuclear	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Oswaldo Cruz	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Pasteur	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Pasteur Eurofins	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Pathos	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	PC & C	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Personal - SP	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Plani	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Previlab	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ramos de Souza	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	RCC	-	-	-	-	-	-	-	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	RDO	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Rede Moriah Saúde	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ribeiro Porto	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Rio Claro	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	RM Beiramar	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sabin	-	-	-	-	LAB	LAB	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sabin Diagnóstico - SP	-	-	-	-	LAB	LAB	-	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Salomão e Zoppi	-	-	-	-	-	-	-	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sancet	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sanitas	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	São José	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	São Judas Tadeu	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	São Lucas - SP	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	São Paulo	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sete Mais	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	SMG - SP	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sonolayer	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Souza Arêas	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sta Clara	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Tec Lab	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Tomovale	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Transduson	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Trianálises	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ultracron	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	UMDI	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	UNEF	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Unep	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Unilab	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Unilabor	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Unimagem	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vale Clin - SP	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vidas Diagnóstico - SP	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vital Lab	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB

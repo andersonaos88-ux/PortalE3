@@ -1,0 +1,564 @@
+regiao	cidade	hospital	Efetivo Enf	Efetivo Quarto	Efetivo Plus Enf	Efetivo Plus Quarto	Saúde + Enf	Saúde + Quarto	Nacional II Enf	Nacional III Quarto	Nacional III 2 Quarto	Nacional III 3 Quarto	Nacional Plus 4 Quarto	Nacional Plus 6 Quarto	Nacional Plus 8 Quarto	Premium 6 Quarto	Premium 8 Quarto	Premium 10 Quarto
+São Paulo - Centro	Bela Vista	Hospital BP	H,PS	H,PS	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Liberdade	Leforte	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Bela Vista	Paulistano - SP	H	H	H,PS	H,PS	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Centro	Liberdade	A C Camargo - Antônio Prudente	H	H	-	H	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Centro	Cambuci	H Cruz Azul de São Paulo	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Bela Vista	H Igesp Paulista	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Liberdade	H Saha	H	H	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Centro	Bela Vista	Samaritano - Paulista	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Bela Vista	Sta Catarina	-	-	-	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Aclimação	A C Camargo - Pires da Mota	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Centro	Liberdade	H Adventista - Aclimação	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Jardim Paulista	H Nove de Julho	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Bela Vista	BP Mirante	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Consolação	H Infantil Sabará	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Centro	Bela Vista	Oswaldo Cruz - Paulista	-	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H
+São Paulo - Centro	B Vista	Pro Matre	-	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Centro	Santa Cecília	Samaritano - Higienópolis	-	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Centro	Bela Vista	Sírio Libanês	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Higienópolis	Sta Isabel	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Lapa	Albert Sabin	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Cerqueira César	Clínicas FMUSP - Incor	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Cerqueira César	Clínicas FMUSP - Instituto Central	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Butantã	H Luz	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Jardim Marilu	H Previna - São Paulo	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Jardim Jaraguá (São Domingos)	Irmãs Hospitaleiras	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H	H	H	H	H	H
+São Paulo - Zona Oeste	Vila Progredior	Leforte - Morumbi	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Vila Romana	Metropolitano	H,M,PS	H,M,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Oeste	Vila Pompéia	São Camilo Pompéia	-	-	-	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Vila Jaguara	Saint Patrick - Jaguara/Oeste	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Oeste	Cidade Jardim	H e Mat São Luíz - Morumbi	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Oeste	Vila Romana	Metropolitano - Cirurgica	-	-	H,M,PS	H,M,PS	-	-	-	-	-	-	-	-	-	-	-	-
+São Paulo - Zona Sul	Ipiranga	Dom Alvarenga	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Paraíso	H e Mat Sta Maria	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Sul	Vila Clementino	Rim e Hipertensão	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+São Paulo - Zona Sul	Indianópolis	Ruben Berta	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Indianópolis	Alvorada - Moema	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Clementino	GRAACC	H,PS	H,PS	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Parque Jabaquara	H da Criança - Jabaquara	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Parque Jabaquara	H e Mat São Luíz - Jabaquara	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Mariana	H e Mat Sepaco	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Sul	Jardim Campo Grande	H e Mat Vida's	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Mariana	H Sta Cruz	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Monumento	São Camilo Ipiranga	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Mariana	Sta Rita	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Indianópolis	API Psiquiátrica Integrada	-	-	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Zona Sul	Vila Olímpia	Blanc	-	-	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Zona Sul	Vila Clementino	Edmundo Vasconcelos	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Capão Redondo	H Central Sul	-	-	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Santo Amaro	H Luz Sto Amaro	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Brooklin Paulista	Sta Paula	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Paraíso	Santa Joana	-	-	-	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Sul	Vila Clementino	H Paulista Otorrinolaringologia	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Paraíso	HCOR	-	-	-	H,PS	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Clementino	Hospital São Paulo	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Zona Sul	Vila Nova Conceição	H e Mat São Luíz - Itaim	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Jardim Leonor	Albert Einstein Morumbi	-	-	-	-	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Sul	Planalto Paulista	H Moriah	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Sul	Vila Nova Conceição	H Vila Nova Star	-	-	-	-	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Vila Carmosina	Sta Marcelina	H,M,PS	H,M,PS	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Leste	Quarta Parada	Cema - ZL Belém	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Vila Iolanda(Lajeado)	H Central Leste	H,PS	H,PS	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Quarta Parada	H Central Tatuapé	-	-	H	H	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Alto Da Moóca	H Villa Lobos	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Brás	IBCC	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+São Paulo - Zona Leste	Jardim Belém	São Miguel - Ermelino Matarazzo	H,PS	H,PS	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Vila Regente Feijó	Vitória - Anália Franco	H,M,PS	H,M,PS	H,PS	H,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Leste	Ermelino Matarazzo	H Vidas Paranaguá	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Vila Formosa	Sagrada Família Vl Formosa	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Brás	Sta Virginia	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Vila Matilde	H e Mat Sta Clara Vila Matilde	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Jardim Helena	H Jd Helena	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Leste	Tatuapé	H São Luíz - Anália Franco	-	-	-	-	-	H,M,PS	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Leste	Cidade Nitro Operária	H São Miguel	-	-	-	-	-	-	PS	PS	PS	PS	PS	PS	PS	PS	PS	PS
+São Paulo - Zona Leste	Jardim Pedro José Nunes	Independência da Zona Leste	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Norte	Parque Novo Mundo	Nipo Brasileiro	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Norte	Santana	Hospital Sao Camilo	H,PS	H,PS	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+São Paulo - Zona Norte	Santana	HSANP	-	-	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+São Paulo - Zona Norte	Tucuruvi	HOSP - Norte Cirúrgica	-	-	H,PS	H,PS	-	-	-	-	-	-	-	-	-	-	-	-
+ABCD	São Bernardo do Campo	Cto de Tratamento Bezerra de Menezes - SBC	H	H	H,PS	H,PS	H	H	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	Santo André	Beneficência Portuguesa de Sto André	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	São Bernardo do Campo	H Assunção	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	Santo André	H Bartira	-	-	H	H	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	São Caetano do Sul	H Benef Portuguesa São Caetano	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+ABCD	Mauá	H Brasil Mauá	H,PS	H,PS	H,PS	H,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+ABCD	Diadema	H Christóvão da Gama	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	Santo André	H e M Brasil	-	-	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+ABCD	Ribeirão Pires	H e M Ribeirão Pires	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+ABCD	Santo André	H e Mat Dr Christovão da Gama	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+ABCD	São Bernardo do Campo	H Ifor	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	São Bernardo do Campo	H São Bernardo	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	Mauá	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	São Caetano do Sul	H São Luíz SCS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+ABCD	São Bernardo do Campo	Sta Marcelina	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	Santo André	H ABC - Unid Cirurgica	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	São Bernardo do Campo	H ABC - Unid Cirúrgica - SBC	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+ABCD	São Caetano do Sul	H Central	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Carapicuíba	Central Oeste	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Cotia	H São Francisco	H	H	H,M,PS	H,M,PS	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Taboão da Serra	Clín Maia (Psiquiatria)	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Itapevi	Crusam	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Guarulhos	H Carlos Chagas	H,M,PS	H,M,PS	H,PS	H,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Caieiras	H Clín Caieiras	H	H	H,M	H,M	-	-	H	H	H	H	H	H	H	H	H	H
+Grande SP	Osasco	H e M São Luíz	-	-	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Osasco	H e Mat Cruzeiro do Sul	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Guarulhos	H e Mat São Luiz	-	-	H	H	H,M,PS	H,M,PS	H,PS	H,PS	H,PS	H,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Franco da Rocha	H Previna	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Grande SP	Guarulhos	H Stella Maris	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Cotia	CPR Mulherer	-	-	-	-	H,M,PS	H,M,PS	H	H	H	H	H	H	H	H	H	H
+Grande SP	Guarulhos	H e Mat Bom Clima	H,M,PS	H,M,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Taboão da Serra	H Family	-	-	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Osasco	H Vidas Osasco	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Barueri	Hospitalis - Unid Barueri	H,M,PS	H,M,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Itapecerica da Serra	Sta Mônica	-	-	-	-	H	H	H	H	H	H	H	H	H	H	H	H
+Grande SP	Caieiras	CSA - Unid Caieiras	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Grande SP	Itapevi	H e Mat Nova Vida	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP	Itapevi	H Yes	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Grande SP	Taboão da Serra	Policlinica Taboao	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Grande SP	Barueri	São Luiz Alphaville	-	-	-	H,PS	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Grande SP - Sul	Embu das Artes	Clín Maia (Psiquiatria)	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H	H
+Alto Tietê	Suzano	H Sta Maria de Suzano	H	H	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Alto Tietê	Mogi das Cruzes	H e Mat Mogi Mater	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Alto Tietê	Mogi das Cruzes	H Ipiranga	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Alto Tietê	Suzano	H Saint Nicholas	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Alto Tietê	Arujá	Ipiranga (AMA)	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Alto Tietê	Guararema	Sta Casa	-	-	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Alto Tietê	Santa Isabel	Sta Casa	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Alto Tietê	Mogi das Cruzes	H Santana	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Baixada Santista	Santos	H Infantil de Santos	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Guarujá	H Sto Amaro	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Cubatão	H Ana Costa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Santos	H Benef Portuguesa de Santos	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Santos	H São Lucas de Santos	H,M,PS	H,M,PS	H,M	H,M	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Baixada Santista	Santos	Casa de Saúde	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Baixada Santista	Santos	H Ana Costa - Dr Aloísio F	H,M	H,M	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Baixada Santista	São Vicente	H Ana Costa	H,M	H,M	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Baixada Santista	Praia Grande	H Igesp Litoral	-	-	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	São Vicente	H São José	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Praia Grande	Casa de Saúde	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Guarujá	H do Guarujá	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	Santos	H Frei Galvão	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Baixada Santista	São Vicente	H Ana Costa - Presidente Wilson	-	-	H,M	H,M	-	-	-	-	-	-	-	-	-	-	-	-
+Baixada Santista	Santos	IMUVI Ana Costa	-	-	H,M	H,M	-	-	-	-	-	-	-	-	-	-	-	-
+Baixada Santista	Santos	Med Center Unid Cirúrgica	-	-	H	H	-	-	-	-	-	-	-	-	-	-	-	-
+Campinas e Região	Campinas	Casa de Saúde Vera Cruz Campinas	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Jundiaí	GRENDACC	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Amparo	H Benef Portuguesa de Amparo	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Campinas	H Boldrini	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Sumaré	H Day Sumaré	H,PS	H,PS	H,PS	H,PS	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Jundiaí	H Paulo Sacramento	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Itupeva	H Psiquiátrico Itupeva	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Hortolândia	H Samaritano Hortolândia	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Jundiaí	H Sta Elisa	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Campinas e Região	Indaiatuba	H Sta Ignês	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Capivari	H Unimed	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Bragança Paulista	H Universitário HUSF	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Piracicaba	HFC	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Itapira	Inst Bairral Psiquiatria	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Indaiatuba	Instituto Indaiá - IRPSI	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Espírito Santo do Pinhal	Irmandade do H Francisco Rosa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Serra Negra	Santa Rosa de Lima	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Americana	São Francisco de Americana	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Rio Claro	São Rafael	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Campinas e Região	Bragança Paulista	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Itapira	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Itatiba	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Leme	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Louveira	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Pirassununga	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Valinhos	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Vinhedo	Sta Casa	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Campinas e Região	Casa Branca	Sta Casa de Casa Branca	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	São João da Boa Vista	Sta Casa Dona Carolina Malheiros	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Cosmópolis	Sta Gertrudes	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Limeira	Frei Galvão de Limeira	H,M,PS	H,M,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Artur Nogueira	H Bom Samaritano	H,M,PS	H,M,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	H São Luiz	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Santa Bárbara d'Oeste	H Sta Bárbara	H,M,PS	H,M,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	H Vera Cruz	H,M	H,M	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Limeira	Medical de Limeira	-	-	-	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Atibaia	Albert Sabin	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	Campinas Day H	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Campinas	Centro Médico Campinas	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Itapira	Clín Repouso Sta Fé	-	-	-	-	-	-	H	H	H	H	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Indaiatuba	CM São Camilo	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Campinas e Região	Campinas	H Benef Portuguesa de Campinas	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Campinas	H Coração de Campinas	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Campinas	H e Mat de Campinas	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Valinhos	H e Mat Galileo	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	H Geral e Mat Sta Tereza	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Itatiba	H Itatiba	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Atibaia	H Novo Atibaia	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	H PUC	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	H Renascença Campinas	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Americana	H São Lucas	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Brotas	H Sta Therezinha	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	São José do Rio Pardo	H Unimed SJRB	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	Irmandade de Misericórdia de Campinas	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	Campinas	Madre Theodora	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Jundiaí	Pitangueiras	-	-	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Campinas e Região	Monte Mor	Sagrado Coração de Jesus	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Santa Bárbara d'Oeste	Samaritano - Sta Bárbara D'oeste	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Campinas	Samaritano de Campinas	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Cabreúva	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Campinas e Região	Capivari	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Mococa	Sta Casa	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Campinas e Região	São Pedro	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Piracaia	Sta Casa São Vicente de Paulo	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Campinas e Região	Rio Claro	Sta Filomena	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Matão	Carlos F Malzoni	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Cajuru	Casa Vicente de Paulo	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Santo Anastácio	H Anita Costa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	São José do Rio Preto	H Austa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Fernandópolis	H das Clínicas	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Macatuba	H de Macatuba	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Rancharia	H e Mat de Rancharia	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Franca	H e Mat São Joaquim	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Registro	H e Mat São José	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Mirassol	H HB Saúde	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Presidente Prudente	H Iamada	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Lençóis Paulista	H N S da Piedade	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Araras	H Pro Saúde Geral Araras	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Bauru	H São Francisco Bauru	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Barretos	H São Jorge	H,PS	H,PS	H	H	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Ituverava	H São Jorge	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Ribeirão Preto	H São Lucas	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Ribeirão Preto	H São Lucas Ribeirânia	H,M	H,M	H,M	H,M	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Birigui	H Unimed Birigui	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Bebedouro	H Unimed Samaritano	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Assis	IAM	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Araraquara	Mat Gota de Leite	H	H	H	H	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Nhandeara	São Domingos Providência de Deus	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Tupã	São Francisco Assis de Tupã	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Novo Horizonte	São José Novo Horizonte	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Araraquara	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Assis	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Bariri	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Descalvado	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Fernandópolis	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Lins	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Marília	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Monte Alto	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Nova Granada	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Ourinhos	Sta Casa	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Paraguaçu Paulista	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Pederneiras	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Penápolis	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Ribeirão Preto	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Santa Fé do Sul	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	São Carlos	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	São Joaquim da Barra	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Serrana	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Tupã	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Votuporanga	Sta Casa	H,M	H,M	H,M	H,M	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Batatais	Sta Casa Batatais	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Adamantina	Sta Casa de Adamantina	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Araras	Sta Casa de Araras	H,M	H,M	H,M	H,M	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Capão Bonito	Sta Casa de Capão Bonito	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Fartura	Sta Casa de Fartura	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Igarapava	Sta Casa de Igarapava	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Jales	Sta Casa de Jales	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Olímpia	Sta Casa de Olímpia	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Ribeirão Preto	Civil H C Ribeirão Preto	H,M	H,M	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	São José do Rio Preto	H do Coração S J Rio Preto	H	H	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Jarinu	H Jarinu	H	H	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Registro	H São João	-	-	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Bariri	Sta Casa de Bariri	H,M,PS	H,M,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Jaboticabal	H São Marcos	-	H,M	-	H,M	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Apiaí	Ass Benef de Apiaí	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Potirendaba	Assistencial de Potirendaba	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Clementina	Assoc Hosp Clementina	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	São José do Rio Preto	Casa de Saúde Sta Helena	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	São José do Rio Preto	Clín Psiq Siqueira Campos	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Presidente Prudente	Cto de Fraturas São Lucas	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Caçapava	Grupo R Mattos	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Jaú	H Amaral Carvalho	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Bauru	H Benef Portuguesa de Bauru	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	São José do Rio Preto	H de Base	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Riolândia	H de Riolândia	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Estrela d'Oeste	H Dr Onofre S Rosateli	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Caçapava	H e M Policlin Caçapava	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Lins	H e Mat São Lucas	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Ribeirão Preto	H Fundação e Mat Sinha Junqueira	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Catanduva	H Mahatma Gandhi	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Catanduva	H Padre Albino	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Teodoro Sampaio	H Regional de Teodoro Sampaio	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Ribeirão Preto	H São Francisco	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Sertãozinho	H São Francisco - Unid Netto Campello	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Barretos	H São Judas Tadeu	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Ribeirão Preto	H São Paulo	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Ribeirão Preto	H Sta Lydia	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Marília	H Unimar	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Ribeirão Preto	H Viver	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	São José do Rio Preto	HIORP	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	São José do Rio Preto	HO Redentora	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Sertãozinho	HOCE	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Interior	Ibitinga	Hospital Hi	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Colina	Hospital José Venâncio	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	São Carlos	Norden Hospital	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Presidente Bernardes	Nossa Senhora Aparecida	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Presidente Prudente	Nossa Senhora das Graças	-	-	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Monte Aprazível	Santa Casa Monte Apraziel	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Monte Azul Paulista	Senhor Bom Jesus	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	São José do Rio Preto	Sociedade Portuguesa Benef de S J Rio Preto	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Ribeirão Preto	Sociedade Portuguesa de Benef de Ribeirão Preto	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Cravinhos	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	General Salgado	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Guará	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Ituverava	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Jaú	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	José Bonifácio	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Lucélia	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Paulo de Faria	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Pontal	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Presidente Epitácio	Sta Casa	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Presidente Venceslau	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	São José do Rio Preto	Sta Casa	-	-	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Taquarituba	Sta Casa	-	-	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Valparaíso	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Andradina	Sta Casa de Andradina	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Barretos	Sta Casa de Barretos	-	-	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Interior	Cafelândia	Sta Casa de Cafelândia	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Cardoso	Sta Casa de Cardoso	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Auriflama	Sta Casa de Dr Oswaldo Siqueira Lyra	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Guariba	Sta Casa de Guariba	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Presidente Prudente	Sta Casa de Presidente Prudente	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Tabatinga	Sta Casa de São Miguel	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Tanabi	Sta Casa São Vicente P Tanabi	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Penápolis	UNIMED DE PENAPOLIS - PRONTO ATENDIMENTO	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Interior	Catanduva	Unimed H São Domingos	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Jaú	Unimed Regional	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Santo Antônio de Posse	Vivare	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Interior	Bilac	Assoc Ben de Bilac	-	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H
+Interior	Assis	H de Olhos Oeste Paulista	-	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H
+Interior	Ipuã	Irm Sta Casa Ipuã	-	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Interior	Caçapava	FUSAM	-	-	-	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB
+Interior	Franca	Sta Casa	-	-	H,M,PS	H,M,PS	-	-	-	-	-	-	-	-	-	-	-	-
+Sorocaba e Região	Sorocaba	CORTS	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Ibiúna	Estância Morro Grande	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Sorocaba e Região	Sorocaba	H Oftalmológico de Sorocaba	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	São Roque	H São Francisco	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Sorocaba	H Sta Lucinda	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Cerquilho	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Laranjal Paulista	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Porto Feliz	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Salto de Pirapora	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H	H	H	H	H	H	H	H	H	H
+Sorocaba e Região	Tietê	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Avaré	Sta Casa de Avaré	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Sorocaba	GPACI	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Sorocaba	H Modelo Sorocaba	-	-	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Sorocaba	H Evangélico de Sorocaba	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Araçoiaba da Serra	H Nova Reabilitação	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Boituva	H São Luiz	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Votorantim	H Sto Antônio	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Sorocaba	Notrecare	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Sorocaba e Região	Piedade	Sta Casa	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Sorocaba e Região	Tatuí	Sta Casa	-	-	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Sorocaba e Região	Cerqueira César	Sta Casa de Cerqueira César	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Sorocaba e Região	Itu	Unimed Salto/Itu	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	São José dos Campos	Antoninho da Rocha Marmo	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Vale do Paraíba	Caraguatatuba	CM São Camilo	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São Sebastião	H de Clín de São Sebastião	H,M	H,M	H,M,PS	H,M,PS	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Vale do Paraíba	São José dos Campos	H GACC	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Vale do Paraíba	São José dos Campos	H Infantil Prontil	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	H Pro Infância	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	H São José	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	Caraguatatuba	H Stella Maris	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Taubaté	ICV	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Vale do Paraíba	Jacareí	São Francisco Assis	H,M	H,M	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Cruzeiro	Sta Casa	H,M	H,M	H,M	H,M	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Vale do Paraíba	Guaratinguetá	Sta Casa	H	H	H	H	-	-	H	H	H	H	H	H	H	H	H	H
+Vale do Paraíba	Jacareí	Sta Casa	H,PS	H,PS	H,PS	H,PS	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	Lorena	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Pindamonhangaba	Sta Casa	H,M,PS	H,M,PS	H,PS	H,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Ubatuba	Sta Casa	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Aparecida	Sta Casa de Aparecida	H,M,PS	H,M,PS	H,M,PS	H,M,PS	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	São José dos Campos	Chuí Psiq	H	H	-	-	-	-	H	H	H	H	H	H	H	H	H	H
+Vale do Paraíba	Guaratinguetá	H e Mat Frei Galvão	H,PS	H,PS	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Campos do Jordão	H São Camilo	H,PS	H,PS	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	Pindamonhangaba	10 de Julho	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	Jacareí	H Alvorada	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Jacareí	H Clín Antônio Afonso	-	-	-	-	-	-	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M	H,M
+Vale do Paraíba	Jacareí	H e M Policlin	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	São José dos Campos	H e M Policlin	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Taubaté	H e M Policlin Taubaté	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	São José dos Campos	H Francisca Júlia	-	-	-	-	-	-	H	H	H	H	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	H Orto	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	H Pio XII	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	H Policlin - SJC	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	Taubaté	H Regional de Taubaté	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	Taubaté	H Ubarana	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	Guaratinguetá	H Unimed Guaratinguetá	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São José dos Campos	H Vivalle	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	São José dos Campos	Orthoservice	-	-	-	-	-	-	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS	H,PS
+Vale do Paraíba	São Bento do Sapucaí	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	São José dos Campos	Sta Casa	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	Lorena	Unimed de Lorena	-	-	-	-	-	-	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS	H,M,PS
+Vale do Paraíba	São José dos Campos	Inst Chui de Psiquiatria	-	-	H	H	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	A Frealdo	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	A+ (Grupo Fleury) - SP	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Alfa Excelência Diagnóstica	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Alpha	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Alpha Imagem Diagnost	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Alta	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Anaclin	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Analisys	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Angiocor	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Angiocorpore	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Artur Parada	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Assad Laborhclin	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ativa	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Baldo e Mansano - Itaquaquecetuba	-	-	LAB	LAB	LAB	LAB	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Bellato	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Bio Campos	-	-	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Bio Clínica Itatiba	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Bio Imagem	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Biocenter - SP	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Bioclinic	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Bioclinica	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Biolab	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Biolab Cerquilho	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Biolabor	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Biológico	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Biomed	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Bionalises - Santos	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	BR Diagnostico	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Cardio Calil	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Carlos Chagas	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CD Mauá	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CDA	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CDA	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	CDB	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CDI Guarujá	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Cedill	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cedime	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cedlab	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cellula Mater	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cemad Clín	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cemed	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Central	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Central - Mogi Mirim	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Centro de Análises Clínicas Jacareí	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Centro de Diag Sorocaba	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Centro De Hematologia	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cepac	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Cesar & Kan	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Cetam	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	CID	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cintilog	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Citolab - Mogi Mirim	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Citologus	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Clima	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Clin Canto do Forte	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Clin Sao Pedro	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Clinesp	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Clinic	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Clinice	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CML	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Confiance	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	CRM	-	-	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	CTA	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cura	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Cytolab	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	DAC -SP	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Delboni Auriemo	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Diag-Lab	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dirceu Dalpino - Bauru	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Donnu's	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dr Edna - Indaiatuba	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dr Leão de Moura	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Dr Pedro Bonelli	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dr Tajara	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Duclin	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Dunacor	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Endomed	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Endoplus	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Eras Laboratório	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Exame	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Exame Brasil	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Femme	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Fleury	-	-	-	-	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Foizer	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Franceschi	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Gardiencor	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Hemoclinica de Santos	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Hemolab	LAB	LAB	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Henrique	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Hermes Pardini	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Hormon	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	IACS	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ibac	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	IDS	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Imedi	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Itapema	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Itulab	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Jac	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	JM	-	-	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Jorge Eid	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Koch	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Lab Barbosa & Montagnana - SP	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Lab Biodoctor - SP	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Lab Dracena	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Lab Nakano	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Lab Paulista	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Lab Sabin Birigui - SP	-	-	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Labac	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labcenter Limeira	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labclin	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Laboratorio Santa Lucia	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Laboratorio São Roque	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Laboratorio Tiezzi	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Laborclin	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labormac	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Labormac	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Lavoisier - SP	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Lumen	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Marlene Spir	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Medcenter	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Medcin	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Medlab - Bauru	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Mello Diagnostico	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Menzen	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Mil	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Modelo	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Nasa	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Neolabor	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Notrelabs	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Oswaldo Cruz	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Pasteur Eurofins	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	PC & C	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Penna E Melo	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Personal - SP	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Plani	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Pozzetti	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Precision	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Previlab	LAB	LAB	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Prezecor - SP	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Pro Exame	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Rio Claro	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Rocha Lima	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Ruiz e Milare	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sabin	LAB	LAB	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sabin	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Sancet	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Santa Paula	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	São Judas Tadeu	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	São Lucas	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	São Lucas - SP	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Senne Liquor	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	SM	LAB	LAB	-	-	-	-	-	-	-	-	-	-	-	-	-	-
+Laboratórios	Laboratório	Sonolayer	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Tecnolab	LAB	LAB	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Tecnolab - Bauru	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Transduson	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Trianálises	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Unidade Médica	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Unilab	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Unilabor	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vale Clin - SP	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vital Brasil - SP	LAB	LAB	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vital Brazil	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vital Lab	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vitalabor	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
+Laboratórios	Laboratório	Vozza	-	-	-	-	-	-	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB	LAB
