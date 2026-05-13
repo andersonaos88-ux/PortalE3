@@ -9,3 +9,7 @@ id = "b1658bcecdcd4d2db5aab57dc382f012"
 [[routes]]
 pattern = "api.corretortech.com/*"
 zone_name = "corretortech.com"
+
+[[routes]]
+pattern = "corretortech.com/api/*"
+zone_name = "corretortech.com"

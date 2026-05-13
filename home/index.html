@@ -45,6 +45,7 @@
     }
     .logo-name { font-size: 17px; font-weight: 800; color: var(--text); letter-spacing: .3px; }
     .logo-sub  { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .8px; text-transform: uppercase; }
+    .header-right { display: flex; align-items: center; gap: 12px; }
     .header-tag {
       font-size: 11px; font-weight: 700; color: var(--orange);
       background: rgba(232,102,26,.12);
@@ -53,6 +54,16 @@
       padding: 5px 14px;
       letter-spacing: .5px;
     }
+    .admin-link {
+      font-size: 11px; font-weight: 700; color: var(--muted);
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 14px;
+      text-decoration: none;
+      display: none;
+    }
+    .admin-link:hover { color: var(--text); }
 
     /* ── HERO ── */
     .hero {
@@ -107,17 +118,11 @@
       transform: translateY(-3px);
       box-shadow: 0 12px 32px rgba(0,0,0,.35);
     }
-    .app-card.soon {
-      opacity: .55;
-      cursor: default;
-      pointer-events: none;
-    }
     .app-card::before {
       content: '';
       position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, var(--orange), var(--orange2));
-      opacity: 0;
-      transition: opacity .2s;
+      opacity: 0; transition: opacity .2s;
     }
     .app-card:hover::before { opacity: 1; }
 
@@ -125,8 +130,7 @@
       width: 52px; height: 52px;
       border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
+      font-size: 24px; flex-shrink: 0;
     }
     .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
     .card-badge {
@@ -135,57 +139,46 @@
       flex-shrink: 0; margin-top: 2px;
     }
     .badge-active {
-      background: rgba(22,163,74,.15);
-      color: #4ade80;
+      background: rgba(22,163,74,.15); color: #4ade80;
       border: 1px solid rgba(22,163,74,.25);
     }
-    .badge-soon {
-      background: rgba(136,136,170,.1);
-      color: var(--muted);
-      border: 1px solid rgba(136,136,170,.2);
-    }
-    .badge-dev {
-      background: rgba(245,158,11,.12);
-      color: #FBBF24;
-      border: 1px solid rgba(245,158,11,.28);
-    }
-    .app-card.dev {
-      border-color: rgba(245,158,11,.18);
-      cursor: default;
-      pointer-events: none;
-      opacity: .82;
-    }
-    .app-card.dev::before {
-      background: linear-gradient(90deg, #F59E0B, #FBBF24);
-    }
-    /* seção de rodapé separando grupos */
-    .section-title.mt { margin-top: 32px; }
-
-    .card-name {
-      font-size: 17px; font-weight: 800; color: var(--text);
-      line-height: 1.2; margin-bottom: 4px;
-    }
-    .card-desc {
-      font-size: 12px; color: var(--muted); line-height: 1.55;
-    }
+    .card-name { font-size: 17px; font-weight: 800; color: var(--text); line-height: 1.2; margin-bottom: 4px; }
+    .card-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
     .card-footer {
       display: flex; align-items: center; justify-content: space-between;
       border-top: 1px solid var(--border);
       padding-top: 14px; margin-top: auto;
     }
-    .card-tag {
-      font-size: 10px; font-weight: 700; color: var(--muted);
-      text-transform: uppercase; letter-spacing: .6px;
-    }
+    .card-tag { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
     .card-arrow {
       width: 28px; height: 28px;
       background: rgba(232,102,26,.12);
       border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
-      color: var(--orange); font-size: 14px;
-      transition: background .2s;
+      color: var(--orange); font-size: 14px; transition: background .2s;
     }
     .app-card:hover .card-arrow { background: var(--orange); color: #fff; }
+
+    /* ── LOADING / ERRO ── */
+    .loading {
+      grid-column: 1/-1; text-align: center;
+      padding: 60px 0; color: var(--muted); font-size: 14px;
+    }
+    .loading-spinner {
+      width: 32px; height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--orange);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .sem-acesso {
+      grid-column: 1/-1; text-align: center;
+      padding: 60px 20px; color: var(--muted);
+    }
+    .sem-acesso h2 { color: var(--text); margin-bottom: 8px; }
 
     /* ── FOOTER ── */
     footer {
@@ -213,127 +206,87 @@
         <div class="logo-sub">Tecnologia para corretores de seguros</div>
       </div>
     </div>
-    <div class="header-tag">Acesso Restrito</div>
+    <div class="header-right">
+      <a class="admin-link" id="admin-link" href="https://admin.corretortech.com">⚙ Admin</a>
+      <div class="header-tag">Acesso Restrito</div>
+    </div>
   </header>
 
   <div class="hero">
     <div class="hero-label">Painel de Aplicativos</div>
-    <h1>Bem-vindo, <span>Corretor Tech</span> 👋</h1>
-    <p>Acesse as ferramentas internas da consultoria. Novos aplicativos serão adicionados conforme forem desenvolvidos.</p>
+    <h1>Bem-vindo, <span id="hero-nome">Corretor Tech</span> 👋</h1>
+    <p>Acesse as ferramentas disponíveis para o seu perfil. Novos aplicativos serão adicionados conforme forem desenvolvidos.</p>
   </div>
 
   <div class="section-title">Aplicativos disponíveis</div>
 
-  <div class="grid">
-
-    <!-- Bradesco Rede -->
-    <a class="app-card" href="https://bradesco.corretortech.com" target="_blank">
-      <div class="card-header">
-        <div class="card-icon" style="background:rgba(204,0,0,.10)">🏥</div>
-        <span class="card-badge badge-active">Ativo</span>
-      </div>
-      <div>
-        <div class="card-name">Apresentação Bradesco Rede</div>
-        <div class="card-desc">Gere apresentações profissionais a partir da cotação SPG Bradesco Saúde. Para corretores do Canal Rede.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Bradesco · Canal Rede</span>
-        <div class="card-arrow">→</div>
-      </div>
-    </a>
-
-    <!-- Portal de Cotação -->
-    <a class="app-card" href="https://cotacao.corretortech.com" target="_blank">
-      <div class="card-header">
-        <div class="card-icon" style="background:rgba(14,134,255,.12)">💊</div>
-        <span class="card-badge badge-active">Ativo</span>
-      </div>
-      <div>
-        <div class="card-name">Apresentação Mercado</div>
-        <div class="card-desc">Gere estudos de mercado comparando planos de saúde empresariais com coparticipação, reembolso e reajuste.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Plano de Saúde · PME</span>
-        <div class="card-arrow">→</div>
-      </div>
-    </a>
-
-    <!-- Em breve: Gerador de Proposta -->
-    <div class="app-card soon">
-      <div class="card-header">
-        <div class="card-icon" style="background:rgba(136,136,170,.08)">📋</div>
-        <span class="card-badge badge-soon">Em breve</span>
-      </div>
-      <div>
-        <div class="card-name">Gerador de Proposta</div>
-        <div class="card-desc">Crie propostas personalizadas para clientes com layouts profissionais prontos para envio.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Propostas · PDF</span>
-        <div class="card-arrow">→</div>
-      </div>
+  <div class="grid" id="cards-grid">
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      Carregando seus aplicativos…
     </div>
-
-  </div>
-
-  <!-- ── MÓDULOS EM DESENVOLVIMENTO ── -->
-  <div class="section-title mt">Em desenvolvimento</div>
-
-  <div class="grid">
-
-    <!-- Chat de Suporte -->
-    <a class="app-card" href="https://chat.corretortech.com" target="_blank">
-      <div class="card-header">
-        <div class="card-icon" style="background:rgba(245,158,11,.10)">💬</div>
-        <span class="card-badge badge-active">Ativo</span>
-      </div>
-      <div>
-        <div class="card-name">Chat de Suporte</div>
-        <div class="card-desc">Assistente especialista em planos de saúde empresariais. Tire dúvidas sobre produtos, carências, coparticipação e muito mais.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">Suporte · Dúvidas · Tempo real</span>
-        <div class="card-arrow">→</div>
-      </div>
-    </a>
-
-    <!-- Integração WhatsApp -->
-    <div class="app-card dev">
-      <div class="card-header">
-        <div class="card-icon" style="background:rgba(37,211,102,.10)">📱</div>
-        <span class="card-badge badge-dev">Em dev.</span>
-      </div>
-      <div>
-        <div class="card-name">WhatsApp Connect</div>
-        <div class="card-desc">Envie cotações, propostas e notificações direto pelo WhatsApp a partir de qualquer app da plataforma.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">WhatsApp · Mensagens · API</span>
-        <div class="card-arrow">→</div>
-      </div>
-    </div>
-
-    <!-- CRM -->
-    <div class="app-card dev">
-      <div class="card-header">
-        <div class="card-icon" style="background:rgba(99,102,241,.10)">🗂️</div>
-        <span class="card-badge badge-dev">Em dev.</span>
-      </div>
-      <div>
-        <div class="card-name">CRM Comercial</div>
-        <div class="card-desc">Gerencie oportunidades, pipeline de vendas e carteira de clientes. Integrado ao chat e ao WhatsApp.</div>
-      </div>
-      <div class="card-footer">
-        <span class="card-tag">CRM · Pipeline · Clientes</span>
-        <div class="card-arrow">→</div>
-      </div>
-    </div>
-
   </div>
 
   <footer>
     Corretor Tech · Acesso restrito à equipe autorizada
   </footer>
+
+  <script>
+    async function init() {
+      const grid = document.getElementById('cards-grid');
+
+      try {
+        const res = await fetch('/api/me');
+        const data = await res.json();
+
+        // Atualiza nome no hero
+        if (data.nome) {
+          document.getElementById('hero-nome').textContent = data.nome.split(' ')[0];
+        }
+
+        // Mostra link admin se for admin
+        if (data.admin) {
+          document.getElementById('admin-link').style.display = 'flex';
+        }
+
+        // Sem acesso
+        if (data.bloqueado || !data.cards || data.cards.length === 0) {
+          grid.innerHTML = `
+            <div class="sem-acesso">
+              <h2>⛔ Sem acesso</h2>
+              <p>Você não possui aplicativos disponíveis. Entre em contato com o administrador.</p>
+            </div>`;
+          return;
+        }
+
+        // Renderiza cards
+        grid.innerHTML = data.cards.map(card => `
+          <a class="app-card" href="${card.url}" target="_blank">
+            <div class="card-header">
+              <div class="card-icon" style="background:rgba(232,102,26,.12)">${card.icon || '🔧'}</div>
+              <span class="card-badge badge-active">Ativo</span>
+            </div>
+            <div>
+              <div class="card-name">${card.label}</div>
+              <div class="card-desc">${card.desc || ''}</div>
+            </div>
+            <div class="card-footer">
+              <span class="card-tag">${card.tag || ''}</span>
+              <div class="card-arrow">→</div>
+            </div>
+          </a>`).join('');
+
+      } catch (e) {
+        grid.innerHTML = `
+          <div class="sem-acesso">
+            <h2>Erro ao carregar</h2>
+            <p>Não foi possível carregar seus aplicativos. Tente recarregar a página.</p>
+          </div>`;
+      }
+    }
+
+    init();
+  </script>
 
 </body>
 </html>

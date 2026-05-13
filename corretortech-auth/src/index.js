@@ -1,6 +1,7 @@
 const CORS_ORIGINS = [
   'https://corretortech.com',
   'https://admin.corretortech.com',
+  'https://api.corretortech.com',
 ];
 
 export default {
@@ -13,12 +14,15 @@ export default {
 
     const email = parseJwtEmail(request);
 
+    // Normaliza path: /api/me → /me, /api/admin/... → /admin/...
+    const path = url.pathname.replace(/^\/api/, '') || '/';
+
     try {
-      if (url.pathname === '/me' && method === 'GET')
+      if (path === '/me' && method === 'GET')
         return handleMe(email, env, origin);
 
-      if (url.pathname.startsWith('/admin'))
-        return handleAdmin(url, method, request, email, env, origin);
+      if (path.startsWith('/admin'))
+        return handleAdmin({ pathname: path }, method, request, email, env, origin);
 
       return corsResponse({ error: 'Not found' }, 404, origin);
     } catch (e) {
