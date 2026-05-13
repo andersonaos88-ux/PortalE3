@@ -2,6 +2,7 @@ const CORS_ORIGINS = [
   'https://corretortech.com',
   'https://admin.corretortech.com',
   'https://api.corretortech.com',
+  'https://www.corretortech.com',
 ];
 
 export default {
@@ -18,6 +19,19 @@ export default {
     const path = url.pathname.replace(/^\/api/, '') || '/';
 
     try {
+      // Debug endpoint (remover depois)
+      if (path === '/debug' && method === 'GET') {
+        const cookie = request.headers.get('Cookie') || '';
+        const jwt = request.headers.get('CF-Access-Jwt-Assertion');
+        const cfMatch = cookie.match(/CF_Authorization=([^;]+)/);
+        return corsResponse({
+          email,
+          has_jwt_header: !!jwt,
+          has_cf_cookie: !!cfMatch,
+          cookie_keys: cookie.split(';').map(c => c.trim().split('=')[0]),
+        }, 200, origin);
+      }
+
       if (path === '/me' && method === 'GET')
         return handleMe(email, env, origin);
 
@@ -34,7 +48,16 @@ export default {
 /* ── Auth ─────────────────────────────────────────────── */
 
 function parseJwtEmail(request) {
-  const jwt = request.headers.get('CF-Access-Jwt-Assertion');
+  // Tenta header (server-side Access)
+  let jwt = request.headers.get('CF-Access-Jwt-Assertion');
+
+  // Fallback: cookie CF_Authorization (browser fetch same-origin)
+  if (!jwt) {
+    const cookie = request.headers.get('Cookie') || '';
+    const match = cookie.match(/CF_Authorization=([^;]+)/);
+    if (match) jwt = match[1];
+  }
+
   if (!jwt) return null;
   try {
     const payload = JSON.parse(atob(jwt.split('.')[1]));
@@ -166,6 +189,7 @@ function corsResponse(data, status = 200, origin = '') {
       'Access-Control-Allow-Origin': allowed,
       'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Credentials': 'true',
     },
   });
 }

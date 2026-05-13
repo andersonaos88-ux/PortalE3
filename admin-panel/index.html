@@ -190,7 +190,7 @@ const API = 'https://api.corretortech.com';
 let allCards = [], allPlans = [], allAdmins = [], editingEmail = null;
 
 async function api(path, method = 'GET', body = null) {
-  const opts = { method, headers: { 'Content-Type': 'application/json' } };
+  const opts = { method, headers: { 'Content-Type': 'application/json' }, credentials: 'include' };
   if (body) opts.body = JSON.stringify(body);
   const res = await fetch(API + path, opts);
   return res.json();
