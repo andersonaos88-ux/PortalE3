@@ -146,54 +146,70 @@ body { font-family: 'Open Sans', system-ui, sans-serif; background: var(--gray-b
 ═══════════════════════════════ */
 .s-cover {
   width: 960px; height: 540px;
-  background: var(--navy);
+  background: url('bg-capa.png') center center / cover no-repeat;
   position: relative; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 52px 60px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 36px 56px 52px;
 }
-.s-cover .bg-circle {
-  position: absolute; right: -80px; top: -80px;
-  width: 520px; height: 520px; border-radius: 50%;
-  background: rgba(75,75,219,.18);
+/* logo fixo no topo */
+.s-cover .cover-logo { z-index: 2; }
+.s-cover .cover-logo img { height: 36px; max-width: 160px; object-fit: contain; display: block; }
+/* bloco de texto no fundo-esquerda */
+.s-cover .cover-body {
+  display: flex; flex-direction: column;
+  z-index: 2; width: 52%;
 }
-.s-cover .bg-circle2 {
-  position: absolute; right: 80px; top: 60px;
-  width: 340px; height: 340px; border-radius: 50%;
-  background: rgba(75,75,219,.12);
+.s-cover .cover-tag {
+  font-family: 'Open Sans',sans-serif;
+  font-size: 13px; font-weight: 400;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 10px;
 }
-.s-cover .bg-lines {
-  position: absolute; right: 50px; top: 0;
-  width: 440px; height: 440px; border-radius: 50%;
-  background: repeating-linear-gradient(32deg,transparent,transparent 5px,rgba(100,100,220,.3) 5px,rgba(100,100,220,.3) 7px);
-  opacity: .5;
+.s-cover .cover-company {
+  font-family: 'Industry','Industry Book',sans-serif;
+  font-size: 36px; font-weight: 700;
+  color: #fff; text-transform: uppercase;
+  line-height: 1.15; letter-spacing: .5px;
+  margin-bottom: 18px;
 }
-.s-cover .tag { font-family: 'Industry','Industry Book',sans-serif; font-size: 10px; letter-spacing: 2.5px; color: rgba(255,255,255,.45); text-transform: uppercase; }
-.s-cover .title { font-family: 'Industry','Industry Book',sans-serif; font-size: 54px; font-weight: 300; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
-.s-cover .title strong { font-family: 'Industry','Industry Book',sans-serif; font-weight: 800; }
-.s-cover .company { font-family: 'Industry','Industry Book',sans-serif; font-size: 17px; font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
-.s-cover .date { font-family: 'Open Sans',sans-serif; font-size: 13px; color: rgba(255,255,255,.5); }
-.s-cover .logo-area { position: absolute; left: 60px; top: 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
-.s-cover .logo-box { width: 46px; height: 46px; background: var(--white); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; color: var(--navy); letter-spacing: -1px; }
-.s-cover .logo-txt { font-size: 10px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+.s-cover .cover-line {
+  width: 72px; height: 2px;
+  background: rgba(255,255,255,.4);
+  margin-bottom: 14px;
+}
+.s-cover .cover-date {
+  font-family: 'Open Sans',sans-serif;
+  font-size: 12px; color: rgba(255,255,255,.55);
+}
 
 /* ═══════════════════════════════
    SLIDE 3 — BACK COVER
 ═══════════════════════════════ */
 .s-back {
   width: 960px; height: 540px;
-  background: var(--navy);
+  background: url('bg-contracapa.png') center center / cover no-repeat;
+  position: relative; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
-.s-back .back-logo-wrap {
-  display: flex; flex-direction: column; align-items: center;
-  padding-right: 60px;
+.s-back .back-left {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; flex-direction: column;
+  align-items: flex-start; z-index: 2;
+  width: 46%;
 }
-.s-back .back-logo-wrap img { width: 130px; object-fit: contain; }
-.s-back .back-sep { width: 1px; height: 110px; background: rgba(255,255,255,.3); }
 .s-back .back-tagline {
-  padding-left: 60px;
   font-family: 'Industry','Industry Book',sans-serif;
-  font-size: 22px; font-weight: 300; color: rgba(255,255,255,.85); letter-spacing: .3px;
+  font-size: 30px; font-weight: 400;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 20px; letter-spacing: .3px;
+}
+.s-back .back-sub {
+  font-family: 'Open Sans',sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: rgba(255,255,255,.5);
+  letter-spacing: 2.5px; text-transform: uppercase;
 }
 
 /* ═══════════════════════════════
@@ -852,6 +868,13 @@ window.addEventListener('DOMContentLoaded', () => {
   syncAtualPlanOpts();
   addPlan();
   render();
+
+  // Pré-preenche o campo Corretor/Consultor com o nome do usuário logado
+  const ctNome = document.cookie.match(/(?:^|;\s*)ct_nome=([^;]+)/);
+  if (ctNome) {
+    const el = document.getElementById('consultor');
+    if (el && !el.value) { el.value = decodeURIComponent(ctNome[1]); render(); }
+  }
 });
 
 
@@ -1259,15 +1282,14 @@ function buildCover(d) {
   return `
   <div class="slide-box" id="sl-cover">
     <div class="s-cover">
-      <div class="bg-lines"></div>
-      <div class="bg-circle"></div>
-      <div class="bg-circle2"></div>
-      <div class="title">Estudo de<br><strong>mercado</strong></div>
-      <div class="company">${esc(d.empresa)}</div>
-      <div class="date">${esc(d.mesano)}${d.consultor ? ' · ' + esc(d.consultor) : ''}</div>
-      <div class="logo-area">
-        <img src="e3_hor_branco.png" style="height:46px;max-width:180px;object-fit:contain">
-        <div class="tag">A sua Consultoria em Seguros</div>
+      <div class="cover-logo">
+        <img src="e3_hor_branco.png" alt="E3 Consultoria">
+      </div>
+      <div class="cover-body">
+        <div class="cover-tag">Estudo de mercado</div>
+        <div class="cover-company">${esc(d.empresa)}</div>
+        <div class="cover-line"></div>
+        <div class="cover-date">${esc(d.mesano)}${d.consultor ? ' · ' + esc(d.consultor) : ''}</div>
       </div>
     </div>
   </div>`;
@@ -1394,11 +1416,12 @@ function buildBackCover() {
   return `
   <div class="slide-box" id="sl-back">
     <div class="s-back">
-      <div class="back-logo-wrap">
-        <img src="e3_vert_branco.png">
+      <div class="back-left">
+        <div class="back-tagline">Vamos Juntos?</div>
+        <img src="e3_hor_branco.png" alt="E3 Consultoria"
+             style="height:56px;width:auto;object-fit:contain;display:block;margin-bottom:20px">
+        <div class="back-sub">A sua consultoria em seguros</div>
       </div>
-      <div class="back-sep"></div>
-      <div class="back-tagline">A sua consultoria em seguros!</div>
     </div>
   </div>`;
 }
