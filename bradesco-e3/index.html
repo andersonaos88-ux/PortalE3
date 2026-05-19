@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bradesco E3 — Proposta Comercial</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --red:    #CC0000;
+  --red2:   #a00000;
+  --navy:   #1A0000;
+  --gray-bg:#F4F4F8;
+  --border: #E0E0EC;
+  --text:   #1A1A3E;
+  --muted:  #6B6B8A;
+  --white:  #FFFFFF;
+  --green:  #16a34a;
+  --blue:   #2563EB;
+  --bradesco: #CC0000;
+}
+body { font-family: 'Open Sans', system-ui, sans-serif; background: var(--gray-bg); color: var(--text); min-height: 100vh; }
+
+/* ── HEADER ── */
+.header { background: var(--red); color: #fff; padding: 14px 28px; display: flex; align-items: center; gap: 14px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,.4); }
+.header .logo { width: 38px; height: 38px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 12px; color: var(--red); letter-spacing: -1px; }
+.header h1 { font-size: 17px; font-weight: 700; }
+.header p  { font-size: 11px; color: rgba(255,255,255,.6); }
+
+/* ── LAYOUT ── */
+.layout { display: grid; grid-template-columns: 420px 1fr; min-height: calc(100vh - 66px); }
+
+/* ── SIDEBAR ── */
+.sidebar { background: var(--white); border-right: 1px solid var(--border); display: flex; flex-direction: column; position: sticky; top: 66px; height: calc(100vh - 66px); }
+.sidebar-body { flex: 1; padding: 20px; overflow-y: auto; }
+.sidebar-footer { padding: 14px 20px; border-top: 1px solid var(--border); background: var(--white); }
+.stitle { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.4px; color: var(--red); border-bottom: 2px solid var(--red); padding-bottom: 6px; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+.stitle span { font-size: 15px; }
+.fsec { margin-bottom: 24px; }
+.fg { margin-bottom: 11px; }
+.fg label { display: block; font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .6px; }
+.fg input, .fg select { width: 100%; padding: 9px 11px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 13px; color: var(--text); background: var(--white); outline: none; transition: border-color .15s, box-shadow .15s; font-family: inherit; }
+.fg input:focus, .fg select:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(204,0,0,.1); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+
+/* cop toggle */
+.cop-toggle { display: flex; gap: 8px; }
+.cop-btn { flex: 1; padding: 8px 6px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; background: var(--white); color: var(--muted); transition: all .15s; text-align: center; font-family: inherit; }
+.cop-btn.active-sim { border-color: #16a34a; background: #f0fdf4; color: #15803d; }
+.cop-btn.active-nao { border-color: #dc2626; background: #fef2f2; color: #b91c1c; }
+
+/* ins dot */
+.ins-wrap { position: relative; }
+.ins-dot { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 9px; height: 9px; border-radius: 50%; pointer-events: none; }
+.ins-wrap select { padding-left: 26px; }
+
+/* check option */
+.check-opt { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 8px; background: var(--gray-bg); border: 1.5px solid var(--border); cursor: pointer; margin-bottom: 8px; transition: border-color .15s; }
+.check-opt:hover { border-color: var(--red); }
+.check-opt input { accent-color: var(--red); width: 15px; height: 15px; cursor: pointer; flex-shrink: 0; }
+.check-opt label { font-size: 12px; font-weight: 600; color: var(--text); cursor: pointer; }
+
+/* toggle row */
+.toggle-row { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 8px; background: #fff8f8; border: 1.5px solid #ffcccc; cursor: pointer; margin-bottom: 8px; }
+.toggle-row input { accent-color: var(--red); width: 15px; height: 15px; cursor: pointer; flex-shrink: 0; }
+.toggle-row label { font-size: 11px; font-weight: 700; color: #b91c1c; cursor: pointer; }
+
+/* logo upload */
+.logo-box { border: 2px dashed var(--border); border-radius: 10px; padding: 16px; text-align: center; cursor: pointer; transition: all .15s; margin-bottom: 10px; }
+.logo-box:hover { border-color: var(--red); background: #fff5f5; }
+.logo-box img { max-height: 50px; max-width: 180px; object-fit: contain; }
+.logo-box .ph { font-size: 12px; color: var(--muted); }
+
+/* PDF upload */
+.pdf-upload-box { border: 2px dashed #ffcccc; border-radius: 10px; padding: 12px 16px; cursor: pointer; transition: all .15s; margin-bottom: 10px; background: #fff8f8; }
+.pdf-upload-box:hover { border-color: var(--red); background: #fff0f0; }
+.pdf-upload-box .pu-title { font-size: 12px; font-weight: 700; color: var(--red); }
+.pdf-upload-box .pu-hint  { font-size: 10px; color: var(--muted); margin-top: 2px; }
+#brad-pdf-status { font-size: 11px; color: var(--green); font-weight: 700; margin-bottom: 8px; min-height: 16px; }
+
+/* gen button */
+.gen-btn { width: 100%; padding: 13px; background: var(--red); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all .2s; font-family: inherit; }
+.gen-btn:hover { background: var(--red2); box-shadow: 0 4px 18px rgba(204,0,0,.3); }
+
+/* ── PREVIEW ── */
+.preview { padding: 28px 24px; overflow-y: auto; background: #C8C8CC; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.preview-bar { width: 100%; display: flex; align-items: center; justify-content: space-between; background: var(--white); border-radius: 10px; padding: 10px 18px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.preview-bar span { font-size: 12px; font-weight: 600; color: var(--muted); }
+.pdf-btn { padding: 8px 18px; background: var(--red); color: #fff; border: none; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: background .15s; font-family: inherit; }
+.pdf-btn:hover { background: var(--red2); }
+.pdf-btn:disabled { opacity: .6; cursor: not-allowed; }
+.slides-wrap { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.slide-box { box-shadow: 0 6px 28px rgba(0,0,0,.25); border-radius: 6px; overflow: hidden; }
+.empty { min-height: 360px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--muted); gap: 10px; }
+.empty .icon { font-size: 44px; opacity: .35; }
+
+/* ══════════════════════════════════
+   SLIDE STYLES
+══════════════════════════════════ */
+
+/* CAPA */
+.s-cover {
+  width: 960px; height: 540px;
+  background: linear-gradient(135deg, #8B0000 0%, #CC0000 55%, #E00000 100%);
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 52px 60px;
+}
+.s-cover .bg-geo1 { position: absolute; right: -60px; top: -60px; width: 500px; height: 500px; border-radius: 50%; background: rgba(255,255,255,.06); }
+.s-cover .bg-geo2 { position: absolute; right: 100px; top: 40px; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,.04); }
+.s-cover .bg-lines { position: absolute; right: 40px; top: 0; width: 440px; height: 440px; background: repeating-linear-gradient(40deg,transparent,transparent 6px,rgba(255,255,255,.07) 6px,rgba(255,255,255,.07) 8px); border-radius: 50%; }
+.s-cover .logo-area { position: absolute; top: 36px; left: 56px; display: flex; align-items: flex-end; gap: 18px; }
+.s-cover .logo-area img { max-height: 48px; max-width: 180px; object-fit: contain; }
+.s-cover .logo-placeholder { background: rgba(255,255,255,.15); border-radius: 8px; padding: 8px 18px; font-size: 13px; font-weight: 800; color: rgba(255,255,255,.8); letter-spacing: 1px; }
+.s-cover .brad-badge { position: absolute; top: 40px; right: 56px; text-align: right; }
+.s-cover .brad-badge .b1 { font-size: 11px; font-weight: 900; color: rgba(255,255,255,.95); letter-spacing: 3px; text-transform: uppercase; }
+.s-cover .brad-badge .b2 { font-size: 9px; color: rgba(255,255,255,.55); letter-spacing: 2px; margin-top: 3px; text-transform: uppercase; }
+.s-cover .tag { font-size: 10px; letter-spacing: 2.5px; color: rgba(255,255,255,.55); text-transform: uppercase; margin-bottom: 12px; }
+.s-cover .title { font-size: 54px; font-weight: 300; color: #fff; line-height: 1.08; margin-bottom: 20px; }
+.s-cover .title strong { font-weight: 900; }
+.s-cover .company { font-size: 18px; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
+.s-cover .date { font-size: 13px; color: rgba(255,255,255,.6); }
+
+/* COMPARISON */
+.s-comp { width: 960px; min-height: 540px; background: #fff; padding: 36px 44px 28px; position: relative; }
+.s-comp .s-title { text-align: center; font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 28px; }
+.s-comp .s-title em { font-style: normal; font-weight: 400; color: var(--muted); }
+.comp-grid { display: flex; gap: 0; align-items: stretch; }
+.comp-col { display: flex; flex-direction: column; }
+.comp-col.atual { width: 200px; flex-shrink: 0; }
+.comp-col.brad  { flex: 1; }
+.col-label { text-align: center; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text); margin-bottom: 10px; }
+.ins-tag { display: inline-block; padding: 4px 14px; border-radius: 20px; border: 1.5px solid; font-size: 11px; font-weight: 700; margin-bottom: 4px; }
+.chart-wrap { height: 240px; position: relative; }
+.plan-meta { display: flex; flex-direction: column; align-items: center; margin-top: 6px; gap: 3px; }
+.plan-name-label { font-size: 10px; font-weight: 700; }
+.cop-chip { font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: .4px; }
+.cop-chip.sim { background: #dcfce7; color: #15803d; }
+.cop-chip.nao { background: #fee2e2; color: #b91c1c; }
+.vidas-chip { font-size: 9px; color: var(--muted); }
+.reembolso-chip { font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 10px; background: #eff6ff; color: #1d4ed8; }
+.ganho-chip { font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px; letter-spacing: .3px; white-space: nowrap; }
+.ganho-chip.positivo { background: #dcfce7; color: #15803d; }
+.ganho-chip.negativo { background: #fee2e2; color: #b91c1c; }
+.ganho-chip.neutro   { background: #f1f5f9; color: var(--muted); }
+.ganho-label { font-size: 8px; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); }
+.vert-sep { width: 1px; background: var(--border); margin: 0 20px; }
+.divider  { height: 3px; background: linear-gradient(90deg, var(--red), #ff6666); border-radius: 2px; margin: 20px 0 12px; }
+.legend-row { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.leg-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--muted); font-weight: 700; }
+.leg-dot { width: 9px; height: 9px; border-radius: 50%; }
+
+/* COP SLIDE */
+.s-cop { width: 960px; min-height: 540px; background: #fff; padding: 44px 56px; position: relative; }
+
+/* CARÊNCIAS SLIDE */
+.s-wait { width: 960px; min-height: 540px; background: #fff; padding: 44px 56px; position: relative; }
+.wait-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+.wait-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; border-radius: 10px; background: var(--gray-bg); border: 1.5px solid var(--border); }
+.wait-icon { font-size: 22px; flex-shrink: 0; }
+.wait-name { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.wait-tag { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: 10px; font-weight: 700; margin-right: 4px; }
+.wait-tag.zero { background: #dcfce7; color: #15803d; }
+.wait-tag.low  { background: #fef9c3; color: #854d0e; }
+.wait-tag.mid  { background: #fef2f2; color: #b91c1c; }
+
+/* DIFERENCIAIS */
+.s-diff { width: 960px; min-height: 540px; background: #fff; padding: 44px 56px; position: relative; }
+.diff-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
+.diff-item { padding: 18px; border-radius: 12px; border: 1.5px solid var(--border); background: var(--gray-bg); }
+.diff-icon { font-size: 28px; margin-bottom: 8px; }
+.diff-title { font-size: 13px; font-weight: 800; color: var(--red); margin-bottom: 5px; }
+.diff-desc  { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+/* BACK COVER */
+.s-back { width: 960px; height: 540px; background: linear-gradient(135deg, #8B0000, #CC0000); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.s-back .bg-geo { position: absolute; right: -80px; bottom: -80px; width: 400px; height: 400px; border-radius: 50%; background: rgba(255,255,255,.05); }
+
+/* REDE CREDENCIADA SLIDE */
+.s-rede { width: 960px; min-height: 540px; background: #fff; padding: 36px 44px 32px; position: relative; }
+.rede-grid { display: grid; gap: 14px; margin-top: 20px; }
+.rede-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.rede-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.rede-city-card { border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.rede-city-head { padding: 9px 13px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,.06); }
+.rede-city-name { font-size: 12px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 5px; }
+.rede-city-count { font-size: 9px; font-weight: 700; color: var(--muted); background: rgba(0,0,0,.05); padding: 2px 7px; border-radius: 8px; }
+.rede-hosp-list { padding: 8px 13px 10px; display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.rede-hosp-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.rede-hosp-name { font-size: 10.5px; color: var(--text); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 1.3; }
+.rede-plan-badge { font-size: 9px; font-weight: 800; padding: 2px 7px; border-radius: 7px; flex-shrink: 0; white-space: nowrap; letter-spacing: .2px; }
+
+/* slide section header */
+.slide-sec-head { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+.slide-sec-bar { width: 5px; border-radius: 3px; flex-shrink: 0; }
+.slide-sec-title { font-size: 21px; font-weight: 800; color: var(--text); }
+.slide-sec-sub   { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* logo watermark in slides */
+.slide-logo-wm { position: absolute; top: 20px; right: 36px; max-height: 30px; max-width: 110px; object-fit: contain; opacity: .5; }
+
+@media (max-width: 767px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; }
+  .preview { padding: 16px 10px; }
+  .header p { display: none; }
+  .row2 { grid-template-columns: 1fr; }
+}
+
+/* ── MODAL SELEÇÃO DE PLANO ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55);
+  z-index: 999; align-items: center; justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: #fff; border-radius: 16px; padding: 32px 28px; width: 520px; max-width: 95vw;
+  box-shadow: 0 24px 64px rgba(0,0,0,.3); max-height: 80vh; display: flex; flex-direction: column;
+}
+.modal-title { font-size: 17px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.modal-sub   { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+.modal-plans { display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; margin-bottom: 20px; }
+.plan-opt {
+  display: flex; align-items: center; gap: 14px; padding: 12px 16px;
+  border: 2px solid var(--border); border-radius: 10px; cursor: pointer; transition: all .15s;
+}
+.plan-opt:hover  { border-color: var(--red); background: #fff5f5; }
+.plan-opt.sel    { border-color: var(--red); background: #fff0f0; }
+.plan-opt input  { accent-color: var(--red); width: 16px; height: 16px; flex-shrink: 0; }
+.plan-opt-name   { font-size: 13px; font-weight: 700; color: var(--text); flex: 1; }
+.plan-opt-val    { font-size: 13px; font-weight: 800; color: var(--red); }
+.modal-actions   { display: flex; gap: 10px; justify-content: flex-end; }
+.btn-cancel { padding: 10px 20px; border: 1.5px solid var(--border); border-radius: 8px; background: #fff; font-size: 13px; font-weight: 700; color: var(--muted); cursor: pointer; font-family: inherit; }
+.btn-confirm { padding: 10px 24px; background: var(--red); color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .15s; }
+.btn-confirm:hover { background: var(--red2); }
+.btn-confirm:disabled { opacity: .4; cursor: not-allowed; }
+.modal-section-hdr {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 4px 6px; font-size: 11px; font-weight: 800;
+  color: var(--muted); text-transform: uppercase; letter-spacing: .5px;
+  border-top: 1px solid var(--border); margin-top: 4px;
+}
+.modal-section-hdr:first-child { border-top: none; margin-top: 0; padding-top: 2px; }
+.pdf-dual { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pdf-box-small {
+  border: 1.5px dashed rgba(204,0,0,.35); border-radius: 10px;
+  padding: 12px 10px; text-align: center; cursor: pointer; transition: all .15s;
+  background: rgba(204,0,0,.02);
+}
+.pdf-box-small:hover { border-color: var(--red); background: rgba(204,0,0,.06); }
+.pdf-box-small .pb-title { font-size: 11px; font-weight: 800; color: var(--red); }
+.pdf-box-small .pb-sub { font-size: 10px; color: var(--muted); margin-top: 2px; }
+.pdf-status { font-size: 11px; color: var(--muted); min-height: 16px; text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- ══ MODAL SELEÇÃO DE PLANO ══ -->
+<div class="modal-overlay" id="plan-modal" onclick="if(event.target===this)closePlanModal()">
+  <div class="modal-box">
+    <div class="modal-title">📋 Selecione os planos para apresentar</div>
+    <div class="modal-sub">Planos extraídos das cotações SPG. Selecione quantos quiser — com e sem coparticipação serão exibidos em slides separados.</div>
+    <div class="modal-plans" id="modal-plans-list"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closePlanModal()">Cancelar</button>
+      <button class="btn-confirm" id="modal-confirm-btn" onclick="confirmPlanSelection()" disabled>Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="logo">BR</div>
+  <div>
+    <h1>Bradesco Rede — Proposta Comercial</h1>
+    <p>Gerador de apresentação para corretores do Canal Rede</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="sidebar-body">
+
+      <!-- ══ TOPO: Importar SPG ══ -->
+      <div class="fsec" style="border-color:rgba(204,0,0,.25);background:rgba(204,0,0,.04)">
+        <div class="stitle" style="color:var(--red)"><span>📄</span> Cotação SPG Bradesco</div>
+        <div class="pdf-upload-box" onclick="document.getElementById('brad-pdf').click()">
+          <div class="pu-title">📄 Importar cotação(ões) SPG Bradesco</div>
+          <div class="pu-hint">Selecione 1 ou 2 PDFs — com e sem coparticipação</div>
+        </div>
+        <input type="file" id="brad-pdf" accept=".pdf" multiple style="display:none" onchange="handleBradescoPdfs(this.files)">
+        <div id="brad-pdf-status" class="pdf-status"></div>
+        <button onclick="clearBradPdfs()" id="brad-pdf-clear-btn" style="display:none;width:100%;margin-top:4px;padding:6px;border:1px dashed var(--border);border-radius:7px;background:none;cursor:pointer;font-size:10px;color:var(--muted);font-family:inherit">↩ Limpar PDFs importados</button>
+      </div>
+
+      <!-- 1. Cliente -->
+      <div class="fsec">
+        <div class="stitle"><span>🏢</span> Dados do Cliente</div>
+        <div class="fg">
+          <label>Nome da empresa / cliente</label>
+          <input id="empresa" type="text" placeholder="Ex: Empresa ABC Ltda" oninput="render()">
+        </div>
+        <div class="row2">
+          <div class="fg">
+            <label>Mês / Ano</label>
+            <input id="mesano" type="month" oninput="render()">
+          </div>
+          <div class="fg">
+            <label>Corretor / Consultor</label>
+            <input id="consultor" type="text" placeholder="Seu nome" oninput="render()">
+          </div>
+        </div>
+        <!-- Logo do Cliente (dentro de Dados do Cliente) -->
+        <div class="fg" style="margin-top:4px">
+          <label>Logo do cliente <span style="font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0">(opcional)</span></label>
+          <div class="logo-box" id="cliente-logo-box" onclick="document.getElementById('cliente-logo-input').click()" style="margin-top:4px">
+            <div id="cliente-logo-preview-wrap">
+              <div class="ph">📤 Carregar logo do cliente (PNG · JPG · SVG)</div>
+              <div class="ph" style="font-size:10px;margin-top:4px">Aparece na capa da apresentação</div>
+            </div>
+          </div>
+          <input type="file" id="cliente-logo-input" accept="image/*" style="display:none" onchange="handleClienteLogo(this.files[0])">
+          <div id="cliente-logo-remove-wrap" style="display:none;margin-top:6px">
+            <button onclick="removeClienteLogo()" style="width:100%;padding:6px;border:1px solid var(--border);border-radius:6px;background:none;cursor:pointer;font-size:11px;color:var(--muted);font-family:inherit">✕ Remover logo do cliente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Plano Atual -->
+      <div class="fsec">
+        <div class="stitle"><span>📋</span> Plano Atual do Cliente</div>
+        <div class="toggle-row" onclick="toggleShowAtual()" style="margin-bottom:14px">
+          <input type="checkbox" id="opt-atual-check" checked onclick="event.stopPropagation();toggleShowAtual()">
+          <label for="opt-atual-check" onclick="event.stopPropagation();event.preventDefault();toggleShowAtual()">Incluir plano atual na apresentação</label>
+        </div>
+        <div id="atual-fields-wrap">
+        <div class="row2">
+          <div class="fg">
+            <label>Operadora</label>
+            <div class="ins-wrap">
+              <div class="ins-dot" id="dot-atual" style="background:#6B6B8A"></div>
+              <select id="a-seg" onchange="syncDotAtual(); syncAtualPlanOpts(); render()">
+                <option value="sulamerica">SulAmérica</option>
+                <option value="amil">Amil</option>
+                <option value="portoseguro">Porto Seguro</option>
+                <option value="hapvida">Hapvida</option>
+                <option value="bradesco">Bradesco</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg">
+            <label>Nome do Plano</label>
+            <select id="a-plano" onchange="syncAtualReembolso();render()"></select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="fg">
+            <label>Nº de Vidas</label>
+            <input id="a-vidas" type="number" min="1" value="10" oninput="render()">
+          </div>
+          <div class="fg">
+            <label>Valor Mensal (R$)</label>
+            <input id="a-valor" type="number" min="0" step="0.01" placeholder="18500.00" oninput="render()">
+          </div>
+        </div>
+        <div class="fg">
+          <label>Coparticipação</label>
+          <div class="cop-toggle">
+            <button class="cop-btn" id="cop-a-sim" onclick="setAtualCop(true)">✔ Com Coparticipação</button>
+            <button class="cop-btn active-nao" id="cop-a-nao" onclick="setAtualCop(false)">✕ Sem Coparticipação</button>
+          </div>
+        </div>
+        <div class="toggle-row" onclick="toggleAtualReemb()">
+          <input type="checkbox" id="rs-atual" onclick="event.stopPropagation();toggleAtualReemb()">
+          <label for="rs-atual" onclick="event.stopPropagation();event.preventDefault();toggleAtualReemb()">Informar reembolso por consulta</label>
+        </div>
+        <div id="a-reemb-container" style="display:none">
+          <div class="fg"><label>Reembolso por consulta (R$)</label><input id="a-reembolso" type="number" min="0" step="0.01" placeholder="200.00" oninput="render()"></div>
+        </div>
+        </div><!-- /atual-fields-wrap -->
+      </div>
+
+      <!-- 4a. Planos Bradesco via PDF (multi-plano) — renderizado dinamicamente -->
+      <div id="brad-plans-container"></div>
+
+      <!-- 4b. Plano Bradesco manual (quando não há PDF) -->
+      <div class="fsec" id="brad-manual-section">
+        <div class="stitle"><span>🏥</span> Plano Bradesco Saúde</div>
+        <div class="row2">
+          <div class="fg">
+            <label>Nome do Plano</label>
+            <select id="brad-plano" onchange="syncBradReembolso(); render()">
+              <option>Regional</option>
+              <option>Saúde +</option>
+              <option>Flex</option>
+              <option>Ideal</option>
+              <option selected>Efetivo</option>
+              <option>Efetivo Plus</option>
+              <option>Nacional</option>
+              <option>Nacional Plus</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Acomodação</label>
+            <select id="brad-acom" onchange="render()">
+              <option>Enfermaria</option>
+              <option selected>Apartamento</option>
+            </select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="fg">
+            <label>Nº de Vidas</label>
+            <input id="brad-vidas" type="number" min="1" value="10" oninput="render()">
+          </div>
+          <div class="fg">
+            <label>Valor Mensal (R$)</label>
+            <input id="brad-valor" type="number" min="0" step="0.01" placeholder="15200.00" oninput="render()">
+          </div>
+        </div>
+        <div class="fg">
+          <label>Coparticipação Bradesco</label>
+          <div class="cop-toggle">
+            <button class="cop-btn active-sim" id="cop-b-sim" onclick="setBradCop(true)">✔ Com Coparticipação</button>
+            <button class="cop-btn" id="cop-b-nao" onclick="setBradCop(false)">✕ Sem Coparticipação</button>
+          </div>
+        </div>
+        <div class="toggle-row" id="brad-reemb-toggle-row" onclick="toggleBradReemb()">
+          <input type="checkbox" id="rs-brad" onclick="event.stopPropagation();toggleBradReemb()">
+          <label for="rs-brad" onclick="event.stopPropagation();event.preventDefault();toggleBradReemb()">Exibir reembolso por consulta no documento</label>
+        </div>
+        <div id="brad-reemb-container" style="display:none">
+          <div class="fg"><label>Reembolso por consulta (R$)</label><input id="brad-reembolso" type="number" min="0" step="0.01" oninput="render()"></div>
+        </div>
+        <div id="brad-plans-reemb-section" style="display:none"></div>
+        <button id="brad-add-manual-btn" onclick="addManualBradPlan()"
+          style="width:100%;margin-top:8px;padding:9px;border:1.5px dashed var(--primary);border-radius:8px;
+                 background:none;cursor:pointer;font-size:13px;font-weight:700;color:var(--primary);
+                 font-family:inherit;transition:all .15s"
+          onmouseover="this.style.background='rgba(180,0,0,.05)'" onmouseout="this.style.background='none'">
+          ➕ Adicionar plano à apresentação
+        </button>
+      </div>
+
+      <!-- 5. Slides opcionais -->
+      <div class="fsec">
+        <div class="stitle"><span>📑</span> Slides da Apresentação</div>
+        <div class="check-opt" id="opt-cop-wrap" onclick="toggleOpt('cop')">
+          <input type="checkbox" id="opt-cop" checked onclick="event.stopPropagation();toggleOpt('cop')">
+          <label for="opt-cop">Tabela de Coparticipação Bradesco</label>
+        </div>
+        <div class="check-opt" onclick="toggleOpt('wait')">
+          <input type="checkbox" id="opt-wait" checked onclick="event.stopPropagation();toggleOpt('wait')">
+          <label for="opt-wait">Tabela de Carências</label>
+        </div>
+        <div class="check-opt" onclick="toggleOpt('diff')">
+          <input type="checkbox" id="opt-diff" checked onclick="event.stopPropagation();toggleOpt('diff')">
+          <label for="opt-diff">Diferenciais Bradesco Saúde</label>
+        </div>
+        <div class="check-opt" onclick="toggleOpt('rede')">
+          <input type="checkbox" id="opt-rede" onclick="event.stopPropagation();toggleOpt('rede')">
+          <label for="opt-rede">Resumo de Rede Credenciada</label>
+        </div>
+        <div id="rede-regioes-wrap" style="display:none;padding:4px 0 0 10px">
+          <div class="check-opt" style="margin-bottom:5px;border-color:rgba(204,0,0,.2)" onclick="toggleRede('ABCDM')">
+            <input type="checkbox" id="opt-rede-abcdm" checked onclick="event.stopPropagation();toggleRede('ABCDM')">
+            <label for="opt-rede-abcdm" style="font-size:11px">📍 Região ABCDM</label>
+          </div>
+          <div class="check-opt" style="margin-bottom:5px;border-color:rgba(204,0,0,.2)" onclick="toggleRede('SP Capital')">
+            <input type="checkbox" id="opt-rede-spcap" checked onclick="event.stopPropagation();toggleRede('SP Capital')">
+            <label for="opt-rede-spcap" style="font-size:11px">📍 São Paulo Capital</label>
+          </div>
+          <div class="check-opt" style="border-color:rgba(204,0,0,.2)" onclick="toggleRede('Interior')">
+            <input type="checkbox" id="opt-rede-int" checked onclick="event.stopPropagation();toggleRede('Interior')">
+            <label for="opt-rede-int" style="font-size:11px">📍 Interior de SP</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="sidebar-footer">
+      <button class="gen-btn" onclick="render()">🔄 Atualizar Preview</button>
+    </div>
+  </aside>
+
+  <!-- ══ PREVIEW ══ -->
+  <main class="preview">
+    <div class="preview-bar">
+      <span>📄 Preview da apresentação</span>
+      <button class="pdf-btn" id="pdf-btn" onclick="gerarPDF()">⬇ Baixar PDF</button>
+    </div>
+    <div id="doc-wrap" class="slides-wrap">
+      <div class="empty"><div class="icon">🏥</div><p>Preencha os dados e a apresentação aparece aqui</p></div>
+    </div>
+  </main>
+
+</div>
+
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+/* ═══════════ CONSTANTS ═══════════ */
+const INS = {
+  bradesco:    { label: 'Bradesco',     color: '#CC0000' },
+  sulamerica:  { label: 'SulAmérica',   color: '#E8661A' },
+  amil:        { label: 'Amil',         color: '#3B2F9E' },
+  portoseguro: { label: 'Porto Seguro', color: '#005FAF' },
+  hapvida:     { label: 'Hapvida',      color: '#00873D' },
+  outro:       { label: 'Outro',        color: '#888888' },
+};
+
+const PLANS = {
+  bradesco:    ['Regional','Saúde +','Efetivo','Efetivo Plus','Flex','Ideal','Nacional','Nacional Plus'],
+  sulamerica:  ['Direto Nacional E','Direto Nacional Q','Exato E','Exato Q','Clássico Vital E','Clássico Vital Q','Clássico 100 E','Especial 100 Q','Especial Mais','Executivo','Prestige'],
+  amil:        ['Bronze SP','Bronze Mais','Prata','Ouro','Ouro II','Platinum R1','Platinum R2','S380 E','S380 Q','S450 E','S450 Q','S750 R1','S750 R2','S750 R3','Black I','S2500','Black II','S6500 Black'],
+  portoseguro: ['Pró ABCDM','Prata Pró E','Prata Pró Q','Ouro Pró','Diamante Pró','Bronze Brasil E','Bronze Brasil Q','Prata Mais E','Prata Mais Q','Ouro Mais','Ouro Max','Diamante Mais'],
+  hapvida:     ['200 ABC','200 UP','300 E','500 E','500 Q','600 E','600 Q','700 E','700 Q'],
+  outro:       [],
+};
+
+const BRAD_COP = {
+  subtitulo: 'Limite máximo em reais por utilização · Contratos de 3 a 199 vidas',
+  procedimentos: ['Atendimento em P.S.','Consulta eletiva','Exames Especiais (Tipo B)','Exames Simples (Tipo A)','Procedimentos Ambulatoriais','Procedimentos Seriados','Internação'],
+  planos: {
+    'Regional':      ['R$ 90,00','R$ 35,00','R$ 120,00','R$ 45,00','R$ 135,00','R$ 50,00','R$ 250,00'],
+    'Saúde +':       ['R$ 90,00','R$ 35,00','R$ 120,00','R$ 45,00','R$ 135,00','R$ 50,00','R$ 250,00'],
+    'Efetivo':       ['R$ 90,00','R$ 35,00','R$ 120,00','R$ 45,00','R$ 135,00','R$ 50,00','R$ 250,00'],
+    'Efetivo Plus':  ['R$ 120,00','R$ 45,00','R$ 160,00','R$ 60,00','R$ 150,00','R$ 55,00','R$ 300,00'],
+    'Flex':          ['R$ 115,00','R$ 40,00','R$ 135,00','R$ 55,00','R$ 150,00','R$ 55,00','R$ 300,00'],
+    'Ideal':         ['R$ 120,00','R$ 45,00','R$ 160,00','R$ 60,00','R$ 150,00','R$ 55,00','R$ 300,00'],
+    'Nacional':      ['R$ 130,00','R$ 70,00','R$ 160,00','R$ 65,00','R$ 180,00','R$ 65,00','R$ 500,00'],
+    'Nacional Plus': ['R$ 320,00','R$ 160,00','R$ 320,00','R$ 160,00','R$ 320,00','R$ 160,00','R$ 550,00'],
+  }
+};
+
+// Tabela de reembolso unificada por operadora → plano (mesmos dados do Portal de Cotação)
+const REEMBOLSO_DATA = {
+  bradesco: {
+    'Regional': 109.76, 'Saúde +': 109.76, 'Flex': 109.76, 'Ideal': 109.76,
+    'Efetivo': 109.76, 'Efetivo Plus': 109.76,
+    'Nacional':     [109.76, 219.52, 329.27],
+    'Nacional Plus':[439.03, 658.55, 878.06],
+  },
+  sulamerica: {
+    'Direto Nacional E': 90.00, 'Direto Nacional Q': 90.00,
+    'Clássico Vital E': 110.25, 'Clássico Vital Q': 110.25,
+    'Clássico 100 E': 110.25, 'Especial 100 Q': 180.00,
+    'Especial Mais Vital': 330.75, 'Especial Mais': 330.75,
+    'Executivo': [500.00, 660.00, 880.00],
+    'Prestige': 1000.00,
+  },
+  amil: {
+    'Ouro': 96.00, 'Ouro II': 80.00,
+    'Platinum R1': 240.00, 'Platinum R2': 328.00,
+    'S380 E': 80.00, 'S380 Q': 80.00,
+    'S450 E': 96.00, 'S450 Q': 96.00,
+    'S750 R1': 136.00, 'S750 R2': 240.00, 'S750 R3': 328.00,
+    'Black I': [432.00, 600.00], 'S2500': [432.00, 600.00],
+    'Black II': [600.00, 800.00, 1040.00], 'S6500 Black': 600.00,
+  },
+  portoseguro: {
+    'Bronze Brasil E': 95.00, 'Bronze Brasil Q': 95.00,
+    'Prata Mais E': 95.00, 'Prata Mais Q': 95.00,
+    'Ouro Mais': 152.00, 'Ouro Max': 249.00, 'Diamante Mais': 370.00,
+  },
+  hapvida: {
+    '600 E': 75.00, '600 Q': 75.00, '700 E': 96.00, '700 Q': 96.00,
+  },
+};
+
+// Atalhos por seguradora para uso interno
+const BRAD_REEMBOLSO = REEMBOLSO_DATA.bradesco;
+// Sufixos de variação de reembolso (mais barato → mais caro)
+const BRAD_REEMBOLSO_SUFFIX = {
+  'Nacional':     ['1x', '2x', '3x'],
+  'Nacional Plus': ['4x', '6x', '8x'],
+};
+// Helper para plano atual
+function getAtualReembolso(seg, plano) { return REEMBOLSO_DATA[seg]?.[plano]; }
+
+
+const BRAD_CARENCIAS = [
+  { proc: 'Urgência e emergência',              icon: '🚨', sem: '24 horas',  com: '24 horas',  level: 'zero' },
+  { proc: 'Consultas',                          icon: '🩺', sem: '15 dias',   com: 'Isento',    level: 'low'  },
+  { proc: 'Exames do tipo A',                   icon: '🔬', sem: '15 dias',   com: 'Isento',    level: 'low'  },
+  { proc: 'Exames do tipo B',                   icon: '🧪', sem: '180 dias',  com: 'Isento',    level: 'mid'  },
+  { proc: 'Terapias não médicas',               icon: '🧘', sem: '180 dias',  com: '180 dias',  level: 'mid'  },
+  { proc: 'Internações clínicas',               icon: '🏥', sem: '180 dias',  com: 'Isento',    level: 'mid'  },
+  { proc: 'Cirurgias em geral (exceto bariátrica)', icon: '⚕️', sem: '180 dias', com: 'Isento', level: 'mid'  },
+  { proc: 'Cirurgia bariátrica',                icon: '🔪', sem: '180 dias',  com: '180 dias',  level: 'mid'  },
+];
+
+const BRAD_DIFFS = [
+  { icon: '📱', title: 'Meu Doutor', desc: 'Telemedicina 24h por dia, 7 dias por semana, sem custo adicional. Clínico geral e especialistas.' },
+  { icon: '🏋️', title: 'Clube+ Saúde', desc: 'Academias, nutricionistas e psicólogos com condições especiais. Mais de 3.000 parceiros no Brasil.' },
+  { icon: '💊', title: 'Desconto Farmácia', desc: 'Até 40% de desconto em medicamentos nas redes parceiras Bradesco Saúde.' },
+  { icon: '🌎', title: 'Maior Rede Nacional', desc: 'Mais de 42.000 prestadores credenciados — a maior rede de saúde privada do país.' },
+  { icon: '📲', title: 'Bradesco Saúde App', desc: 'Autorize procedimentos, gere 2ª via de carteirinha e acesse a rede credenciada pelo celular.' },
+  { icon: '💰', title: 'Reembolso', desc: 'Flexibilidade para consultar qualquer médico fora da rede com reembolso parcial garantido.' },
+];
+
+/* ═══════════ REDE CREDENCIADA DATA ═══════════ */
+const PLAN_BADGE = {
+  'Ef':  { label: 'Efetivo',   bg: '#DBEAFE', color: '#1D4ED8' },
+  'EP':  { label: 'Ef. Plus',  bg: '#EDE9FE', color: '#6D28D9' },
+  'Fx':  { label: 'Flex',      bg: '#D1FAE5', color: '#047857' },
+  'Id':  { label: 'Ideal',     bg: '#CCFBF1', color: '#0F766E' },
+  'N':   { label: 'Nacional',  bg: '#FEF3C7', color: '#B45309' },
+  'NP':  { label: 'Nac. Plus', bg: '#FEE2E2', color: '#B91C1C' },
+};
+
+const REDE_DATA = {
+  'ABCDM': {
+    label: 'Região ABCDM',
+    subtitulo: 'Santo André · São Bernardo do Campo · São Caetano do Sul · Diadema · Mauá · Ribeirão Pires',
+    cidades: [
+      { nome: 'Santo André', hospitais: [
+        { nome: 'Hosp. Ben. Portuguesa de Sto. André', min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'IRC Inst. Regeneração Celular',       min: 'Ef', tipo: 'H DIA' },
+        { nome: 'Hospital e Maternidade Brasil',       min: 'EP', tipo: 'H/P.S/M' },
+        { nome: 'Hospital Bartira',                    min: 'EP', tipo: 'H/P.S/A' },
+        { nome: 'Hosp. Mat. Dr. Christóvão Gama',     min: 'Fx', tipo: 'H/P.S/M/A' },
+      ]},
+      { nome: 'São Bernardo\ndo Campo', hospitais: [
+        { nome: 'Hospital São Bernardo',               min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Ctro. Trat. Bezerra de Menezes',      min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hosp. Neomater Santa Marcelina',      min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hospital IFOR',                       min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hosp. São Luiz - São Bernardo',       min: 'EP', tipo: 'H/P.S' },
+        { nome: 'Clínica Especializada Vaad',          min: 'N',  tipo: 'H' },
+      ]},
+      { nome: 'São Caetano\ndo Sul', hospitais: [
+        { nome: 'Soc. Portuguesa Beneficência',        min: 'Ef', tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital e Mat. Central',             min: 'Fx', tipo: 'H/P.S' },
+        { nome: 'Hospital São Luiz São Caetano',       min: 'Fx', tipo: 'H/P.S/M/A' },
+      ]},
+      { nome: 'Diadema', hospitais: [
+        { nome: 'Innova Hospitais',                    min: 'Ef', tipo: 'H/P.S/A' },
+      ]},
+      { nome: 'Mauá', hospitais: [
+        { nome: 'Santa Casa de Mauá',                  min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hosp. e Mat. Brasil - Mauá',          min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hosp. e Maternidade América',         min: 'Fx', tipo: 'H/P.S/M/A' },
+      ]},
+      { nome: 'Ribeirão Pires', hospitais: [
+        { nome: 'Hospital Ribeirão Pires',             min: 'EP', tipo: 'H/P.S/M/A' },
+      ]},
+    ],
+  },
+  'SP Capital': {
+    label: 'São Paulo Capital',
+    subtitulo: 'Principais hospitais credenciados na capital',
+    cidades: [
+      { nome: 'São Paulo', hospitais: [
+        { nome: 'Hospital Santa Marcelina',      min: 'Ef', tipo: 'H/P.S/M' },
+        { nome: 'H. e Mat. Santa Maria',         min: 'Ef', tipo: 'H/P.S/M' },
+        { nome: 'Hospital São Camilo Pompeia',   min: 'Ef', tipo: 'H/P.S' },
+        { nome: 'Hospital São Camilo Santana',   min: 'Ef', tipo: 'H/P.S' },
+        { nome: 'Hospital Nipo Brasileiro',      min: 'Ef', tipo: 'H/P.S/M' },
+        { nome: 'Hospital Moriah',               min: 'Ef', tipo: 'H/P.S' },
+        { nome: 'Cruz Azul',                     min: 'Ef', tipo: 'H/P.S' },
+        { nome: 'Hospital Santa Isabel',         min: 'Ef', tipo: 'H/P.S' },
+        { nome: 'IBCC',                          min: 'Ef', tipo: 'H' },
+        { nome: 'Hospital das Clínicas (HC)',    min: 'EP', tipo: 'H/P.S/A' },
+        { nome: 'Hospital Leforte Liberdade',    min: 'EP', tipo: 'H/P.S' },
+        { nome: 'Instituto do Coração INCOR',   min: 'EP', tipo: 'H/P.S' },
+        { nome: 'Hospital São Paulo (HSANP)',    min: 'Fx', tipo: 'H/P.S/M' },
+        { nome: 'Hospital Santa Paula',          min: 'Fx', tipo: 'H/P.S' },
+        { nome: 'Hospital 9 de Julho',           min: 'Id', tipo: 'H/P.S' },
+        { nome: 'Hospital Paulistano',           min: 'Id', tipo: 'H/P.S' },
+        { nome: 'AC Camargo Cancer Center',      min: 'Id', tipo: 'H' },
+        { nome: 'Hospital Independência ZL',     min: 'Id', tipo: 'H/P.S' },
+        { nome: 'Hospital Adventista SP',        min: 'N',  tipo: 'H/P.S' },
+        { nome: 'Hospital São Camilo Ipiranga',  min: 'N',  tipo: 'H/P.S' },
+        { nome: 'Hospital Albert Einstein',      min: 'NP', tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital Sírio-Libanês',        min: 'NP', tipo: 'H/P.S' },
+        { nome: 'Hospital Samaritano SP',        min: 'NP', tipo: 'H/P.S/M' },
+      ]},
+    ],
+  },
+  'Interior': {
+    label: 'Interior de SP',
+    subtitulo: 'Guarulhos · Campinas · S. J. dos Campos · Indaiatuba · Atibaia · Bragança Paulista',
+    cidades: [
+      { nome: 'Guarulhos', hospitais: [
+        { nome: 'Hospital Carlos Chagas',            min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hospital Carlos Chagas',            min: 'Ef', tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital Stella Maris',             min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hospital São Luiz Guarulhos',       min: 'EP', tipo: 'H/P.S/M/A' },
+      ]},
+      { nome: 'Campinas', hospitais: [
+        { nome: 'Centro Infantil Boldrini',          min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Casa de Saúde',                     min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hospital Vera Cruz',                min: 'Ef', tipo: 'H/M' },
+        { nome: 'Hosp. EV Samaritano Campinas',      min: 'Fx', tipo: 'H/P.S/M' },
+        { nome: 'Coração de Campinas',               min: 'Fx', tipo: 'H/A' },
+        { nome: 'Hospital Santa Tereza',             min: 'Fx', tipo: 'H/P.S/M/A' },
+        { nome: 'Hosp. e Mat. Celso Pierro',         min: 'Fx', tipo: 'H/P.S/M/A' },
+        { nome: 'Irmandade Misericórdia',            min: 'Fx', tipo: 'H/A' },
+        { nome: 'Hospital Radium',                   min: 'Fx', tipo: 'H DIA' },
+        { nome: 'Hospital Madre Theodora',           min: 'Fx', tipo: 'H/P.S/A' },
+        { nome: 'Hospital São Luiz Campinas',        min: 'Id', tipo: 'H/M/A' },
+        { nome: 'Hospital São Luiz Campinas',        min: 'Id', tipo: 'H/P.S/M/A' },
+        { nome: 'Maternidade de Campinas',           min: 'N',  tipo: 'H/P.S/M/A' },
+        { nome: 'Campinas Day Hospital',             min: 'N',  tipo: 'H/A' },
+        { nome: 'Fund. Centro Médico Campinas',      min: 'N',  tipo: 'H/P.S/A' },
+        { nome: 'Hospital Renascença Campinas',      min: 'N',  tipo: 'H/P.S/M/A' },
+      ]},
+      { nome: 'S. J. dos\nCampos', hospitais: [
+        { nome: 'Clínica Pró-Infância',              min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hosp. Mat. Antoninho da Rocha M.',  min: 'Ef', tipo: 'H/M/A' },
+        { nome: 'CTFM / GACC',                       min: 'Ef', tipo: 'H/A' },
+        { nome: 'Hospital Prontil',                  min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Hospital São José',                 min: 'Ef', tipo: 'H/P.S' },
+        { nome: 'Assoc. Inst. Chui Psiquiatria',     min: 'Ef', tipo: 'H/A' },
+        { nome: 'Hospital Orto',                     min: 'Fx', tipo: 'H/P.S/A' },
+        { nome: 'Orthoservice',                      min: 'Fx', tipo: 'H/P.S/A' },
+        { nome: 'Hospital Francisca Júlia',          min: 'Fx', tipo: 'H/A' },
+        { nome: 'Hosp. e Mat. Pio XII',              min: 'Fx', tipo: 'H/P.S' },
+        { nome: 'Hospital Policlin',                 min: 'Fx', tipo: 'H/P.S/M' },
+        { nome: 'Santa Casa S. J. dos Campos',       min: 'Fx', tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital Vivalle',                  min: 'Id', tipo: 'H/M' },
+      ]},
+      { nome: 'Indaiatuba', hospitais: [
+        { nome: 'Hospital Santa Inês',               min: 'Ef', tipo: 'H/P.S/M' },
+      ]},
+      { nome: 'Atibaia', hospitais: [
+        { nome: 'Hospital Albert Sabin',             min: 'Fx', tipo: 'H/P.S' },
+        { nome: 'Hospital Novo Atibaia',             min: 'N',  tipo: 'H/P.S/M' },
+      ]},
+      { nome: 'Bragança\nPaulista', hospitais: [
+        { nome: 'Hospital Univ. São Francisco',      min: 'Ef', tipo: 'H/P.S/M/A' },
+        { nome: 'Santa Casa Bragança Paulista',      min: 'Ef', tipo: 'H/P.S' },
+      ]},
+    ],
+  },
+};
+
+/* ═══════════ LOGOS FIXOS E3 ═══════════ */
+const E3_LOGO_BRANCO = './e3_hor_branco.png'; // capa e contracapa (fundo vermelho)
+const E3_LOGO_AZUL   = './e3_hor_azul.png';   // slides brancos (watermark e header)
+
+/* ═══════════ STATE ═══════════ */
+let state = {
+  logoUrl: E3_LOGO_BRANCO,
+  clienteLogoUrl: null,
+  copAtual: false,
+  copBrad: true,
+  atualReembShow: false,
+  bradReembShow: false,
+  showCop: true,
+  showWait: true,
+  showDiff: true,
+  showAtual: true,   // checkbox "incluir plano atual na apresentação"
+  bradPlans: [], // planos selecionados no modal PDF (múltiplos)
+  showRede: false,
+  redeRegioes: { 'ABCDM': true, 'SP Capital': true, 'Interior': true },
+};
+let charts = [];
+let renderGen = 0;
+
+/* ═══════════ INIT ═══════════ */
+window.addEventListener('DOMContentLoaded', () => {
+  const now = new Date();
+  document.getElementById('mesano').value = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+  syncAtualPlanOpts();
+  render();
+
+  // Pré-preenche o campo Corretor/Consultor com o nome do usuário logado
+  const ctNome = document.cookie.match(/(?:^|;\s*)ct_nome=([^;]+)/);
+  if (ctNome) {
+    const el = document.getElementById('consultor');
+    if (el && !el.value) { el.value = decodeURIComponent(ctNome[1]); render(); }
+  }
+});
+
+/* ═══════════ LOGO (fixo E3 — sem upload) ═══════════ */
+function handleLogo() {}
+function removeLogo() {}
+
+/* ═══════════ LOGO DO CLIENTE ═══════════ */
+function handleClienteLogo(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    state.clienteLogoUrl = e.target.result;
+    const wrap = document.getElementById('cliente-logo-preview-wrap');
+    wrap.innerHTML = `<img src="${state.clienteLogoUrl}" style="max-height:50px;max-width:180px;object-fit:contain">`;
+    document.getElementById('cliente-logo-remove-wrap').style.display = '';
+    render();
+  };
+  reader.readAsDataURL(file);
+}
+function removeClienteLogo() {
+  state.clienteLogoUrl = null;
+  document.getElementById('cliente-logo-preview-wrap').innerHTML = '<div class="ph">📤 Carregar logo do cliente (PNG · JPG · SVG)</div><div class="ph" style="font-size:10px;margin-top:4px">Aparece na capa da apresentação</div>';
+  document.getElementById('cliente-logo-remove-wrap').style.display = 'none';
+  document.getElementById('cliente-logo-input').value = '';
+  render();
+}
+
+/* ═══════════ TOGGLE PLANO ATUAL ═══════════ */
+function toggleShowAtual() {
+  state.showAtual = !state.showAtual;
+  document.getElementById('opt-atual-check').checked = state.showAtual;
+  const wrap = document.getElementById('atual-fields-wrap');
+  if (wrap) wrap.style.opacity = state.showAtual ? '1' : '0.4';
+  render();
+}
+
+/* ═══════════ INS DOT ═══════════ */
+function syncDotAtual() {
+  const seg = document.getElementById('a-seg')?.value || 'outro';
+  document.getElementById('dot-atual').style.background = (INS[seg] || INS.outro).color;
+}
+function syncAtualPlanOpts() {
+  const seg = document.getElementById('a-seg')?.value || 'sulamerica';
+  const sel = document.getElementById('a-plano');
+  if (!sel) return;
+  const opts = PLANS[seg] || [];
+  sel.innerHTML = opts.length
+    ? opts.map(p => `<option>${p}</option>`).join('')
+    : '<option value="">— livre —</option>';
+  syncDotAtual();
+  // Limpa reembolso para que o auto-fill funcione com a nova seguradora
+  const rf = document.getElementById('a-reembolso');
+  if (rf) rf.value = '';
+  syncAtualReembolso();
+}
+
+/* ═══════════ COP TOGGLES ═══════════ */
+function setAtualCop(v) {
+  state.copAtual = v;
+  document.getElementById('cop-a-sim').className = 'cop-btn' + (v ? ' active-sim' : '');
+  document.getElementById('cop-a-nao').className = 'cop-btn' + (!v ? ' active-nao' : '');
+  render();
+}
+function setBradCop(v) {
+  state.copBrad = v;
+  document.getElementById('cop-b-sim').className = 'cop-btn' + (v ? ' active-sim' : '');
+  document.getElementById('cop-b-nao').className = 'cop-btn' + (!v ? ' active-nao' : '');
+  // mostrar checkbox de coparticipação só se plano Bradesco tem cop
+  const wrap = document.getElementById('opt-cop-wrap');
+  if (wrap) wrap.style.display = v ? '' : 'none';
+  if (!v) { state.showCop = false; document.getElementById('opt-cop').checked = false; }
+  render();
+}
+
+/* ═══════════ REEMBOLSO TOGGLES ═══════════ */
+function syncAtualReembolso() {
+  if (!state.atualReembShow) return;
+  const seg   = document.getElementById('a-seg')?.value || 'outro';
+  const plano = document.getElementById('a-plano')?.value || '';
+  const field = document.getElementById('a-reembolso');
+  if (!field) return;
+  // Sempre atualiza ao trocar plano/operadora — valor vem da tabela REEMBOLSO_DATA
+  const val = getAtualReembolso(seg, plano);
+  if (val !== undefined) {
+    const v = Array.isArray(val) ? val[0] : val;
+    if (v > 0) field.value = v.toFixed(2);
+  } else {
+    field.value = ''; // plano sem reembolso cadastrado → limpa o campo
+  }
+}
+
+function toggleAtualReemb() {
+  state.atualReembShow = !state.atualReembShow;
+  document.getElementById('rs-atual').checked = state.atualReembShow;
+  document.getElementById('a-reemb-container').style.display = state.atualReembShow ? '' : 'none';
+  if (state.atualReembShow) {
+    // Limpa para forçar auto-fill
+    const rf = document.getElementById('a-reembolso');
+    if (rf) rf.value = '';
+    syncAtualReembolso();
+  }
+  render();
+}
+function toggleBradReemb() {
+  state.bradReembShow = !state.bradReembShow;
+  document.getElementById('rs-brad').checked = state.bradReembShow;
+  document.getElementById('brad-reemb-container').style.display = state.bradReembShow ? '' : 'none';
+  if (state.bradReembShow) syncBradReembolso();
+  render();
+}
+function syncBradReembolso() {
+  if (!state.bradReembShow) return;
+  const plano = document.getElementById('brad-plano')?.value || 'Efetivo';
+  const val   = BRAD_REEMBOLSO[plano];
+  const container = document.getElementById('brad-reemb-container');
+  if (!container) return;
+
+  if (Array.isArray(val)) {
+    // Troca input por SELECT quando há múltiplos níveis
+    container.innerHTML = `<div class="fg"><label>Nível de Reembolso</label><select id="brad-reembolso" onchange="render()" style="width:100%">
+      ${val.map((v, i) => `<option value="${v}">R$ ${v.toLocaleString('pt-BR',{minimumFractionDigits:2})} — Nível ${i+1}</option>`).join('')}
+    </select></div>`;
+  } else {
+    container.innerHTML = `<div class="fg"><label>Reembolso por consulta (R$)</label><input id="brad-reembolso" type="number" min="0" step="0.01" value="${val ? val.toFixed(2) : ''}" oninput="render()"></div>`;
+    if (val) document.getElementById('brad-reembolso').value = val.toFixed(2);
+  }
+  render();
+}
+
+/* ═══════════ PER-PLAN REEMBOLSO SIDEBAR ═══════════ */
+function renderBradPlansReembSection() {
+  const container   = document.getElementById('brad-plans-container');
+  const manualSec   = document.getElementById('brad-manual-section');
+  if (!container) return;
+
+  if (!state.bradPlans || state.bradPlans.length === 0) {
+    container.innerHTML = '';
+    if (manualSec) {
+      manualSec.style.display = '';
+      const t = manualSec.querySelector('.stitle');
+      if (t) t.innerHTML = '<span>🏥</span> Plano Bradesco Saúde';
+    }
+    return;
+  }
+
+  // Multi-plano: mantém o formulário visível mas muda o título
+  if (manualSec) {
+    manualSec.style.display = '';
+    const t = manualSec.querySelector('.stitle');
+    if (t) t.innerHTML = '<span>➕</span> Adicionar outro plano Bradesco';
+  }
+
+  let html = '';
+  state.bradPlans.forEach((p, i) => {
+    const color = BRAD_COLORS[i] || BRAD_COLORS[0];
+    const copLabel = p.cop ? 'Com Coparticipação' : 'Sem Coparticipação';
+    const copClass = p.cop ? 'active-sim' : 'active-nao';
+    html += `
+    <div class="fsec" style="border-color:${color}33;padding-bottom:14px">
+      <div class="stitle" style="color:${color}">
+        <span>🏥</span> Plano Bradesco ${i + 1}
+        <button onclick="removeBradPlan(${i})" title="Remover plano"
+          style="margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer;font-size:13px;padding:0 2px">✕</button>
+      </div>
+      <div style="background:${color}11;border:1.5px solid ${color}33;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:14px;font-weight:800;color:${color}">${esc(p.plano)}${p.acom ? ' · ' + esc(p.acom) : ''}</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text)">${fmt(p.valor)} <span style="font-size:10px;color:var(--muted);font-weight:400">/ mês</span></div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+          <span class="cop-chip ${p.cop ? 'sim' : 'nao'}" style="font-size:10px">${copLabel}</span>
+          ${p.reembolso ? `<span class="reembolso-chip" style="font-size:10px">↩ ${fmt(p.reembolso)}</span>` : ''}
+        </div>
+      </div>
+    </div>`;
+  });
+
+  html += `
+  <div style="padding:0 0 8px">
+    <button onclick="clearBradPlans()"
+      style="width:100%;padding:8px;border:1px dashed var(--border);border-radius:8px;background:none;
+             cursor:pointer;font-size:11px;color:var(--muted);font-family:inherit;transition:all .15s"
+      onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">
+      ✕ Limpar todos os planos
+    </button>
+  </div>`;
+
+  container.innerHTML = html;
+}
+
+function removeBradPlan(i) {
+  state.bradPlans.splice(i, 1);
+  if (state.bradPlans.length === 0) clearBradPlans();
+  else { renderBradPlansReembSection(); render(); }
+}
+
+function clearBradPlans() {
+  state.bradPlans = [];
+  renderBradPlansReembSection();
+  render();
+}
+
+function addManualBradPlan() {
+  const plano = document.getElementById('brad-plano')?.value || 'Efetivo';
+  const acom  = document.getElementById('brad-acom')?.value  || 'Apartamento';
+  const vidas = parseInt(document.getElementById('brad-vidas')?.value) || 1;
+  const valor = parseFloat(document.getElementById('brad-valor')?.value) || 0;
+  const cop   = state.copBrad === true;
+
+  // Reembolso por variação (Nacional/Nacional Plus) ou fixo
+  const suffixes = BRAD_REEMBOLSO_SUFFIX[plano];
+  let reembolso = 0;
+  if (state.bradReembShow) {
+    reembolso = parseFloat(document.getElementById('brad-reembolso')?.value) || 0;
+  } else if (suffixes) {
+    // Descobre o nível pelo valor: ordena os do mesmo plano+cop já adicionados
+    const same = state.bradPlans.filter(p => p.plano === plano && p.cop === cop);
+    const rank = same.length; // próximo índice (barato→caro)
+    reembolso  = BRAD_REEMBOLSO[plano][Math.min(rank, suffixes.length - 1)];
+  } else {
+    const rd = BRAD_REEMBOLSO[plano];
+    reembolso = Array.isArray(rd) ? rd[0] : (rd || 0);
+  }
+
+  // Label com sufixo se aplicável
+  let label = null;
+  if (suffixes) {
+    const same = state.bradPlans.filter(p => p.plano === plano && p.cop === cop);
+    const rank = same.length;
+    label = `${plano} ${suffixes[Math.min(rank, suffixes.length - 1)]}`;
+  }
+
+  state.bradPlans.push({ plano, acom, vidas, valor, cop, reembolso, label });
+  renderBradPlansReembSection();
+  render();
+}
+
+/* ═══════════ SLIDE OPTIONS ═══════════ */
+function toggleOpt(key) {
+  const map = { cop: 'showCop', wait: 'showWait', diff: 'showDiff', rede: 'showRede' };
+  state[map[key]] = !state[map[key]];
+  document.getElementById(`opt-${key}`).checked = state[map[key]];
+  if (key === 'rede') {
+    const wrap = document.getElementById('rede-regioes-wrap');
+    if (wrap) wrap.style.display = state.showRede ? '' : 'none';
+  }
+  render();
+}
+
+function toggleRede(regiao) {
+  state.redeRegioes[regiao] = !state.redeRegioes[regiao];
+  const keyMap = { 'ABCDM': 'abcdm', 'SP Capital': 'spcap', 'Interior': 'int' };
+  const el = document.getElementById(`opt-rede-${keyMap[regiao]}`);
+  if (el) el.checked = state.redeRegioes[regiao];
+  render();
+}
+
+/* ═══════════ COLLECT DATA ═══════════ */
+const IOF_RATE = 1.0238; // IOF 2,38%
+function withIof(v) { return Math.round((v || 0) * IOF_RATE * 100) / 100; }
+
+function getData() {
+  const mv = document.getElementById('mesano').value;
+  let label = '';
+  if (mv) {
+    const [y, m] = mv.split('-');
+    const M = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    label = `${M[+m-1]}/${y}`;
+  }
+  const atualValorRaw = parseFloat(document.getElementById('a-valor')?.value) || 0;
+  const bradValorRaw  = parseFloat(document.getElementById('brad-valor')?.value) || 0;
+
+  // Planos Bradesco com IOF aplicado
+  const rawBradPlans = state.bradPlans.length > 0 ? state.bradPlans : [{
+    plano:  document.getElementById('brad-plano')?.value || 'Efetivo',
+    acom:   document.getElementById('brad-acom')?.value || 'Apartamento',
+    valor:  bradValorRaw,
+    cop:    state.copBrad,
+    reembolso: state.bradReembShow ? (parseFloat(document.getElementById('brad-reembolso')?.value) || 0) : 0,
+    label:  (document.getElementById('brad-plano')?.value || 'Efetivo') + ' ' + (document.getElementById('brad-acom')?.value || 'Apartamento'),
+  }];
+  const bradPlans = rawBradPlans.map(p => ({ ...p, valor: withIof(p.valor) }));
+
+  return {
+    empresa:        document.getElementById('empresa').value.trim() || 'Nome da Empresa',
+    mesano:         label || 'Mês/Ano',
+    consultor:      document.getElementById('consultor').value.trim(),
+    logoUrl:        state.logoUrl,
+    clienteLogoUrl: state.clienteLogoUrl,
+    nomeCorretora:  document.getElementById('nome-corretora')?.value.trim() || '',
+    showAtual:      state.showAtual,
+    atual: {
+      seg:      document.getElementById('a-seg')?.value || 'sulamerica',
+      plano:    document.getElementById('a-plano')?.value || '—',
+      vidas:    parseInt(document.getElementById('a-vidas')?.value) || 1,
+      valor:    atualValorRaw,
+      cop:      state.copAtual,
+      reembolso: state.atualReembShow ? (parseFloat(document.getElementById('a-reembolso')?.value) || 0) : 0,
+    },
+    brad: {
+      plano:    document.getElementById('brad-plano')?.value || 'Efetivo',
+      acom:     document.getElementById('brad-acom')?.value || 'Apartamento',
+      vidas:    parseInt(document.getElementById('brad-vidas')?.value) || 1,
+      valor:    withIof(bradValorRaw),
+      cop:      state.copBrad,
+      reembolso: state.bradReembShow ? (parseFloat(document.getElementById('brad-reembolso')?.value) || 0) : 0,
+    },
+    bradPlans,
+    showCop:     state.showCop,
+    showWait:    state.showWait,
+    showDiff:    state.showDiff,
+    showRede:    state.showRede,
+    redeRegioes: state.redeRegioes,
+  };
+}
+
+/* ═══════════ RENDER ═══════════ */
+function render() {
+  charts.forEach(c => { try { c.destroy(); } catch(_){} });
+  charts = [];
+  const d = getData();
+  const wrap = document.getElementById('doc-wrap');
+  let html = buildCover(d) + buildComp(d);
+  if (d.showCop && d.bradPlans.some(p => p.cop)) html += buildCopSlide(d);
+  if (d.showWait) html += buildCarenciaSlide(d);
+  if (d.showDiff) html += buildDiffSlide(d);
+  if (d.showRede) {
+    ['ABCDM', 'SP Capital', 'Interior'].forEach(r => {
+      if (d.redeRegioes[r]) html += buildRedeSlide(d, r);
+    });
+  }
+  html += buildBackCover(d);
+  wrap.innerHTML = html;
+  applyZoom();
+  renderBradPlansReembSection();
+  const gen = ++renderGen;
+  setTimeout(() => { if (gen === renderGen) drawCharts(d); }, 60);
+}
+
+function applyZoom() {
+  const area = document.querySelector('.preview');
+  if (!area) return;
+  const st = getComputedStyle(area);
+  const hPad = parseFloat(st.paddingLeft) + parseFloat(st.paddingRight);
+  const avail = area.clientWidth - hPad;
+  const z = Math.min(1, avail / 960);
+  document.querySelectorAll('.slide-box').forEach(el => el.style.zoom = z);
+}
+window.addEventListener('resize', applyZoom);
+
+/* ═══════════ SLIDE: CAPA ═══════════ */
+function buildCover(d) {
+  const corretoraHtml = d.logoUrl
+    ? `<img src="${d.logoUrl}" style="max-height:44px;max-width:160px;object-fit:contain">`
+    : d.nomeCorretora
+      ? `<div class="logo-placeholder">${esc(d.nomeCorretora)}</div>`
+      : `<div class="logo-placeholder">CORRETORA</div>`;
+  const clienteHtml = d.clienteLogoUrl
+    ? `<div style="background:rgba(255,255,255,.92);border-radius:7px;padding:5px 12px;display:flex;align-items:center"><img src="${d.clienteLogoUrl}" style="max-height:36px;max-width:130px;object-fit:contain"></div>`
+    : '';
+  const logoHtml = clienteHtml
+    ? `${corretoraHtml}<div style="width:1px;height:36px;background:rgba(255,255,255,.3);margin:0 6px"></div>${clienteHtml}`
+    : corretoraHtml;
+  return `
+  <div class="slide-box" id="sl-cover">
+    <div class="s-cover">
+      <div class="bg-geo1"></div><div class="bg-geo2"></div><div class="bg-lines"></div>
+      <div class="logo-area">${logoHtml}</div>
+      <div class="brad-badge">
+        <div class="b1">Bradesco Saúde</div>
+        <div class="b2">Canal Rede · Proposta Exclusiva</div>
+      </div>
+      <div class="tag">Plano de Saúde Empresarial</div>
+      <div class="title">Proposta<br><strong>Bradesco</strong></div>
+      <div class="company">${esc(d.empresa)}</div>
+      <div class="date">${esc(d.mesano)}${d.consultor ? ' · ' + esc(d.consultor) : ''} · ${d.brad.vidas} vida${d.brad.vidas !== 1 ? 's' : ''}</div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════ SLIDE: COMPARAÇÃO ═══════════ */
+const BRAD_COLORS = ['#CC0000','#E53935','#FF6B6B','#FF9999','#FFB3B3','#CC6666'];
+
+function buildComp(d) {
+  const copPlans   = d.bradPlans.filter(p => p.cop);
+  const nocopPlans = d.bradPlans.filter(p => !p.cop);
+  if (copPlans.length && nocopPlans.length) {
+    return buildCompSlide(d, copPlans,   'cop',   true) +
+           buildCompSlide(d, nocopPlans, 'nocop', false);
+  }
+  return buildCompSlide(d, d.bradPlans, 'main', d.bradPlans.length ? d.bradPlans[0].cop : null);
+}
+
+function buildCompSlide(d, plans, suffix, copFlag) {
+  const atualIns  = INS[d.atual.seg] || INS.outro;
+  const vidas     = d.brad.vidas;
+  const logoWm    = `<img src="${E3_LOGO_AZUL}" class="slide-logo-wm">`;
+  const showAtual = d.showAtual;
+  const isSplit   = (suffix === 'cop' || suffix === 'nocop');
+  let copBadge = '';
+  if (isSplit) {
+    copBadge = copFlag
+      ? `<span style="display:inline-block;background:#dcfce7;color:#15803d;padding:3px 12px;border-radius:12px;font-size:11px;font-weight:700;margin-left:10px;vertical-align:middle">✔ Com Coparticipação</span>`
+      : `<span style="display:inline-block;background:#fee2e2;color:#b91c1c;padding:3px 12px;border-radius:12px;font-size:11px;font-weight:700;margin-left:10px;vertical-align:middle">✕ Sem Coparticipação</span>`;
+  }
+  const title = (showAtual ? 'Por que migrar para a <em>Bradesco Saúde?</em>' : 'Proposta <em>Bradesco Saúde</em>') + copBadge;
+
+  const bradCards = plans.map((p, i) => {
+    const ganhoMensal = d.atual.valor - p.valor;
+    const ganhoAnual  = ganhoMensal * 12;
+    const ganhoClass  = ganhoAnual > 200 ? 'positivo' : ganhoAnual < -200 ? 'negativo' : 'neutro';
+    const ganhoIcon   = ganhoAnual > 200 ? '▼' : ganhoAnual < -200 ? '▲' : '≈';
+    const ganhoLabel  = ganhoAnual > 200 ? 'Economia' : ganhoAnual < -200 ? 'Invest. adicional' : 'Equivalente';
+    const color = BRAD_COLORS[i] || BRAD_COLORS[BRAD_COLORS.length - 1];
+    return `
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:0 6px">
+      <div style="width:10px;height:10px;border-radius:50%;background:${color};margin-bottom:2px"></div>
+      <div style="font-size:10px;font-weight:800;color:${color};text-align:center;line-height:1.2">${esc(p.label||p.plano)}</div>
+      ${p.acom ? `<div style="font-size:9px;color:var(--muted)">${esc(p.acom)}</div>` : ''}
+      <div style="font-size:9px;color:var(--muted)">${vidas} vida${vidas !== 1 ? 's' : ''}</div>
+      ${p.reembolso ? `<span class="reembolso-chip" style="font-size:8px">↩ ${fmt(p.reembolso)}</span>` : ''}
+      ${showAtual && d.atual.valor > 0 && p.valor > 0 ? `
+        <span class="ganho-chip ${ganhoClass}" style="font-size:9px;margin-top:4px;white-space:nowrap">${ganhoIcon} ${ganhoLabel}</span>
+        <div style="font-size:8px;color:var(--muted);white-space:nowrap">${fmt(Math.abs(ganhoAnual))}/ano</div>
+      ` : ''}
+    </div>`;
+  }).join(`<div style="width:1px;background:var(--border);margin:0 4px;align-self:stretch"></div>`);
+
+  const atualColHtml = showAtual ? `
+        <div style="width:180px;flex-shrink:0;display:flex;flex-direction:column;align-items:center">
+          <div class="col-label">Plano Atual</div>
+          <span class="ins-tag" style="border-color:${atualIns.color};color:${atualIns.color};margin-bottom:8px">${atualIns.label}</span>
+          <div class="chart-wrap" style="width:100%"><canvas id="ch-atual-${suffix}"></canvas></div>
+          <div class="plan-meta">
+            <span class="plan-name-label" style="color:${atualIns.color}">${esc(d.atual.plano)}</span>
+            <span class="cop-chip ${d.atual.cop ? 'sim' : 'nao'}">${d.atual.cop ? 'Com Cop.' : 'Sem Cop.'}</span>
+            <span class="vidas-chip">${vidas} vida${vidas !== 1 ? 's' : ''}</span>
+            ${d.atual.reembolso ? `<span class="reembolso-chip">↩ ${fmt(d.atual.reembolso)}</span>` : ''}
+          </div>
+        </div>
+        <div class="vert-sep"></div>` : '';
+
+  const legendaAtualHtml = showAtual
+    ? `<div class="leg-item"><div class="leg-dot" style="background:${atualIns.color}"></div>${atualIns.label} — Plano atual</div>`
+    : '';
+
+  return `
+  <div class="slide-box" id="sl-comp-${suffix}">
+    <div class="s-comp">
+      ${logoWm}
+      <div class="s-title">${title}</div>
+      <div style="display:flex;gap:0;align-items:stretch">
+        ${atualColHtml}
+        <div style="flex:1;display:flex;flex-direction:column">
+          <div class="col-label" style="color:var(--red);text-align:center">Bradesco Saúde</div>
+          <span class="ins-tag" style="border-color:var(--red);color:var(--red);display:block;text-align:center;margin-bottom:8px">Bradesco</span>
+          <div class="chart-wrap" style="flex:1"><canvas id="ch-brad-${suffix}"></canvas></div>
+          <div style="display:flex;justify-content:space-around;padding-top:8px;margin-top:4px;border-top:1px solid var(--border)">
+            ${bradCards}
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="legend-row">
+        ${legendaAtualHtml}
+        ${plans.map((p,i) => `<div class="leg-item"><div class="leg-dot" style="background:${BRAD_COLORS[i]||BRAD_COLORS[0]}"></div>${esc(p.label||p.plano)}</div>`).join('')}
+      </div>
+      <div style="text-align:right;font-size:9px;color:var(--muted);margin-top:6px">* Valores incluem IOF de 2,38%</div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════ SLIDE: COPARTICIPAÇÃO ═══════════ */
+function buildCopSlide(d) {
+  const logoWm = `<img src="${E3_LOGO_AZUL}" class="slide-logo-wm">`; // logo azul E3
+
+  // Filtra apenas os planos que têm coparticipação
+  const copPlans = d.bradPlans.filter(p => p.cop);
+  // Se nenhum plano tem cop, usa o plano do formulário como fallback
+  const plansToShow = copPlans.length > 0 ? copPlans : [{
+    plano: d.brad.plano, acom: d.brad.acom, cop: true
+  }];
+
+  const thSt = `padding:10px 12px;text-align:center;font-size:10px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.6px`;
+  const tdPr = `padding:9px 12px;font-size:11px;color:var(--text);border-bottom:1px solid #f0f0f5;white-space:nowrap`;
+  const tdVl = `padding:9px 12px;font-size:12px;font-weight:800;color:var(--red);text-align:center;border-bottom:1px solid #f0f0f5;border-left:1px solid #f0f0f5`;
+
+  // Cabeçalhos dos planos
+  const planHeaders = plansToShow.map((p, i) => {
+    const color = BRAD_COLORS[d.bradPlans.indexOf(p)] || BRAD_COLORS[i] || BRAD_COLORS[0];
+    return `<th style="${thSt}"><span style="display:block;font-size:9px;opacity:.75">${esc(p.acom || '')}</span>${esc(p.plano)}</th>`;
+  }).join('');
+
+  // Linhas: uma célula por plano
+  const rows = BRAD_COP.procedimentos.map((proc, ri) => {
+    const cells = plansToShow.map(p => {
+      const vals = BRAD_COP.planos[p.plano] || BRAD_COP.planos['Efetivo'];
+      return `<td style="${tdVl}">${vals[ri] || '—'}</td>`;
+    }).join('');
+    return `<tr><td style="${tdPr}">${proc}</td>${cells}</tr>`;
+  }).join('');
+
+  // Título dinâmico
+  const titleStr = plansToShow.length === 1
+    ? `Coparticipação — ${esc(plansToShow[0].plano)}${plansToShow[0].acom ? ' ' + esc(plansToShow[0].acom) : ''}`
+    : `Coparticipação — ${plansToShow.length} planos comparados`;
+
+  return `
+  <div class="slide-box" id="sl-cop">
+    <div class="s-cop">
+      ${logoWm}
+      <div class="slide-sec-head">
+        <div class="slide-sec-bar" style="background:var(--red);height:44px"></div>
+        <div>
+          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:var(--red)">Bradesco Saúde</div>
+          <div class="slide-sec-title">${titleStr}</div>
+          <div class="slide-sec-sub">${BRAD_COP.subtitulo}</div>
+        </div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;margin-top:20px">
+        <thead>
+          <tr style="background:var(--red)">
+            <th style="${thSt};text-align:left">Procedimento</th>
+            ${planHeaders}
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+      ${!d.atual.cop ? `
+      <div style="margin-top:20px;padding:14px 16px;background:#f0fdf4;border-radius:10px;border:1.5px solid #16a34a;font-size:12px;color:#15803d;font-weight:600">
+        ✅ <strong>Ponto de atenção:</strong> O plano atual <em>não possui coparticipação</em>.
+        Os limites acima representam o custo máximo que o beneficiário pagará por utilização no plano Bradesco.
+      </div>` : ''}
+    </div>
+  </div>`;
+}
+
+/* ═══════════ SLIDE: CARÊNCIAS ═══════════ */
+function buildCarenciaSlide(d) {
+  const logoWm = `<img src="${E3_LOGO_AZUL}" class="slide-logo-wm">`; // logo azul E3
+  const items = BRAD_CARENCIAS.map(c => `
+    <div class="wait-item">
+      <div class="wait-icon">${c.icon}</div>
+      <div>
+        <div class="wait-name">${c.proc}</div>
+        <div style="margin-top:4px;display:flex;flex-direction:column;gap:4px">
+          <span class="wait-tag low">Sem aproveitamento: ${c.sem}</span>
+          <span class="wait-tag zero">Com aproveitamento: ${c.com}</span>
+        </div>
+      </div>
+    </div>`).join('');
+  return `
+  <div class="slide-box" id="sl-wait">
+    <div class="s-wait">
+      ${logoWm}
+      <div class="slide-sec-head">
+        <div class="slide-sec-bar" style="background:var(--red);height:44px"></div>
+        <div>
+          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:var(--red)">Bradesco Saúde</div>
+          <div class="slide-sec-title">Carências do Plano</div>
+          <div class="slide-sec-sub">Prazos para novos beneficiários — com e sem aproveitamento de carência</div>
+        </div>
+      </div>
+      <div class="wait-grid">${items}</div>
+      <div style="margin-top:14px;padding:10px 14px;background:#fff8f8;border-radius:8px;font-size:10px;color:var(--muted)">
+        💡 <strong>Com aproveitamento de carência:</strong> Quando o beneficiário migra de outro plano regulamentado pela ANS, é possível aproveitar o período já cumprido — reduzindo significativamente os prazos acima.
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════ SLIDE: DIFERENCIAIS ═══════════ */
+function buildDiffSlide(d) {
+  const logoWm = `<img src="${E3_LOGO_AZUL}" class="slide-logo-wm">`; // logo azul E3
+  const items = BRAD_DIFFS.map(df => `
+    <div class="diff-item">
+      <div class="diff-icon">${df.icon}</div>
+      <div class="diff-title">${df.title}</div>
+      <div class="diff-desc">${df.desc}</div>
+    </div>`).join('');
+  return `
+  <div class="slide-box" id="sl-diff">
+    <div class="s-diff">
+      ${logoWm}
+      <div class="slide-sec-head">
+        <div class="slide-sec-bar" style="background:var(--red);height:44px"></div>
+        <div>
+          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:var(--red)">Bradesco Saúde</div>
+          <div class="slide-sec-title">Por que Bradesco Saúde?</div>
+          <div class="slide-sec-sub">Benefícios exclusivos para os seus colaboradores</div>
+        </div>
+      </div>
+      <div class="diff-grid">${items}</div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════ SLIDE: REDE CREDENCIADA ═══════════ */
+function buildRedeSlide(d, regiaoKey) {
+  const logoWm = `<img src="${E3_LOGO_AZUL}" class="slide-logo-wm">`; // logo azul E3
+  const regiao = REDE_DATA[regiaoKey];
+  if (!regiao) return '';
+
+  const PLAN_COLS = [
+    { key: 'Ef',  label: 'EFETIVO' },
+    { key: 'EP',  label: 'EF. PLUS' },
+    { key: 'Fx',  label: 'FLEX' },
+    { key: 'Id',  label: 'IDEAL' },
+    { key: 'N',   label: 'NACIONAL' },
+    { key: 'NP',  label: 'NAC. PLUS' },
+  ];
+  const PLAN_IDX = { 'Ef': 0, 'EP': 1, 'Fx': 2, 'Id': 3, 'N': 4, 'NP': 5 };
+
+  // Mapeamento: nome do plano → chave de tier na rede
+  const PLAN_TO_TIER = {
+    'Efetivo':      'Ef',
+    'Efetivo Plus': 'EP',
+    'Flex':         'Fx',
+    'Ideal':        'Id',
+    'Nacional':     'N',
+    'Nacional Plus':'NP',
+  };
+
+  // Tiers selecionados a partir dos planos escolhidos (bradPlans)
+  const selectedTiers = new Set();
+  (d.bradPlans || []).forEach(p => {
+    const tier = PLAN_TO_TIER[p.plano];
+    if (tier) selectedTiers.add(tier);
+  });
+  const filterActive = selectedTiers.size > 0;
+
+  // Colunas visíveis: apenas os tiers selecionados (ou todos se não houver mapeamento)
+  const visibleCols = filterActive
+    ? PLAN_COLS.filter(c => selectedTiers.has(c.key))
+    : PLAN_COLS;
+
+  // Índice máximo entre os tiers selecionados (hospitais com min <= esse índice são acessíveis)
+  const maxTierIdx = filterActive
+    ? Math.max(...[...selectedTiers].map(t => PLAN_IDX[t]))
+    : 5;
+
+  const RED = '#CC0000';
+  const thBase = `padding:7px 4px;font-size:8px;font-weight:800;color:#fff;text-align:center;letter-spacing:.5px;border-left:1px solid rgba(255,255,255,.2);line-height:1.2`;
+  const tdCid  = `font-size:9.5px;font-weight:800;color:${RED};background:#FFF5F5;text-align:center;padding:6px 5px;border:1px solid #F0E0E0;vertical-align:middle;line-height:1.35;white-space:pre-line`;
+  const tdNome = `font-size:10px;color:#1A1A3E;padding:5px 8px;border:1px solid #F0F0F5;vertical-align:middle;line-height:1.3`;
+  const tdPlan = `font-size:8.5px;font-weight:700;color:${RED};text-align:center;padding:5px 3px;border:1px solid #F0F0F5;vertical-align:middle;letter-spacing:.2px`;
+  const tdVoid = `font-size:8px;color:#E0E0E8;text-align:center;padding:5px 3px;border:1px solid #F0F0F5;vertical-align:middle`;
+
+  let rows = '';
+  regiao.cidades.forEach(cidade => {
+    // Filtra hospitais acessíveis por pelo menos um plano selecionado
+    const hospFiltrados = cidade.hospitais.filter(h =>
+      !filterActive || (PLAN_IDX[h.min] ?? 0) <= maxTierIdx
+    );
+    if (hospFiltrados.length === 0) return;
+
+    hospFiltrados.forEach((h, hi) => {
+      const minIdx = PLAN_IDX[h.min] ?? 0;
+      const planCells = visibleCols.map(col =>
+        PLAN_IDX[col.key] >= minIdx
+          ? `<td style="${tdPlan}">${h.tipo || 'H/P.S'}</td>`
+          : `<td style="${tdVoid}">—</td>`
+      ).join('');
+      const cidCell = hi === 0
+        ? `<td rowspan="${hospFiltrados.length}" style="${tdCid}">${esc(cidade.nome)}</td>`
+        : '';
+      const bg = hi % 2 === 0 ? '#fff' : '#FAFAFA';
+      rows += `<tr style="background:${bg}">${cidCell}<td style="${tdNome}">${esc(h.nome)}</td>${planCells}</tr>`;
+    });
+  });
+
+  const planHeaders = visibleCols.map(c => `<th style="${thBase}">${c.label}</th>`).join('');
+  const legend = `
+    <div style="margin-top:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:9px;font-weight:800;color:#1A1A3E">LEGENDA:</span>
+      ${['H = Hospital','P.S = Pronto Socorro','M = Maternidade','A = Ambulatório','HDIA = Hospital Dia'].map(l =>
+        `<span style="font-size:9px;color:#6B6B8A;font-weight:600">${l}</span>`
+      ).join('<span style="color:#DDD;margin:0 2px">·</span>')}
+      <span style="margin-left:auto;font-size:9px;color:#AAAABC">Verifique disponibilidade em bradescosaude.com.br</span>
+    </div>`;
+
+  const regiaoId = regiaoKey.replace(/\s+/g, '-').toLowerCase();
+  return `
+  <div class="slide-box" id="sl-rede-${regiaoId}">
+    <div class="s-rede">
+      ${logoWm}
+      <div class="slide-sec-head" style="margin-bottom:14px">
+        <div class="slide-sec-bar" style="background:${RED};height:44px"></div>
+        <div>
+          <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;color:${RED}">Bradesco Saúde · Rede Credenciada</div>
+          <div class="slide-sec-title">Lista de Hospitais por Linha de Planos — ${esc(regiao.label)}</div>
+          <div class="slide-sec-sub">${esc(regiao.subtitulo)}</div>
+        </div>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-family:'Open Sans',sans-serif">
+        <thead>
+          <tr style="background:${RED}">
+            <th style="padding:8px 6px;font-size:8px;font-weight:800;color:#fff;text-align:center;letter-spacing:.5px;width:82px">CIDADE</th>
+            <th style="padding:8px 8px;font-size:8px;font-weight:800;color:#fff;text-align:left;letter-spacing:.5px;border-left:1px solid rgba(255,255,255,.2)">NOME DO REFERENCIADO</th>
+            ${planHeaders}
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+      ${legend}
+    </div>
+  </div>`;
+}
+
+/* ═══════════ SLIDE: CONTRACAPA ═══════════ */
+function buildBackCover(d) {
+  const logoHtml = d.logoUrl
+    ? `<img src="${d.logoUrl}" style="max-height:56px;max-width:200px;object-fit:contain">`
+    : `<div style="background:rgba(255,255,255,.15);border-radius:10px;padding:12px 24px;font-size:15px;font-weight:800;color:rgba(255,255,255,.85);letter-spacing:1.5px">${esc(d.nomeCorretora || 'CORRETORA')}</div>`;
+  return `
+  <div class="slide-box" id="sl-back">
+    <div class="s-back">
+      <div class="bg-geo"></div>
+      <div style="display:flex;align-items:center;gap:48px;z-index:1">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          ${logoHtml}
+          <div style="font-size:9px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:2px">Corretor autorizado</div>
+        </div>
+        <div style="width:1px;height:100px;background:rgba(255,255,255,.25)"></div>
+        <div>
+          <div style="font-size:11px;font-weight:900;color:rgba(255,255,255,.95);letter-spacing:3px;text-transform:uppercase;margin-bottom:6px">Bradesco Saúde</div>
+          <div style="font-size:24px;font-weight:300;color:#fff;line-height:1.3">Pronto para<br><strong>contratar?</strong></div>
+          <div style="margin-top:14px;font-size:11px;color:rgba(255,255,255,.6)">Entre em contato com seu corretor Bradesco Saúde</div>
+          ${d.consultor ? `<div style="margin-top:4px;font-size:12px;font-weight:700;color:rgba(255,255,255,.85)">${esc(d.consultor)}</div>` : ''}
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ═══════════ CHARTS ═══════════ */
+function drawCharts(d) {
+  const atualColor = (INS[d.atual.seg] || INS.outro).color;
+
+  const labelPlugin = {
+    id: 'lbl',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      chart.data.datasets.forEach((ds, di) => {
+        chart.getDatasetMeta(di).data.forEach((bar, i) => {
+          const v = ds.data[i]; if (!v || bar.height < 18) return;
+          ctx.save();
+          ctx.font = 'bold 10px "Open Sans", sans-serif';
+          ctx.fillStyle = '#fff';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          const txt = fmt(v);
+          const parts = txt.split(' ');
+          if (bar.width < 70 && parts.length === 2) {
+            ctx.fillText(parts[0], bar.x, bar.y + bar.height / 2 - 7);
+            ctx.fillText(parts[1], bar.x, bar.y + bar.height / 2 + 7);
+          } else {
+            ctx.fillText(txt, bar.x, bar.y + bar.height / 2);
+          }
+          ctx.restore();
+        });
+      });
+    },
+  };
+
+  const slideGroups = [
+    { suffix: 'main',  plans: d.bradPlans },
+    { suffix: 'cop',   plans: d.bradPlans.filter(p => p.cop)  },
+    { suffix: 'nocop', plans: d.bradPlans.filter(p => !p.cop) },
+  ];
+
+  slideGroups.forEach(({ suffix, plans }) => {
+    if (!plans.length) return;
+    if (!document.getElementById(`sl-comp-${suffix}`)) return;
+    const allVals = [...(d.showAtual ? [d.atual.valor] : []), ...plans.map(p => p.valor)].filter(v => v > 0);
+    if (!allVals.length) return;
+    const yMax = Math.ceil(Math.max(...allVals) * 1.35 / 500) * 500;
+    const scaleOpts = {
+      min: 0, max: yMax, border: { display: false },
+      grid: { color: '#F0F0F5' },
+      ticks: {
+        callback: v => 'R$' + (v >= 1000 ? (v/1000).toLocaleString('pt-BR', {maximumFractionDigits:0}) + 'k' : v),
+        font: { size: 9 }, color: '#9999AA', maxTicksLimit: 6,
+      },
+    };
+    const ca = document.getElementById(`ch-atual-${suffix}`);
+    if (ca && d.showAtual && d.atual.valor > 0) charts.push(new Chart(ca, {
+      type: 'bar',
+      data: { labels: [''], datasets: [{ data: [d.atual.valor], backgroundColor: atualColor + 'DD', borderRadius: 8, borderSkipped: false }] },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { enabled: false } },
+        animation: { duration: 250 },
+        layout: { padding: { top: 28 } },
+        scales: { x: { grid: { display: false }, border: { display: false }, ticks: { display: false } }, y: scaleOpts },
+      },
+      plugins: [labelPlugin],
+    }));
+    const cb = document.getElementById(`ch-brad-${suffix}`);
+    if (cb && plans.length) {
+      const labels   = plans.map(p => p.label || p.plano);
+      const data     = plans.map(p => p.valor);
+      const bgColors = plans.map((_, i) => (BRAD_COLORS[i] || BRAD_COLORS[0]) + 'DD');
+      charts.push(new Chart(cb, {
+        type: 'bar',
+        data: { labels, datasets: [{ data, backgroundColor: bgColors, borderRadius: 8, borderSkipped: false }] },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { enabled: false } },
+          animation: { duration: 250 },
+          layout: { padding: { top: 28 } },
+          scales: { x: { grid: { display: false }, border: { display: false }, ticks: { display: false } }, y: scaleOpts },
+        },
+        plugins: [labelPlugin],
+      }));
+    }
+  });
+}
+
+/* ═══════════ PDF EXPORT ═══════════ */
+async function gerarPDF() {
+  const btn = document.getElementById('pdf-btn');
+  btn.disabled = true; btn.textContent = '⏳ Gerando PDF...';
+  try {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: [297, 167] });
+    const d = getData();
+    const compIds = ['sl-comp-main','sl-comp-cop','sl-comp-nocop'].filter(id => document.getElementById(id));
+    const ids = ['sl-cover', ...compIds];
+    if (d.showCop && d.bradPlans.some(p => p.cop)) ids.push('sl-cop');
+    if (d.showWait) ids.push('sl-wait');
+    if (d.showDiff) ids.push('sl-diff');
+    if (d.showRede) {
+      ['ABCDM', 'SP Capital', 'Interior'].forEach(r => {
+        if (d.redeRegioes[r]) ids.push(`sl-rede-${r.replace(/\s+/g,'-').toLowerCase()}`);
+      });
+    }
+    ids.push('sl-back');
+
+    for (const [idx, sid] of ids.entries()) {
+      const el = document.getElementById(sid);
+      if (!el) continue;
+      const prevZoom = el.style.zoom;
+      el.style.zoom = 1;
+      const isWhite = !['sl-cover','sl-back'].includes(sid);
+      const canvas = await html2canvas(el.firstElementChild, {
+        scale: 2, useCORS: true, logging: false,
+        backgroundColor: isWhite ? '#ffffff' : null,
+        width: 960, height: el.firstElementChild.offsetHeight,
+      });
+      el.style.zoom = prevZoom;
+      const img = canvas.toDataURL('image/jpeg', 0.94);
+      if (idx > 0) pdf.addPage();
+      pdf.addImage(img, 'JPEG', 0, 0, 297, 167);
+    }
+
+    const name = `bradesco_${d.empresa.replace(/[^\w]/g,'_').slice(0,25)}_${d.mesano.replace('/','_')}.pdf`;
+    pdf.save(name);
+  } catch(e) { alert('Erro ao gerar PDF: ' + e.message); }
+  btn.disabled = false; btn.innerHTML = '⬇ Baixar PDF';
+}
+
+/* ═══════════ PDF PARSER (SPG Bradesco) ═══════════ */
+
+let _pdfPagesStore = { cop: null, nocop: null };
+
+async function parsePdfFile(file) {
+  const ab = await file.arrayBuffer();
+  const pdf = await pdfjsLib.getDocument({ data: ab }).promise;
+  const pages = [];
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    const items = content.items.slice().sort((a, b) => {
+      const dy = b.transform[5] - a.transform[5];
+      return Math.abs(dy) > 3 ? dy : a.transform[4] - b.transform[4];
+    });
+    const lines = []; let cur = []; let lastY = null;
+    for (const it of items) {
+      const y = it.transform[5];
+      if (lastY === null || Math.abs(y - lastY) > 3) {
+        if (cur.length) lines.push(cur.map(x => x.str).join(' ').trim());
+        cur = [it]; lastY = y;
+      } else { cur.push(it); }
+    }
+    if (cur.length) lines.push(cur.map(x => x.str).join(' ').trim());
+    pages.push(lines.filter(Boolean));
+  }
+  return pages;
+}
+
+let _parsedPdfsBatch = [];
+
+async function handleBradescoPdfs(files) {
+  if (!files || !files.length) return;
+  const status = document.getElementById('brad-pdf-status');
+  status.textContent = '⏳ Lendo PDF(s)...';
+  _parsedPdfsBatch = [];
+  try {
+    for (const file of Array.from(files)) {
+      const pages = await parsePdfFile(file);
+      _parsedPdfsBatch.push({ name: file.name, pages });
+    }
+    showPdfAssignmentUI();
+  } catch(e) {
+    status.textContent = '❌ Erro ao ler PDF. Verifique se é uma cotação SPG.';
+    console.error(e);
+  }
+  document.getElementById('brad-pdf').value = '';
+}
+
+function showPdfAssignmentUI() {
+  const status = document.getElementById('brad-pdf-status');
+  const n = _parsedPdfsBatch.length;
+  let html = `<div style="margin-top:4px;font-size:12px;font-weight:600;color:#555">Identifique ${n === 1 ? 'o PDF' : 'os PDFs'}:</div>`;
+  _parsedPdfsBatch.forEach((pdf, i) => {
+    const guessedCop = /cop/i.test(pdf.name);
+    html += `
+      <div style="margin:5px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span style="font-size:11px;max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#333" title="${pdf.name}">📄 ${pdf.name}</span>
+        <label style="font-size:12px;cursor:pointer;display:flex;align-items:center;gap:3px"><input type="radio" name="pdftype${i}" value="cop" ${guessedCop ? 'checked' : ''}> ✔ Com COP</label>
+        <label style="font-size:12px;cursor:pointer;display:flex;align-items:center;gap:3px"><input type="radio" name="pdftype${i}" value="nocop" ${!guessedCop ? 'checked' : ''}> ✕ Sem COP</label>
+      </div>`;
+  });
+  html += `<button onclick="confirmPdfAssignment()" style="margin-top:6px;background:#b50000;color:#fff;border:none;border-radius:4px;padding:4px 14px;cursor:pointer;font-size:12px;font-weight:600">✓ Confirmar</button>`;
+  status.innerHTML = html;
+}
+
+function confirmPdfAssignment() {
+  _parsedPdfsBatch.forEach((pdf, i) => {
+    let isCop = true;
+    document.querySelectorAll(`input[name="pdftype${i}"]`).forEach(r => { if (r.checked) isCop = r.value === 'cop'; });
+    _pdfPagesStore[isCop ? 'cop' : 'nocop'] = pdf.pages;
+  });
+  const copOk   = _pdfPagesStore.cop   ? '✔ Com COP' : '';
+  const nocopOk = _pdfPagesStore.nocop ? '✕ Sem COP' : '';
+  const loaded  = [copOk, nocopOk].filter(Boolean);
+  const status = document.getElementById('brad-pdf-status');
+  status.textContent = loaded.join('  |  ') + ' importado(s)';
+  if (loaded.length < 2) status.textContent += ' — clique novamente para adicionar o outro';
+  document.getElementById('brad-pdf-clear-btn').style.display = '';
+  mergeAndShowPlans();
+}
+
+function clearBradPdfs() {
+  _pdfPagesStore = { cop: null, nocop: null };
+  _parsedPdfsBatch = [];
+  document.getElementById('brad-pdf-status').textContent = '';
+  document.getElementById('brad-pdf-clear-btn').style.display = 'none';
+  clearBradPlans();
+}
+
+function fillCompanyFromPages(pages) {
+  const all = pages.flat();
+  const fullText = all.join('\n');
+  const cnpjM = fullText.match(/(\d{2}[\.\d]+\/\d{4}-\d{2})/);
+  if (cnpjM) {
+    const idx = all.findIndex(l => l.includes(cnpjM[1]));
+    if (idx >= 0) {
+      let company = all[idx].replace(cnpjM[1],'').trim().replace(/^\d{2}\.\d{3}\.\d{3}\s+/,'').trim();
+      if (!company && all[idx+1]) company = all[idx+1].trim();
+      if (company) { const empr = document.getElementById('empresa'); if (!empr.value) empr.value = company; }
+    }
+  }
+  const vidasM = fullText.match(/(\d+)\s*pessoas/i);
+  if (vidasM) {
+    document.getElementById('brad-vidas').value = vidasM[1];
+    document.getElementById('a-vidas').value = vidasM[1];
+  }
+}
+
+function mergeAndShowPlans() {
+  const refPages = _pdfPagesStore.cop || _pdfPagesStore.nocop;
+  if (!refPages) return;
+  fillCompanyFromPages(refPages);
+  let allPlanos = [];
+  if (_pdfPagesStore.cop)   extractPlansFromPDF(_pdfPagesStore.cop).forEach(p => allPlanos.push({ ...p, cop: true }));
+  if (_pdfPagesStore.nocop) extractPlansFromPDF(_pdfPagesStore.nocop).forEach(p => allPlanos.push({ ...p, cop: false }));
+
+  // Preserva ordem original dos grupos, mas ordena cada grupo barato→caro
+  const groupOrder = [];
+  const seenGroups = new Set();
+  allPlanos.forEach(p => {
+    const k = `${p.cop}|${p.plano}`;
+    if (!seenGroups.has(k)) { seenGroups.add(k); groupOrder.push(k); }
+  });
+  allPlanos.sort((a, b) => {
+    const oa = groupOrder.indexOf(`${a.cop}|${a.plano}`);
+    const ob = groupOrder.indexOf(`${b.cop}|${b.plano}`);
+    if (oa !== ob) return oa - ob;
+    return a.valor - b.valor; // dentro do grupo: mais barato primeiro
+  });
+
+  // Atribui label e reembolso para planos com variação de cobertura
+  const varSeen = {};
+  allPlanos.forEach(p => {
+    const suffixes = BRAD_REEMBOLSO_SUFFIX[p.plano];
+    if (!suffixes) return;
+    const k = `${p.cop}|${p.plano}`;
+    if (varSeen[k] === undefined) varSeen[k] = 0;
+    const i = varSeen[k];
+    p.label = `${p.plano} ${suffixes[Math.min(i, suffixes.length - 1)]}`;
+    p.reembolso = BRAD_REEMBOLSO[p.plano][Math.min(i, suffixes.length - 1)];
+    varSeen[k]++;
+  });
+
+  if (allPlanos.length > 1) { openPlanModal(allPlanos); }
+  else if (allPlanos.length === 1) {
+    const p = { ...allPlanos[0] };
+    const rd = BRAD_REEMBOLSO[p.plano];
+    p.reembolso = Array.isArray(rd) ? rd[0] : (rd || 0);
+    state.bradPlans = [p];
+    applyFormFields(p);
+    renderBradPlansReembSection();
+    render();
+  }
+}
+
+function applyFormFields(p) {
+  const sel = document.getElementById('brad-plano');
+  for (const opt of sel.options) { if (opt.value === p.plano) { sel.value = p.plano; break; } }
+  if (p.acom) document.getElementById('brad-acom').value = p.acom;
+  if (p.valor) document.getElementById('brad-valor').value = p.valor.toFixed(2);
+}
+
+/* Extrai planos da página 3 do PDF */
+function extractPlansFromPDF(pages) {
+  const PLAN_MAP = {
+    'EFETIVO PLUS': 'Efetivo Plus', 'EFETIVO': 'Efetivo',
+    'NACIONAL PLUS': 'Nacional Plus', 'NACIONAL FLEX': 'Flex', 'NACIONAL III': 'Nacional', 'NACIONAL': 'Nacional',
+    'FLEX': 'Flex', 'IDEAL': 'Ideal', 'REGIONAL': 'Regional', 'SAUDE+': 'Saúde +',
+  };
+  const planNames = Object.keys(PLAN_MAP).sort((a,b) => b.length - a.length);
+  const results = [];
+  const seen = new Set();
+
+  const pagesToSearch = pages.length >= 3
+    ? [pages[2], ...pages.filter((_,i) => i !== 2)]
+    : pages;
+
+  for (const page of pagesToSearch) {
+    const lines = page || [];
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim().toUpperCase();
+      const matchedKey = planNames.find(k => line.includes(k));
+      if (!matchedKey) continue;
+
+      // Acomodação
+      let acom = '';
+      const acomSearch = lines.slice(Math.max(0,i-2), i+5).join(' ').toUpperCase();
+      if (acomSearch.includes('QUARTO') || acomSearch.includes('APARTAMENTO')) acom = 'Apartamento';
+      else if (acomSearch.includes('ENFERMARIA')) acom = 'Enfermaria';
+
+      // Coleta TODOS os valores R$ nas linhas próximas (janela de 12 linhas)
+      const nearLines = lines.slice(Math.max(0,i-1), Math.min(i+12, lines.length));
+      const allVals = [];
+      for (const nl of nearLines) {
+        // Formato "R$ 1.234,56" ou "R$ 109,76"
+        const matches = [...nl.matchAll(/R\$\s*([\d]{1,3}(?:\.[\d]{3})*,\d{2})/g)];
+        for (const m of matches) {
+          const v = parseFloat(m[1].replace(/\./g,'').replace(',','.'));
+          if (v > 0) allVals.push(v);
+        }
+        // Formato standalone "15.234,00" (sem R$)
+        const nm = nl.trim().match(/^([\d]{1,3}(?:\.[\d]{3})+,\d{2})$/);
+        if (nm) {
+          const v = parseFloat(nm[1].replace(/\./g,'').replace(',','.'));
+          if (v > 0) allVals.push(v);
+        }
+        // Formato reembolso standalone "439,03" (centenas com vírgula)
+        const sm = nl.trim().match(/^(\d{2,3},\d{2})$/);
+        if (sm) {
+          const v = parseFloat(sm[1].replace(',','.'));
+          if (v >= 50 && v < 2000) allVals.push(v);
+        }
+      }
+
+      if (!allVals.length) continue;
+
+      // Valor total = maior valor encontrado
+      const valor = Math.max(...allVals);
+
+      // Reembolso = valor < 2000 e significativamente menor que o total
+      // (o reembolso do Bradesco vai de R$ 109,76 até R$ 878,06)
+      const hasEspecifico = /espec[íi]fico/i.test(nearLines.join(' '));
+      let reembolso = null;
+      if (hasEspecifico) {
+        const rembs = allVals.filter(v => v < 2000 && v !== valor && v >= 50);
+        if (rembs.length) reembolso = Math.max(...rembs); // pega o maior nível se houver mais de um
+      }
+
+      const planLabel = PLAN_MAP[matchedKey] + (acom ? ' ' + acom : '');
+      const key = planLabel + '|' + valor;
+      if (!seen.has(key) && valor) {
+        seen.add(key);
+        results.push({ plano: PLAN_MAP[matchedKey], acom, valor, label: planLabel, reembolso });
+      }
+    }
+    if (results.length > 0) break;
+  }
+
+  return results;
+}
+
+/* ═══════════ MODAL ═══════════ */
+function openPlanModal(planos) {
+  const list = document.getElementById('modal-plans-list');
+  list.innerHTML = '';
+
+  const addPlanItem = (p) => {
+    const gIdx = planos.indexOf(p);
+    const div = document.createElement('div');
+    div.className = 'plan-opt';
+    div.innerHTML = `
+      <input type="checkbox" id="pr-${gIdx}" value="${gIdx}">
+      <label class="plan-opt-name" for="pr-${gIdx}"
+        onclick="event.stopPropagation();event.preventDefault();document.getElementById('pr-${gIdx}').click();updateModalConfirm()">${esc(p.label||p.plano)}</label>
+      <span class="plan-opt-val">R$ ${(+p.valor).toLocaleString('pt-BR',{minimumFractionDigits:2})}</span>
+    `;
+    div.addEventListener('click', e => {
+      if (e.target.tagName === 'INPUT') { updateModalConfirm(); return; }
+      const cb = div.querySelector('input');
+      cb.checked = !cb.checked;
+      div.classList.toggle('sel', cb.checked);
+      updateModalConfirm();
+    });
+    div.querySelector('input').addEventListener('change', () => {
+      div.classList.toggle('sel', div.querySelector('input').checked);
+    });
+    list.appendChild(div);
+  };
+
+  const addSection = (plans, isCop) => {
+    if (!plans.length) return;
+    const hdr = document.createElement('div');
+    hdr.className = 'modal-section-hdr';
+    hdr.innerHTML = isCop
+      ? `<span class="cop-chip sim" style="font-size:11px;padding:3px 10px">✔ Com Coparticipação</span>`
+      : `<span class="cop-chip nao" style="font-size:11px;padding:3px 10px">✕ Sem Coparticipação</span>`;
+    list.appendChild(hdr);
+    plans.forEach(addPlanItem);
+  };
+
+  const hasBoth = planos.some(p => p.cop) && planos.some(p => !p.cop);
+  if (hasBoth) {
+    addSection(planos.filter(p => p.cop),  true);
+    addSection(planos.filter(p => !p.cop), false);
+  } else {
+    addSection(planos, planos.some(p => p.cop));
+  }
+
+  document.getElementById('plan-modal')._planos = planos;
+  document.getElementById('modal-confirm-btn').disabled = true;
+  document.getElementById('plan-modal').classList.add('open');
+}
+
+function updateModalConfirm() {
+  const checked = document.querySelectorAll('#modal-plans-list input[type=checkbox]:checked');
+  document.getElementById('modal-confirm-btn').disabled = checked.length === 0;
+}
+
+function closePlanModal() {
+  document.getElementById('plan-modal').classList.remove('open');
+}
+
+function confirmPlanSelection() {
+  const planos = document.getElementById('plan-modal')._planos;
+  const chosen = [];
+  document.querySelectorAll('#modal-plans-list input[type=checkbox]').forEach(cb => {
+    if (cb.checked) chosen.push({ ...planos[parseInt(cb.value)] });
+  });
+  if (!chosen.length) return;
+
+  chosen.forEach(p => {
+    if (p.reembolso) return; // já atribuído via label (planos com variação)
+    const reembData = BRAD_REEMBOLSO[p.plano];
+    p.reembolso = Array.isArray(reembData) ? reembData[0] : (reembData || 0);
+  });
+
+  closePlanModal();
+  state.bradPlans = chosen;
+  applyFormFields(chosen[0]);
+  renderBradPlansReembSection();
+  render();
+}
+
+/* Preenche o formulário com o plano escolhido */
+function applyPlanData(p, pages) {
+  // Plano e acomodação
+  const sel = document.getElementById('brad-plano');
+  for (const opt of sel.options) {
+    if (opt.value === p.plano) { sel.value = p.plano; break; }
+  }
+  if (p.acom) document.getElementById('brad-acom').value = p.acom;
+
+  // Valor mensal
+  if (p.valor) document.getElementById('brad-valor').value = p.valor.toFixed(2);
+
+  // Copay e Reembolso (do PDF completo)
+  autofillFallback(pages);
+}
+
+/* Preenche copay e reembolso a partir do texto completo do PDF */
+function autofillFallback(pages) {
+  const all = pages.flat();
+  const fullText = all.join('\n');
+  const p2 = (pages[1] || []).join('\n');
+
+  // Copay
+  const copM = p2.match(/Coparticipa[çc][aã]o\s+(N[aã]o|Sim|\d+%)/i);
+  if (copM) {
+    const hasCop = copM[1].toLowerCase().replace('ã','a') !== 'nao';
+    setBradCop(hasCop);
+  }
+
+  // Reembolso
+  const rembM = fullText.match(/Reembolso Espec[íi]fico\s*R\$\s*([\d.,]+)/i);
+  if (rembM) {
+    const valStr = rembM[1].replace(/\./g,'').replace(',','.');
+    state.bradReembShow = true;
+    document.getElementById('rs-brad').checked = true;
+    document.getElementById('brad-reemb-container').style.display = '';
+    document.getElementById('brad-reembolso').value = parseFloat(valStr).toFixed(2);
+  }
+}
+
+/* ═══════════ UTILS ═══════════ */
+function fmt(v) {
+  return 'R$ ' + (+v).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
