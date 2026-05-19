@@ -628,40 +628,43 @@ const PLAN_BADGE = {
 };
 
 const REDE_DATA = {
+  // Fonte: Lista oficial Bradesco Saúde — SP_Nacional_Hospitais_Abril_2026
+  // plans: lista explícita dos planos em que o hospital é credenciado
+  // Ef=Efetivo · EP=Efetivo Plus · Fx=Flex · Id=Ideal · N=Nacional · NP=Nacional Plus
   'ABCDM': {
     label: 'Região ABCDM',
     subtitulo: 'Santo André · São Bernardo do Campo · São Caetano do Sul · Diadema · Mauá · Ribeirão Pires',
     cidades: [
       { nome: 'Santo André', hospitais: [
-        { nome: 'Hosp. Ben. Portuguesa de Sto. André', min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'IRC Inst. Regeneração Celular',       min: 'Ef', tipo: 'H DIA' },
-        { nome: 'Hospital e Maternidade Brasil',       min: 'EP', tipo: 'H/P.S/M' },
-        { nome: 'Hospital Bartira',                    min: 'EP', tipo: 'H/P.S/A' },
-        { nome: 'Hosp. Mat. Dr. Christóvão Gama',     min: 'Fx', tipo: 'H/P.S/M/A' },
+        { nome: 'Hosp. Ben. Portuguesa de Sto. André', plans: ['Ef','EP','Id','N','NP'],         tipo: 'H/P.S/A' },
+        { nome: 'IRC Inst. Regeneração Celular',        plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H DIA' },
+        { nome: 'Hospital e Maternidade Brasil',        plans: ['EP','Id','N','NP'],              tipo: 'H/P.S/M' },
+        { nome: 'Hospital Bartira',                     plans: ['EP','Fx','Id','N','NP'],         tipo: 'H/P.S/A' },
+        { nome: 'Hosp. Mat. Dr. Christóvão Gama',      plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/M/A' },
       ]},
       { nome: 'São Bernardo\ndo Campo', hospitais: [
-        { nome: 'Hospital São Bernardo',               min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Ctro. Trat. Bezerra de Menezes',      min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hosp. Neomater Santa Marcelina',      min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hospital IFOR',                       min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hosp. São Luiz - São Bernardo',       min: 'EP', tipo: 'H/P.S' },
-        { nome: 'Clínica Especializada Vaad',          min: 'N',  tipo: 'H' },
+        { nome: 'Hospital São Bernardo',                plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/A' },
+        { nome: 'Ctro. Trat. Bezerra de Menezes',       plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/A' },
+        { nome: 'Hosp. Neomater Santa Marcelina',       plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/A' },
+        { nome: 'Hospital IFOR',                        plans: ['Ef','Fx','Id','N','NP'],         tipo: 'H/P.S/A' },
+        { nome: 'Hosp. São Luiz - São Bernardo',        plans: ['EP','Fx','Id','N','NP'],         tipo: 'H/P.S' },
+        { nome: 'Clínica Especializada Vaad',           plans: ['N','NP'],                        tipo: 'H' },
       ]},
       { nome: 'São Caetano\ndo Sul', hospitais: [
-        { nome: 'Soc. Portuguesa Beneficência',        min: 'Ef', tipo: 'H/P.S/M/A' },
-        { nome: 'Hospital e Mat. Central',             min: 'Fx', tipo: 'H/P.S' },
-        { nome: 'Hospital São Luiz São Caetano',       min: 'Fx', tipo: 'H/P.S/M/A' },
+        { nome: 'Soc. Portuguesa Beneficência',         plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital e Mat. Central',              plans: ['Fx','Id','N','NP'],              tipo: 'H/P.S' },
+        { nome: 'Hospital São Luiz São Caetano',        plans: ['Fx','N','NP'],                   tipo: 'H/P.S/M/A' },
       ]},
       { nome: 'Diadema', hospitais: [
-        { nome: 'Innova Hospitais',                    min: 'Ef', tipo: 'H/P.S/A' },
+        { nome: 'Innova Hospitais',                     plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/A' },
       ]},
       { nome: 'Mauá', hospitais: [
-        { nome: 'Santa Casa de Mauá',                  min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hosp. e Mat. Brasil - Mauá',          min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hosp. e Maternidade América',         min: 'Fx', tipo: 'H/P.S/M/A' },
+        { nome: 'Santa Casa de Mauá',                   plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/A' },
+        { nome: 'Hosp. e Mat. Brasil - Mauá',           plans: ['Ef','EP','Fx','Id','N','NP'],   tipo: 'H/P.S/A' },
+        { nome: 'Hosp. e Maternidade América',          plans: ['Ef','Fx','Id','N','NP'],         tipo: 'H/P.S/M/A' },
       ]},
       { nome: 'Ribeirão Pires', hospitais: [
-        { nome: 'Hospital Ribeirão Pires',             min: 'EP', tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital Ribeirão Pires',              plans: ['EP','Fx','Id','N','NP'],         tipo: 'H/P.S/M/A' },
       ]},
     ],
   },
@@ -670,29 +673,29 @@ const REDE_DATA = {
     subtitulo: 'Principais hospitais credenciados na capital',
     cidades: [
       { nome: 'São Paulo', hospitais: [
-        { nome: 'Hospital Santa Marcelina',      min: 'Ef', tipo: 'H/P.S/M' },
-        { nome: 'H. e Mat. Santa Maria',         min: 'Ef', tipo: 'H/P.S/M' },
-        { nome: 'Hospital São Camilo Pompeia',   min: 'Ef', tipo: 'H/P.S' },
-        { nome: 'Hospital São Camilo Santana',   min: 'Ef', tipo: 'H/P.S' },
-        { nome: 'Hospital Nipo Brasileiro',      min: 'Ef', tipo: 'H/P.S/M' },
-        { nome: 'Hospital Moriah',               min: 'Ef', tipo: 'H/P.S' },
-        { nome: 'Cruz Azul',                     min: 'Ef', tipo: 'H/P.S' },
-        { nome: 'Hospital Santa Isabel',         min: 'Ef', tipo: 'H/P.S' },
-        { nome: 'IBCC',                          min: 'Ef', tipo: 'H' },
-        { nome: 'Hospital das Clínicas (HC)',    min: 'EP', tipo: 'H/P.S/A' },
-        { nome: 'Hospital Leforte Liberdade',    min: 'EP', tipo: 'H/P.S' },
-        { nome: 'Instituto do Coração INCOR',   min: 'EP', tipo: 'H/P.S' },
-        { nome: 'Hospital São Paulo (HSANP)',    min: 'Fx', tipo: 'H/P.S/M' },
-        { nome: 'Hospital Santa Paula',          min: 'Fx', tipo: 'H/P.S' },
-        { nome: 'Hospital 9 de Julho',           min: 'Id', tipo: 'H/P.S' },
-        { nome: 'Hospital Paulistano',           min: 'Id', tipo: 'H/P.S' },
-        { nome: 'AC Camargo Cancer Center',      min: 'Id', tipo: 'H' },
-        { nome: 'Hospital Independência ZL',     min: 'Id', tipo: 'H/P.S' },
-        { nome: 'Hospital Adventista SP',        min: 'N',  tipo: 'H/P.S' },
-        { nome: 'Hospital São Camilo Ipiranga',  min: 'N',  tipo: 'H/P.S' },
-        { nome: 'Hospital Albert Einstein',      min: 'NP', tipo: 'H/P.S/M/A' },
-        { nome: 'Hospital Sírio-Libanês',        min: 'NP', tipo: 'H/P.S' },
-        { nome: 'Hospital Samaritano SP',        min: 'NP', tipo: 'H/P.S/M' },
+        { nome: 'Hospital Santa Marcelina',      plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/M' },
+        { nome: 'H. e Mat. Santa Maria',         plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/M' },
+        { nome: 'Hospital São Camilo Pompeia',   plans: ['EP','Fx','Id','N','NP'],        tipo: 'H/P.S' },
+        { nome: 'Hospital São Camilo Santana',   plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S' },
+        { nome: 'Hospital Nipo Brasileiro',      plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/M' },
+        { nome: 'Hospital Moriah',               plans: ['NP'],                           tipo: 'H/P.S' },
+        { nome: 'Cruz Azul',                     plans: ['Ef','Fx','N','NP'],             tipo: 'H/P.S' },
+        { nome: 'Hospital Santa Isabel',         plans: ['Ef','EP','Id','N','NP'],        tipo: 'H/P.S' },
+        { nome: 'IBCC',                          plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H' },
+        { nome: 'Hospital das Clínicas (HC)',    plans: ['EP','Fx','Id','N','NP'],        tipo: 'H/P.S/A' },
+        { nome: 'Hospital Leforte Liberdade',    plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S' },
+        { nome: 'Instituto do Coração INCOR',   plans: ['EP','Id','N','NP'],              tipo: 'H/P.S/A' },
+        { nome: 'Hospital São Paulo (HSANP)',    plans: ['EP','Fx','Id','N','NP'],        tipo: 'H/P.S/M' },
+        { nome: 'Hospital Santa Paula',          plans: ['EP','Id','N','NP'],             tipo: 'H/P.S' },
+        { nome: 'Hospital 9 de Julho',           plans: ['N','NP'],                       tipo: 'H/P.S' },
+        { nome: 'Hospital Paulistano',           plans: ['Ef','EP','Id','N','NP'],        tipo: 'H/P.S' },
+        { nome: 'AC Camargo Cancer Center',      plans: ['EP','Id','N','NP'],             tipo: 'H' },
+        { nome: 'Hospital Independência ZL',     plans: ['Id','N','NP'],                  tipo: 'H/P.S' },
+        { nome: 'Hospital Adventista SP',        plans: ['N','NP'],                       tipo: 'H/P.S' },
+        { nome: 'Hospital São Camilo Ipiranga',  plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S' },
+        { nome: 'Hospital Albert Einstein',      plans: ['NP'],                           tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital Sírio-Libanês',        plans: ['NP'],                           tipo: 'H/P.S' },
+        { nome: 'Hospital Samaritano SP',        plans: ['NP'],                           tipo: 'H/P.S/M' },
       ]},
     ],
   },
@@ -701,54 +704,53 @@ const REDE_DATA = {
     subtitulo: 'Guarulhos · Campinas · S. J. dos Campos · Indaiatuba · Atibaia · Bragança Paulista',
     cidades: [
       { nome: 'Guarulhos', hospitais: [
-        { nome: 'Hospital Carlos Chagas',            min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hospital Carlos Chagas',            min: 'Ef', tipo: 'H/P.S/M/A' },
-        { nome: 'Hospital Stella Maris',             min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hospital São Luiz Guarulhos',       min: 'EP', tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital Carlos Chagas',            plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/A' },
+        { nome: 'Hospital Carlos Chagas',            plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/M/A' },
+        { nome: 'Hospital Stella Maris',             plans: ['Ef','EP','Id','N','NP'],        tipo: 'H/P.S/A' },
+        { nome: 'Hospital São Luiz Guarulhos',       plans: ['EP','Id','N','NP'],             tipo: 'H/P.S/M/A' },
       ]},
       { nome: 'Campinas', hospitais: [
-        { nome: 'Centro Infantil Boldrini',          min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Casa de Saúde',                     min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hospital Vera Cruz',                min: 'Ef', tipo: 'H/M' },
-        { nome: 'Hosp. EV Samaritano Campinas',      min: 'Fx', tipo: 'H/P.S/M' },
-        { nome: 'Coração de Campinas',               min: 'Fx', tipo: 'H/A' },
-        { nome: 'Hospital Santa Tereza',             min: 'Fx', tipo: 'H/P.S/M/A' },
-        { nome: 'Hosp. e Mat. Celso Pierro',         min: 'Fx', tipo: 'H/P.S/M/A' },
-        { nome: 'Irmandade Misericórdia',            min: 'Fx', tipo: 'H/A' },
-        { nome: 'Hospital Radium',                   min: 'Fx', tipo: 'H DIA' },
-        { nome: 'Hospital Madre Theodora',           min: 'Fx', tipo: 'H/P.S/A' },
-        { nome: 'Hospital São Luiz Campinas',        min: 'Id', tipo: 'H/M/A' },
-        { nome: 'Hospital São Luiz Campinas',        min: 'Id', tipo: 'H/P.S/M/A' },
-        { nome: 'Maternidade de Campinas',           min: 'N',  tipo: 'H/P.S/M/A' },
-        { nome: 'Campinas Day Hospital',             min: 'N',  tipo: 'H/A' },
-        { nome: 'Fund. Centro Médico Campinas',      min: 'N',  tipo: 'H/P.S/A' },
-        { nome: 'Hospital Renascença Campinas',      min: 'N',  tipo: 'H/P.S/M/A' },
+        { nome: 'Centro Infantil Boldrini',          plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/A' },
+        { nome: 'Casa de Saúde',                     plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/A' },
+        { nome: 'Hospital Vera Cruz',                plans: ['Ef','N','NP'],                 tipo: 'H/M' },
+        { nome: 'Hosp. EV Samaritano Campinas',      plans: ['Fx','N','NP'],                 tipo: 'H/P.S/M' },
+        { nome: 'Coração de Campinas',               plans: ['Fx','Id','N','NP'],            tipo: 'H/A' },
+        { nome: 'Hospital Santa Tereza',             plans: ['Fx','N','NP'],                 tipo: 'H/P.S/M/A' },
+        { nome: 'Hosp. e Mat. Celso Pierro',         plans: ['Fx','Id','N','NP'],            tipo: 'H/P.S/M/A' },
+        { nome: 'Irmandade Misericórdia',            plans: ['Fx','Id','N','NP'],            tipo: 'H/A' },
+        { nome: 'Hospital Radium',                   plans: ['Fx','N','NP'],                 tipo: 'H DIA' },
+        { nome: 'Hospital Madre Theodora',           plans: ['Fx','Id','N','NP'],            tipo: 'H/P.S/A' },
+        { nome: 'Hospital São Luiz Campinas',        plans: ['Id','N','NP'],                 tipo: 'H/M/A' },
+        { nome: 'Hospital São Luiz Campinas',        plans: ['Id','N','NP'],                 tipo: 'H/P.S/M/A' },
+        { nome: 'Maternidade de Campinas',           plans: ['Id','N','NP'],                 tipo: 'H/P.S/M/A' },
+        { nome: 'Campinas Day Hospital',             plans: ['N','NP'],                      tipo: 'H/A' },
+        { nome: 'Fund. Centro Médico Campinas',      plans: ['N','NP'],                      tipo: 'H/P.S/A' },
+        { nome: 'Hospital Renascença Campinas',      plans: ['Fx','Id','N','NP'],            tipo: 'H/P.S/M/A' },
       ]},
       { nome: 'S. J. dos\nCampos', hospitais: [
-        { nome: 'Clínica Pró-Infância',              min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hosp. Mat. Antoninho da Rocha M.',  min: 'Ef', tipo: 'H/M/A' },
-        { nome: 'CTFM / GACC',                       min: 'Ef', tipo: 'H/A' },
-        { nome: 'Hospital Prontil',                  min: 'Ef', tipo: 'H/P.S/A' },
-        { nome: 'Hospital São José',                 min: 'Ef', tipo: 'H/P.S' },
-        { nome: 'Assoc. Inst. Chui Psiquiatria',     min: 'Ef', tipo: 'H/A' },
-        { nome: 'Hospital Orto',                     min: 'Fx', tipo: 'H/P.S/A' },
-        { nome: 'Orthoservice',                      min: 'Fx', tipo: 'H/P.S/A' },
-        { nome: 'Hospital Francisca Júlia',          min: 'Fx', tipo: 'H/A' },
-        { nome: 'Hosp. e Mat. Pio XII',              min: 'Fx', tipo: 'H/P.S' },
-        { nome: 'Hospital Policlin',                 min: 'Fx', tipo: 'H/P.S/M' },
-        { nome: 'Santa Casa S. J. dos Campos',       min: 'Fx', tipo: 'H/P.S/M/A' },
-        { nome: 'Hospital Vivalle',                  min: 'Id', tipo: 'H/M' },
+        { nome: 'Clínica Pró-Infância',              plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/A' },
+        { nome: 'Hosp. Mat. Antoninho da Rocha M.',  plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/M/A' },
+        { nome: 'CTFM / GACC',                       plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/A' },
+        { nome: 'Hospital Prontil',                  plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/A' },
+        { nome: 'Hospital São José',                 plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S' },
+        { nome: 'Assoc. Inst. Chui Psiquiatria',     plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/A' },
+        { nome: 'Hospital Orto',                     plans: ['Fx','Id','N','NP'],            tipo: 'H/P.S/A' },
+        { nome: 'Orthoservice',                      plans: ['Fx','N','NP'],                 tipo: 'H/P.S/A' },
+        { nome: 'Hospital Francisca Júlia',          plans: ['Fx','Id','N','NP'],            tipo: 'H/A' },
+        { nome: 'Hosp. e Mat. Pio XII',              plans: ['Fx','Id','N','NP'],            tipo: 'H/P.S' },
+        { nome: 'Hospital Policlin',                 plans: ['Fx','Id','N','NP'],            tipo: 'H/P.S/M' },
+        { nome: 'Hospital Vivalle',                  plans: ['Id','N','NP'],                 tipo: 'H/M' },
       ]},
       { nome: 'Indaiatuba', hospitais: [
-        { nome: 'Hospital Santa Inês',               min: 'Ef', tipo: 'H/P.S/M' },
+        { nome: 'Hospital Santa Inês',               plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/M' },
       ]},
       { nome: 'Atibaia', hospitais: [
-        { nome: 'Hospital Albert Sabin',             min: 'Fx', tipo: 'H/P.S' },
-        { nome: 'Hospital Novo Atibaia',             min: 'N',  tipo: 'H/P.S/M' },
+        { nome: 'Hospital Albert Sabin',             plans: ['Fx','N','NP'],                 tipo: 'H/P.S' },
+        { nome: 'Hospital Novo Atibaia',             plans: ['Fx','Id','N','NP'],            tipo: 'H/P.S/M' },
       ]},
       { nome: 'Bragança\nPaulista', hospitais: [
-        { nome: 'Hospital Univ. São Francisco',      min: 'Ef', tipo: 'H/P.S/M/A' },
-        { nome: 'Santa Casa Bragança Paulista',      min: 'Ef', tipo: 'H/P.S' },
+        { nome: 'Hospital Univ. São Francisco',      plans: ['Ef','EP','Fx','Id','N','NP'],  tipo: 'H/P.S/M/A' },
+        { nome: 'Santa Casa Bragança Paulista',      plans: ['Ef','EP','Fx','N','NP'],       tipo: 'H/P.S/M/A' },
       ]},
     ],
   },
@@ -1396,10 +1398,8 @@ function buildRedeSlide(d, regiaoKey) {
     { key: 'N',   label: 'NACIONAL' },
     { key: 'NP',  label: 'NAC. PLUS' },
   ];
-  const PLAN_IDX = { 'Ef': 0, 'EP': 1, 'Fx': 2, 'Id': 3, 'N': 4, 'NP': 5 };
-
-  // Mapeamento: nome do plano → chave de tier na rede
-  const PLAN_TO_TIER = {
+  // Mapeamento: nome do plano (bradPlans) → chave do plano na rede
+  const PLAN_TO_KEY = {
     'Efetivo':      'Ef',
     'Efetivo Plus': 'EP',
     'Flex':         'Fx',
@@ -1408,23 +1408,18 @@ function buildRedeSlide(d, regiaoKey) {
     'Nacional Plus':'NP',
   };
 
-  // Tiers selecionados a partir dos planos escolhidos (bradPlans)
-  const selectedTiers = new Set();
+  // Planos selecionados a partir dos bradPlans importados
+  const selectedPlans = new Set();
   (d.bradPlans || []).forEach(p => {
-    const tier = PLAN_TO_TIER[p.plano];
-    if (tier) selectedTiers.add(tier);
+    const key = PLAN_TO_KEY[p.plano];
+    if (key) selectedPlans.add(key);
   });
-  const filterActive = selectedTiers.size > 0;
+  const filterActive = selectedPlans.size > 0;
 
-  // Colunas visíveis: apenas os tiers selecionados (ou todos se não houver mapeamento)
+  // Colunas visíveis: apenas os planos selecionados (ou todos)
   const visibleCols = filterActive
-    ? PLAN_COLS.filter(c => selectedTiers.has(c.key))
+    ? PLAN_COLS.filter(c => selectedPlans.has(c.key))
     : PLAN_COLS;
-
-  // Índice máximo entre os tiers selecionados (hospitais com min <= esse índice são acessíveis)
-  const maxTierIdx = filterActive
-    ? Math.max(...[...selectedTiers].map(t => PLAN_IDX[t]))
-    : 5;
 
   const RED = '#CC0000';
   const thBase = `padding:7px 4px;font-size:8px;font-weight:800;color:#fff;text-align:center;letter-spacing:.5px;border-left:1px solid rgba(255,255,255,.2);line-height:1.2`;
@@ -1435,16 +1430,15 @@ function buildRedeSlide(d, regiaoKey) {
 
   let rows = '';
   regiao.cidades.forEach(cidade => {
-    // Filtra hospitais acessíveis por pelo menos um plano selecionado
+    // Filtra hospitais: mostra apenas os credenciados em pelo menos um plano selecionado
     const hospFiltrados = cidade.hospitais.filter(h =>
-      !filterActive || (PLAN_IDX[h.min] ?? 0) <= maxTierIdx
+      !filterActive || (h.plans || []).some(p => selectedPlans.has(p))
     );
     if (hospFiltrados.length === 0) return;
 
     hospFiltrados.forEach((h, hi) => {
-      const minIdx = PLAN_IDX[h.min] ?? 0;
       const planCells = visibleCols.map(col =>
-        PLAN_IDX[col.key] >= minIdx
+        (h.plans || []).includes(col.key)
           ? `<td style="${tdPlan}">${h.tipo || 'H/P.S'}</td>`
           : `<td style="${tdVoid}">—</td>`
       ).join('');
